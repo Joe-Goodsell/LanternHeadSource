@@ -33,6 +33,8 @@ public class Timer : MonoBehaviour
         int currentMinute = (int) Math.Floor(currentTime / 60);
         if (currentMinute >= 1){
             currentTimeStr = string.Format("{0:00}:{1:00}", currentMinute, currentSecond);
+        } else if (CurrentTime < 0){
+            currentTimeStr = "0.0";
         } else {
             currentTimeStr = currentTime.ToString("0.0");
         }
