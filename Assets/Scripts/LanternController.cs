@@ -22,6 +22,7 @@ public class LanternController : MonoBehaviour
     [SerializeField] private SpriteRenderer fuelBar;
     [SerializeField] private float _maxIntensity = 3.0f;
     [SerializeField] private float _minIntensity = 0.0f;
+    [SerializeField] private float _intensityPerScroll = 1.0f;
 
 
     public int Fuel 
@@ -99,7 +100,7 @@ public class LanternController : MonoBehaviour
     }
 
     void ChangeIntensity(){
-        currIntensity += Input.mouseScrollDelta.y;
+        currIntensity += Input.mouseScrollDelta.y * _intensityPerScroll;
         currIntensity = Mathf.Max(_minIntensity, currIntensity);
         currIntensity = Mathf.Min(_maxIntensity, currIntensity);
         _light2D.intensity = currIntensity;

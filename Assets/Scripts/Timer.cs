@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private float startTime = 300.0f;
     private float currentTime;
     [SerializeField] private TextMeshProUGUI countDown;
+    [SerializeField] private SceneTransition sceneTransition;
 
     public float CurrentTime {
         get {
@@ -35,6 +36,7 @@ public class Timer : MonoBehaviour
             currentTimeStr = string.Format("{0:00}:{1:00}", currentMinute, currentSecond);
         } else if (CurrentTime < 0){
             currentTimeStr = "0.0";
+            sceneTransition.GotoMenuScene(1.0f);
         } else {
             currentTimeStr = currentTime.ToString("0.0");
         }
