@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d9fc03c0becb4212ac1008de8e0b27a
+guid: eacee6a21410c4f24b2555e0dd4d3a02
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: tileset
+  - name: ground_and_walls
     originalName: 
-    pivot: {x: 0.43537414, y: -0.3483444}
+    pivot: {x: 0.50146914, y: -2.9689922}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 882
-      height: 755
-    spriteID: 60f736c5533b64db0b131f4aec6f9fcd
+      width: 1021
+      height: 720
+    spriteID: 60e3e8783c54d43bc9965429823de718
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,24 +138,52 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: -300}
+  - name: ground_and_walls_Frame_1
+    originalName: 
+    pivot: {x: 0.50146914, y: -0.6305733}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 732
+      width: 1021
+      height: 568
+    spriteID: 2e3193ef92461465e820beb28c0a878d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 276}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1600849442
-    name: tileset
+    guid: 1851506475
+    name: ground_and_walls
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: tileset
+    - name: ground_and_walls_Frame_0
       frameIndex: 0
       cellRect:
-        x: 128
-        y: 263
-        width: 882
-        height: 755
-      spriteId: 60f736c5533b64db0b131f4aec6f9fcd
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      spriteId: 60e3e8783c54d43bc9965429823de718
+    - name: ground_and_walls_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      spriteId: 2e3193ef92461465e820beb28c0a878d
     linkedCells: []
     parentIndex: -1
   platformSettings: []
