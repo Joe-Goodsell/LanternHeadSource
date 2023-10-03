@@ -9,21 +9,17 @@ public class LanternController : MonoBehaviour
     private FieldInfo _Falloff = typeof(Light2D).GetField("m_FalloffIntensity", BindingFlags.NonPublic | BindingFlags.Instance);
 
     [SerializeField] private float defaultFalloff = 0.7f;
-    [SerializeField] private float currIntensity = 0.7f;
+    [SerializeField] private float defaultIntensity = 0.7f;
     [SerializeField] private float defaultInnerSpotAngle = 50f;
     [SerializeField] private float defaultOuterSpotAngle = 100f;
     [SerializeField] private float focussedFalloff = 0.4f;
-    [SerializeField] private float focussedIntensity = 1.5f;
+    [SerializeField] private float focussedIntensity = 1.2f;
     [SerializeField] private float focussedInnerSpotAngle = 20f;
     [SerializeField] private float focussedOuterSpotAngle = 40f;
     [SerializeField] private int maxFuel = 100;
     [SerializeField] private int _fuel;
     [SerializeField] private AttackLogic attackLogic;
-    [SerializeField] private SpriteRenderer fuelBar;
-    [SerializeField] private float _maxIntensity = 3.0f;
-    [SerializeField] private float _minIntensity = 0.0f;
-    [SerializeField] private float _intensityPerScroll = 1.0f;
-
+    [SerializeField] private SpriteRenderer fuelBar; 
 
     public int Fuel 
 	{
@@ -54,7 +50,6 @@ public class LanternController : MonoBehaviour
         {
             bool isFocussed = Focus();
             Aim();
-            ChangeIntensity();
             Debug.Log(isFocussed + " " + attackLogic.ready);
 
             if (isFocussed && attackLogic.ready && Input.GetKey(KeyCode.Mouse0))
@@ -83,7 +78,7 @@ public class LanternController : MonoBehaviour
     {
        if (Input.GetKey(KeyCode.Mouse1))
        {
-           _light2D.intensity = currIntensity * focussedIntensity; 
+           _light2D.intensity = focussedIntensity; 
            _light2D.pointLightInnerAngle = focussedInnerSpotAngle;
            _light2D.pointLightOuterAngle = focussedOuterSpotAngle;
            _Falloff.SetValue(_light2D, focussedFalloff);
@@ -91,19 +86,12 @@ public class LanternController : MonoBehaviour
        } 
        else
        {
-           _light2D.intensity = currIntensity; 
+           _light2D.intensity = defaultIntensity; 
            _light2D.pointLightInnerAngle = defaultInnerSpotAngle;
            _light2D.pointLightOuterAngle = defaultOuterSpotAngle;
            _Falloff.SetValue(_light2D, defaultFalloff);
            return false;
        }
-    }
-
-    void ChangeIntensity(){
-        currIntensity += Input.mouseScrollDelta.y * _intensityPerScroll;
-        currIntensity = Mathf.Max(_minIntensity, currIntensity);
-        currIntensity = Mathf.Min(_maxIntensity, currIntensity);
-        _light2D.intensity = currIntensity;
     }
     
 }

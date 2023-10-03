@@ -12,41 +12,24 @@ public class EnemyController : MonoBehaviour
 	private float immunityTime = 2f;
 	private bool isImmune = false;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		_transform = GetComponent<Transform>();
+    // Start is called before the first frame update
+    void Start()
+    {
+        _transform = GetComponent<Transform>();
 		targetTransform = target.GetComponent<Transform>();
+    }
 
-		// Set z to zero
-		_transform.position = new Vector3(_transform.position.x, _transform.position.y, 0.1f);
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
+    // Update is called once per frame
+    void Update()
+    {
 		if (target == null)
 		{
 			return;
 		}
-
 		Vector3 vecToTarget = targetTransform.position - _transform.position;
-		float distToTarget = vecToTarget.magnitude;
 		vecToTarget.Normalize();
-
-		RaycastHit2D hit = Physics2D.Linecast(_transform.position, targetTransform.position, (1<<6));
-
-		if (hit.collider != null) {
-			// If vision is blocked move randomly
-			Vector3 randDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0.1f);
-			randDirection.Normalize();
-
-			_transform.position += randDirection * this.speed * Time.deltaTime;
-		} else {
-			// If has line of sight
-			_transform.position += vecToTarget * (this.speed * Time.deltaTime);
-		}
-	}
+		_transform.position += vecToTarget * (this.speed * Time.deltaTime);
+    }
 
 	IEnumerator Immunity()
 	{
