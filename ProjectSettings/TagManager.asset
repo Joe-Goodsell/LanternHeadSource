@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - ground
-  - 
+  - props
   - 
   - 
   - 
@@ -43,4 +43,19 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: backwalls
+    uniqueID: 4099135991
+    locked: 0
+  - name: back_lvl2
+    uniqueID: 3674420213
+    locked: 0
+  - name: props
+    uniqueID: 403930633
+    locked: 0
+  - name: char
+    uniqueID: 2753337233
+    locked: 0
+  - name: frontwalls
+    uniqueID: 2094984547
     locked: 0

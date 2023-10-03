@@ -652,9 +652,9 @@ ScriptedImporter:
       frameIndex: 0
       cellRect:
         x: 0
-        y: 0
+        y: 68
         width: 1024
-        height: 1024
+        height: 956
       spriteId: bfb6ed45140784e9c92f56bd0057f90a
     linkedCells: []
     parentIndex: -1
