@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Lantern
+  - LanternFuel
+  - HealthPotion
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -58,4 +63,7 @@ TagManager:
     locked: 0
   - name: frontwalls
     uniqueID: 2094984547
+    locked: 0
+  - name: UI
+    uniqueID: 3611230631
     locked: 0
