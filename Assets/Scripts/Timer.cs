@@ -9,15 +9,9 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private float startTime = 300.0f;
-    private float currentTime;
     [SerializeField] private TextMeshProUGUI countDown;
     [SerializeField] private UnityEvent onTimesUp;
-
-    public float CurrentTime {
-        get {
-            return currentTime;
-        }
-    }
+    private float currentTime;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +29,7 @@ public class Timer : MonoBehaviour
         int currentMinute = (int) Math.Floor(currentTime / 60);
         if (currentMinute >= 1){
             currentTimeStr = string.Format("{0:00}:{1:00}", currentMinute, currentSecond);
-        } else if (CurrentTime < 0){
+        } else if (currentTime < 0){
             currentTimeStr = "0.0";
             this.onTimesUp.Invoke();
         } else {
@@ -43,6 +37,5 @@ public class Timer : MonoBehaviour
         }
 
         countDown.text = currentTimeStr;
-
     }
 }

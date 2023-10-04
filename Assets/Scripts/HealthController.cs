@@ -25,7 +25,9 @@ public class HealthController : MonoBehaviour
 				// Not needed if death causes instant restart or screen change
 				healthBar.enabled = false;
 				Destroy(gameObject);
+				
 				this.onDeath.Invoke();
+				
 			} else if (this._currentHealth > 100) {
 				this._currentHealth = 100;
 			}

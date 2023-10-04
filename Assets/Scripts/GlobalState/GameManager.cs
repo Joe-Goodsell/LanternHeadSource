@@ -19,12 +19,12 @@ public class GameManager : MonoBehaviour
     private int _score;
     private float _health;
     private float _fuel;
-    private float _timer;
+
 
     public UnityEvent<int> OnScoreChanged { get; } = new();
     public UnityEvent<float> OnHealthChanged { get; } = new();
     public UnityEvent<float> OnFuelChanged { get; } = new();
-    public UnityEvent<float> OnTimerChanged { get; } = new();
+
     public int Score
     {
         get => this._score;
@@ -55,15 +55,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public float Timer
-    {
-        get => this._timer;
-        set
-        {
-            this._timer = value;
-            OnTimerChanged.Invoke(this._timer);
-        }
-    }
+
 
 
 
@@ -87,7 +79,7 @@ public class GameManager : MonoBehaviour
         // Temporary values
         Health = 100.0f;
         Fuel = 100.0f;
-        Timer = 300.0f;
+
     }
     
     public IEnumerator GotoScene(string sceneName, float delay)
@@ -107,6 +99,6 @@ public class GameManager : MonoBehaviour
             Score = 0; 
             Health = 100.0f;
             Fuel = 100.0f;
-            Timer = 300.0f;
+
     }
 }
