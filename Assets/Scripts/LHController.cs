@@ -36,6 +36,16 @@ public class LHController : MonoBehaviour
     [SerializeField] private Collider2D attackCollider;
     [SerializeField] private bool attackReady;
     private float attackCd;
+    private float _speedBuff;
+
+    public float SpeedBuff
+	{
+		get { return this._speedBuff; }
+		set
+		{
+			this._speedBuff = value;
+		}
+	}
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +56,7 @@ public class LHController : MonoBehaviour
         //player movement settings
         baselineSpeed = 0.7f;
         currSpeed = baselineSpeed;
+        _speedBuff = 1.0f;
         moveMode = MoveMode.Normal;
         dashReady = true;
         dashSpeed = baselineSpeed * 10f;
@@ -122,7 +133,7 @@ public class LHController : MonoBehaviour
             var dy = Vector3.up * Input.GetAxis("Vertical");
             instantDirection = dx + dy;
             instantDirection.Normalize();
-            _rigidBody.velocity = instantDirection * currSpeed;
+            _rigidBody.velocity = instantDirection * currSpeed * _speedBuff;
         } else
         {
             Debug.Log("dashing...");

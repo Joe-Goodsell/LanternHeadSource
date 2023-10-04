@@ -8,7 +8,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float startTime = 300.0f;
+    [SerializeField] private float startTime = 5.0f;
     [SerializeField] private TextMeshProUGUI countDown;
     [SerializeField] private UnityEvent onTimesUp;
     private float currentTime;
