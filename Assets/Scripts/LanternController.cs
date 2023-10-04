@@ -16,15 +16,18 @@ public class LanternController : MonoBehaviour
     [SerializeField] private float focussedIntensity = 1.5f;
     [SerializeField] private float focussedInnerSpotAngle = 20f;
     [SerializeField] private float focussedOuterSpotAngle = 40f;
-    [SerializeField] private int maxFuel = 100;
-    [SerializeField] private int _fuel;
+    [SerializeField] private float maxFuel = 100.0f;
+    [SerializeField] private float _fuel;
     [SerializeField] private AttackLogic attackLogic;
+    [SerializeField] private LHController lanternHead;
     [SerializeField] private SpriteRenderer fuelBar;
     [SerializeField] private float _maxIntensity = 3.0f;
     [SerializeField] private float _minIntensity = 0.0f;
     [SerializeField] private float _intensityPerScroll = 1.0f;
+    [SerializeField] private bool _enableAttack = true;
+    [SerializeField] private float _fuelDecreaseRate = 0.00001f;
 
-    public int Fuel 
+    public float Fuel 
 	{
 		get { return this._fuel; }
 		set
@@ -36,7 +39,7 @@ public class LanternController : MonoBehaviour
 			} else if (this._fuel > 100) {
 				this._fuel = 100;
 			}
-			fuelBar.transform.localScale = new Vector3(((float) this._fuel / maxFuel),1,1); 
+			fuelBar.transform.localScale = new Vector3((this._fuel / maxFuel),1,1); 
 		}
 	}
     // Start is called before the first frame update
@@ -44,11 +47,40 @@ public class LanternController : MonoBehaviour
     {
         Fuel = maxFuel;
         attackLogic = GetComponent<AttackLogic>();
+        lanternHead = GameObject.Find("LanternHead").GetComponent<LHController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Fuel -= _fuelDecreaseRate + (currIntensity / 100.0f);
+
+        if (Fuel == 0){
+            _light2D.intensity = 0;
+            return;
+        }
+
+        // Debug.Log(Fuel);
+        if (Fuel > 90){
+            lanternHead.SpeedBuff = 1.1f;
+            _enableAttack = true;
+        } else if (Fuel > 70){
+            lanternHead.SpeedBuff = 1.05f;
+            _enableAttack = true;
+        } else if (Fuel > 50){
+             lanternHead.SpeedBuff = 1.0f;
+            _enableAttack = true;
+        } else if (Fuel > 30){
+             lanternHead.SpeedBuff = 0.95f;
+            _enableAttack = true;
+        } else if (Fuel > 10){
+             lanternHead.SpeedBuff = 0.85f;
+            _enableAttack = false;
+        } else {
+             lanternHead.SpeedBuff = 0.70f;
+            _enableAttack = false;
+        } 
+
         if (!attackLogic.isAttacking)
         {
             bool isFocussed = Focus();
@@ -56,7 +88,7 @@ public class LanternController : MonoBehaviour
             ChangeIntensity();
             Debug.Log(isFocussed + " " + attackLogic.ready);
 
-            if (isFocussed && attackLogic.ready && Input.GetKey(KeyCode.Mouse0))
+            if (isFocussed && attackLogic.ready && Input.GetKey(KeyCode.Mouse0) && _enableAttack)
             {
                 Debug.Log("special attack");
                 attackLogic.SpecialAttack();
@@ -73,7 +105,7 @@ public class LanternController : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, -transform.eulerAngles.z);
     }
 
-    public void Refuel(int fuel)
+    public void Refuel(float fuel)
     {
         Fuel += fuel;
     }
