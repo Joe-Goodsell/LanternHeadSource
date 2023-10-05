@@ -7,7 +7,8 @@ public class EnemyController : MonoBehaviour
 	[SerializeField] private float speed = 0.5f;
 	[SerializeField] public GameObject target;
 	[SerializeField] private int damage = 10;
-	[SerializeField] private float visionRange = 10.0f;
+	[SerializeField] private float visionRange = 2.5f;
+	[SerializeField] private float wanderRadius = 2.5f;
 	private Transform _transform;
 	private Transform targetTransform;
 	private float immunityTime = 2f;
@@ -37,7 +38,7 @@ public class EnemyController : MonoBehaviour
 
 		// If reached destination, choose another random nearby one
 		var dist = Vector2.Distance(_transform.position, destination);
-		if (dist < 1.0f)
+		if (dist < 0.1f)
 		{
 			destination = RandomLocation();
 		}
@@ -75,8 +76,8 @@ public class EnemyController : MonoBehaviour
 	}
 
 	private Vector3 RandomLocation() {
-		float x = Random.Range(-10.0f, 10.0f);
-		float y = Random.Range(-10.0f, 10.0f);
+		float x = Random.Range(-wanderRadius, wanderRadius);
+		float y = Random.Range(-wanderRadius, wanderRadius);
 		return new Vector3(x + _transform.position.x, y + _transform.position.y, 0.1f);
 	}
 }
