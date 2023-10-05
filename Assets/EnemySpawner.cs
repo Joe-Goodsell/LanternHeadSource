@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] private GameObject player;
 	[SerializeField] public Tilemap tilemap;
 	[SerializeField] public float spawnRadius = 5f;
-	[SerializeField] private int numEnemiesAlive = 0;
+	[SerializeField] public int numEnemiesAlive = 0;
 	[SerializeField] private int maxEnemiesAlive = 5;
 	[SerializeField] private int spawnGracePeriod = 600; // How many frames before attempting to respawn an enemy
 	private int gracePeriod = 0;
@@ -55,6 +55,7 @@ public class EnemySpawner : MonoBehaviour
 		// Spawn enemy if max attempts not reached, and increment numEnemiesAlive
 		if (spawnAttempts < maxSpawnAttempts) {
 			var newEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+			newEnemy.GetComponent<EnemyBehaviour>().spawner = this;
 			newEnemy.GetComponent<EnemyController>().target = player;
 			numEnemiesAlive++;
 			Debug.Log("Spawn Successful");

@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float currHealth;
     [SerializeField] private GameObject healthBarBorder;
     [SerializeField] private GameObject healthBarFill;
+	public EnemySpawner spawner;
     private SpriteRenderer healthBarBorderSprite;
     private SpriteRenderer healthBarFillSprite;
 
@@ -35,6 +36,7 @@ public class EnemyBehaviour : MonoBehaviour
             healthBarFill.transform.localScale.z);
         if (currHealth <= 0)
         {
+			spawner.numEnemiesAlive--;
             Destroy(enemy);
         } else
         {
