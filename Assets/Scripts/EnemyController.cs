@@ -5,29 +5,42 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 	[SerializeField] private float speed = 0.5f;
-	[SerializeField] private GameObject target;
+	[SerializeField] public GameObject target;
 	[SerializeField] private int damage = 10;
+	[SerializeField] private float visionRange = 2.5f;
+	[SerializeField] private float wanderRadius = 2.5f;
 	private Transform _transform;
 	private Transform targetTransform;
 	private float immunityTime = 2f;
 	private bool isImmune = false;
+	private Vector3 destination;
 
-    	// Start is called before the first frame update
+    // Start is called before the first frame update
 	void Start()
 	{
 		_transform = GetComponent<Transform>();
 		targetTransform = target.GetComponent<Transform>();
+
+		destination = RandomLocation();
 
 		// Set z to zero
 		_transform.position = new Vector3(_transform.position.x, _transform.position.y, 0.1f);
 	}
 
 	// Update is called once per frame
+	// Move to last known player position then wander randomly
 	void Update()
 	{
 		if (target == null)
 		{
 			return;
+		}
+
+		// If reached destination, choose another random nearby one
+		var dist = Vector2.Distance(_transform.position, destination);
+		if (dist < 0.1f)
+		{
+			destination = RandomLocation();
 		}
 
 		Vector3 vecToTarget = targetTransform.position - _transform.position;
@@ -36,16 +49,13 @@ public class EnemyController : MonoBehaviour
 
 		RaycastHit2D hit = Physics2D.Linecast(_transform.position, targetTransform.position, (1<<6));
 
-		if (hit.collider != null) {
-			// If vision is blocked move randomly
-			Vector3 randDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0.1f);
-			randDirection.Normalize();
-
-			_transform.position += randDirection * this.speed * Time.deltaTime;
-		} else {
-			// If has line of sight
-			_transform.position += vecToTarget * (this.speed * Time.deltaTime);
+		if (hit.collider == null && (Vector2.Distance(_transform.position, targetTransform.position) < visionRange)) {
+			// If has line of sight, move to player
+			destination = targetTransform.position;
 		}
+
+		// Move to destination
+		_transform.position += (destination - _transform.position).normalized * speed * Time.deltaTime;
 	}
 
 	IEnumerator Immunity()
@@ -57,13 +67,17 @@ public class EnemyController : MonoBehaviour
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
-		Debug.Log("detected collision with " + collision.gameObject.tag);
 		if (collision.gameObject.tag == "Player" && !isImmune)
 		{
-			Debug.Log("collision with player");
 			HealthController healthController = collision.gameObject.GetComponent<HealthController>();
 			healthController.TakeDamage(damage);
 			StartCoroutine(Immunity());
 		}
+	}
+
+	private Vector3 RandomLocation() {
+		float x = Random.Range(-wanderRadius, wanderRadius);
+		float y = Random.Range(-wanderRadius, wanderRadius);
+		return new Vector3(x + _transform.position.x, y + _transform.position.y, 0.1f);
 	}
 }

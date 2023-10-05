@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float currHealth;
     [SerializeField] private GameObject healthBarBorder;
     [SerializeField] private GameObject healthBarFill;
+	public EnemySpawner spawner;
     private SpriteRenderer healthBarBorderSprite;
     private SpriteRenderer healthBarFillSprite;
 
@@ -35,6 +36,12 @@ public class EnemyBehaviour : MonoBehaviour
             healthBarFill.transform.localScale.z);
         if (currHealth <= 0)
         {
+			// Let spawner know they died (Manually added enemies have no spawner)
+			if (spawner != null) {
+				spawner.numEnemiesAlive--;
+				spawner.SpawnItem(GetComponent<Transform>().position);
+			}
+
             Destroy(enemy);
         } else
         {
