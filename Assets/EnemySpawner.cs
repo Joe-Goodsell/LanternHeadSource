@@ -12,8 +12,11 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] public int numEnemiesAlive = 0;
 	[SerializeField] private int maxEnemiesAlive = 5;
 	[SerializeField] private int spawnGracePeriod = 600; // How many frames before attempting to respawn an enemy
+	[SerializeField] private GameObject potionPrefab;
+	[SerializeField] private GameObject fuelPrefab;
+	[SerializeField] private int itemDropChance = 25;
 	private int gracePeriod = 0;
-	public int maxSpawnAttempts = 10;
+	private int maxSpawnAttempts = 10;
 	private List<Vector3> existingTilePositions = new List<Vector3>();
 
 	// Start is called before the first frame update
@@ -61,6 +64,18 @@ public class EnemySpawner : MonoBehaviour
 			Debug.Log("Spawn Successful");
 		} else {
 			Debug.Log("Spawn Failed");
+		}
+	}
+
+	// Currently called by enemies on death
+	public void SpawnItem(Vector3 position) {
+		if (Random.Range(0, 100) >= itemDropChance) {
+			Debug.Log("Item Dropped");
+			if (Random.Range(0, 100) >= 50) {
+				Instantiate(potionPrefab, position, Quaternion.identity);
+			} else {
+				Instantiate(fuelPrefab, position, Quaternion.identity);
+			}
 		}
 	}
 }

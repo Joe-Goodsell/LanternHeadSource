@@ -37,6 +37,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (currHealth <= 0)
         {
 			spawner.numEnemiesAlive--;
+			spawner.SpawnItem(GetComponent<Transform>().position);
             Destroy(enemy);
         } else
         {
