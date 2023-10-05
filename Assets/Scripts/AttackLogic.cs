@@ -68,7 +68,6 @@ public class AttackLogic : MonoBehaviour
     {
         float attackRange = 15.0f; // Maybe adjust again
 
-        // Get aiming direction from LanternController's transform
         Vector2 aimDirection = lanternController.transform.up;  
 
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, aimDirection, attackRange);
