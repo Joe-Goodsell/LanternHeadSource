@@ -36,8 +36,8 @@ public class LanternController : MonoBehaviour
 			if (_fuel <= 0)
 			{
 				this._fuel = 0;
-			} else if (this._fuel > 100) {
-				this._fuel = 100;
+			} else if (this._fuel > maxFuel) {
+				this._fuel = maxFuel;
 			}
 			fuelBar.transform.localScale = new Vector3((this._fuel / maxFuel),1,1); 
 		}
@@ -86,11 +86,9 @@ public class LanternController : MonoBehaviour
             bool isFocussed = Focus();
             Aim();
             ChangeIntensity();
-            Debug.Log(isFocussed + " " + attackLogic.ready);
 
             if (isFocussed && attackLogic.ready && Input.GetKey(KeyCode.Mouse0) && _enableAttack)
             {
-                Debug.Log("special attack");
                 attackLogic.SpecialAttack();
             }
         }
