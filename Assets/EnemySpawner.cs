@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-	[SerializeField] public GameObject enemyPrefab;
+	[SerializeField] private GameObject enemyPrefab;
 	[SerializeField] private GameObject player;
-	[SerializeField] public Tilemap tilemap;
-	[SerializeField] public float spawnRadius = 5f;
+	[SerializeField] private Tilemap tilemap;
+	[SerializeField] private float spawnRadius = 5f;
 	[SerializeField] public int numEnemiesAlive = 0;
 	[SerializeField] private int maxEnemiesAlive = 5;
 	[SerializeField] private int spawnGracePeriod = 600; // How many frames before attempting to respawn an enemy
