@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 	[SerializeField] private float speed = 0.5f;
-	[SerializeField] private GameObject target;
+	[SerializeField] public GameObject target;
 	[SerializeField] private int damage = 10;
 	[SerializeField] private float visionRange = 10.0f;
 	private Transform _transform;
