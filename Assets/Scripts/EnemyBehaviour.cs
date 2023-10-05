@@ -36,8 +36,12 @@ public class EnemyBehaviour : MonoBehaviour
             healthBarFill.transform.localScale.z);
         if (currHealth <= 0)
         {
-			spawner.numEnemiesAlive--;
-			spawner.SpawnItem(GetComponent<Transform>().position);
+			// Let spawner know they died (Manually added enemies have no spawner)
+			if (spawner != null) {
+				spawner.numEnemiesAlive--;
+				spawner.SpawnItem(GetComponent<Transform>().position);
+			}
+
             Destroy(enemy);
         } else
         {
