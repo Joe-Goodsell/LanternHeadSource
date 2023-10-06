@@ -26,6 +26,7 @@ public class LanternController : MonoBehaviour
     [SerializeField] private float _intensityPerScroll = 1.0f;
     [SerializeField] private bool _enableAttack = true;
     [SerializeField] private float _fuelDecreaseRate = 0.00001f;
+    [SerializeField] private float _currIntensityDecreaseWeight = 0.1f;
 
     public float Fuel 
 	{
@@ -53,7 +54,7 @@ public class LanternController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Fuel -= _fuelDecreaseRate + (currIntensity / 100.0f);
+        Fuel -= _fuelDecreaseRate + (currIntensity * _currIntensityDecreaseWeight);
 
         if (Fuel == 0){
             _light2D.intensity = 0;

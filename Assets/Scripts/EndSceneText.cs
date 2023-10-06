@@ -8,19 +8,20 @@ using TMPro;
 public class EndSceneText : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI endSceneText;
-    [SerializeField] private float timeSurvived;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeSurvived = Time.time;
+        var globalTimer = GameObject.FindWithTag("GlobalTimer").GetComponent<GlobalTimer>();
+        float timeSurvived = globalTimer.RecordTime;
+        float targetTime = globalTimer.StartTime;
         Debug.Log(timeSurvived);
         int currentSecond = (int) timeSurvived % 60;
         int currentMinute = (int) Math.Floor(timeSurvived / 60);
         string victoryText = "Congratulations. You made it.";
         string defeatText = string.Format("You survived for {0:00}:{1:00}", currentMinute, currentSecond); 
 
-        if (timeSurvived >= 300){
+        if (timeSurvived >= targetTime){
             endSceneText.text = victoryText;
         } else {
             endSceneText.text = defeatText;
