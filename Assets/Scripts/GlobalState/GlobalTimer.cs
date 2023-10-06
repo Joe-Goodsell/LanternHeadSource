@@ -23,6 +23,11 @@ public class GlobalTimer : MonoBehaviour
     {
         get => this._startTime;
     }
+
+    public float CurrentTime 
+    {
+        get => this._currentTime;
+    }
     
     void Awake()
     {
