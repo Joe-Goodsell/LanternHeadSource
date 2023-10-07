@@ -11,6 +11,7 @@ public class HealthController : MonoBehaviour
 	[SerializeField] private int _currentHealth;
 
 	[SerializeField] private SpriteRenderer healthBar;
+	[SerializeField] private UnityEvent onDeath;
 
 	private int CurrentHealth
 	{
@@ -24,6 +25,9 @@ public class HealthController : MonoBehaviour
 				// Not needed if death causes instant restart or screen change
 				healthBar.enabled = false;
 				Destroy(gameObject);
+				
+				this.onDeath.Invoke();
+				
 			} else if (this._currentHealth > 100) {
 				this._currentHealth = 100;
 			}

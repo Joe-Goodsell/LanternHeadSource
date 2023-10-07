@@ -12,4 +12,9 @@ public class SceneTransition : GameManagerClient
     {
         StartCoroutine(GameManager.GotoScene(GameManager.MenuSceneName, delay));
     }
+
+    public void GotoEndScene(float delay = 0f)
+    {
+        StartCoroutine(GameManager.GotoScene(GameManager.EndSceneName, delay));
+    }
 }

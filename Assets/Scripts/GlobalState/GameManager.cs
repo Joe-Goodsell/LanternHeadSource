@@ -13,14 +13,18 @@ public class GameManager : MonoBehaviour
     
     public const string MenuSceneName = "StartScene";
     public const string StartSceneName = "MainScene";
+    public const string EndSceneName = "EndScene";
+    
     
     private int _score;
     private float _health;
     private float _fuel;
 
+
     public UnityEvent<int> OnScoreChanged { get; } = new();
     public UnityEvent<float> OnHealthChanged { get; } = new();
     public UnityEvent<float> OnFuelChanged { get; } = new();
+
     public int Score
     {
         get => this._score;
@@ -54,6 +58,8 @@ public class GameManager : MonoBehaviour
 
 
 
+
+
     private void Awake()
     {
         // Should not be created if there's already a manager present (at least
@@ -73,6 +79,7 @@ public class GameManager : MonoBehaviour
         // Temporary values
         Health = 100.0f;
         Fuel = 100.0f;
+
     }
     
     public IEnumerator GotoScene(string sceneName, float delay)
@@ -92,5 +99,6 @@ public class GameManager : MonoBehaviour
             Score = 0; 
             Health = 100.0f;
             Fuel = 100.0f;
+
     }
 }

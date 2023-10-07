@@ -9,6 +9,7 @@ TagManager:
   - LanternFuel
   - HealthPotion
   - GameManager
+  - GlobalTimer
   layers:
   - Default
   - TransparentFX

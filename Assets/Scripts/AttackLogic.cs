@@ -10,7 +10,7 @@ public class AttackLogic : MonoBehaviour
     [SerializeField] private Color normalColor;
     [SerializeField] private float normalIntensity;
     [SerializeField] private float normalInnerAngle;
-    [SerializeField] private int fuelCost;
+    [SerializeField] private float fuelCost;
     [SerializeField] private float cdTime;
     public bool isAttacking { get; private set;}
     public bool ready { get; private set;}
@@ -36,7 +36,7 @@ public class AttackLogic : MonoBehaviour
 
     // Special Lantern Attack
     public void SpecialAttack() {
-        int fuel = lanternController.Fuel;
+        float fuel = lanternController.Fuel;
 
         StartCoroutine(VisualEffects());
         RaycastAttack(fuel); // Hit detection
