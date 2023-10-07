@@ -1025,6 +1025,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ground_and_walls_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb37d0e70c96e49c388f0371fe04472b
+      internalID: 535074975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1076,6 +1097,7 @@ TextureImporter:
       ground_and_walls_40: 582044454
       ground_and_walls_41: 1284440552
       ground_and_walls_42: 1051885745
+      ground_and_walls_43: 535074975
       ground_and_walls_5: 363764160
       ground_and_walls_6: 1972231881
       ground_and_walls_7: 1146190246
