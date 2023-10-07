@@ -42,7 +42,7 @@ placeholder for it [here](GDD.md).
 - In total, 5 users evaluate the game, making notes either digitally or with paper and pencil.
 - The evaluation can be conducted either in person or online.
 - Audio and screen will be recorded during the evaluation.
-- All test participants will receive the same initial information through a specially created [introduction sheet](), ensuring comparability across sessions, even when conducted by different test leaders.
+- All test participants will receive the same initial information through a specially created [introduction sheet](https://docs.google.com/document/d/1MyIOHr0rkuhWHuxnQEBZPwGPPn3OximRz8KV_PK14sA/edit?usp=drive_link), ensuring comparability across sessions, even when conducted by different test leaders.
 
 Why this method:
 
@@ -57,7 +57,7 @@ Why this method:
 - The user plays the game and answers a questionnaire
 - In total 16-20 users that evaluate our game
 - Feedback can be provided in an open text box
-- All test persons receive the same initial information in the form of a specially created [introduction sheet]()
+- All test persons receive the same initial information in the form of a specially created [introduction sheet](https://docs.google.com/document/d/1C9YVU1AvxOqkvNcxTTPU0Uw34qerH1F4MrA_C-L6B2I/edit?usp=drive_link)
 
 Why this method:
 
@@ -107,7 +107,7 @@ Evaluation consists of two questionnaire parts
 1. Introduction before the game (Introduction Sheet)
     - This informs the participants about the evaluation process and their legal options. At the same time, an introduction sheet offers the possibility to provide the players with information about the task to be carried out as well as instructions on how to participate in the evaluation. 
 2. User plays the game (Think-Aloud: with verbalizations)
-3. Fill in questionnaire / Commenting on the game (Think-Aloud)
+3. Fill in [questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScyLRMfINL8b4AtPH2CTqlffiw0WYoONCHhX2WD3Hp2huGgsA/viewform?usp=sf_link) / Commenting on the game (Think-Aloud)
 
 ### Participants
 
@@ -147,8 +147,8 @@ What tools will you use?
 
 How will you analyse the data?
 - Data analysis tools for Excel are used to evaluate the evaluation. 
-- For the evaluation of the UEQ and the UEQ+ Questionnaire, the respective data analysis tool by Dr. Martin Schrepp is used. (Link Excel Sheets)
-- For the evaluation of the GUESS-18, the data analysis tool by William J. Shelstad is used. (Link Excel sheet)
+- For the evaluation of the [UEQ](https://docs.google.com/spreadsheets/d/1ep9RGBhArVEjROU2To2whGNUHLM-hauG/edit?usp=drive_link&ouid=113135577092675312398&rtpof=true&sd=true) and the [UEQ+](https://docs.google.com/spreadsheets/d/10Rlr6XrActTDj76iGxTL37rfgIx--SUs/edit?usp=drive_link&ouid=113135577092675312398&rtpof=true&sd=true) Questionnaire, the respective data analysis tool by Dr. Martin Schrepp is used.
+- For the evaluation of the [GUESS-18](https://docs.google.com/spreadsheets/d/1VvqeABXb-Vwt2shMZ4wBmDfe7cELBSEn/edit?usp=drive_link&ouid=113135577092675312398&rtpof=true&sd=true), the data analysis tool by William J. Shelstad is used.
 
 <br>
 
@@ -177,7 +177,7 @@ How will you ensure that everyone contributes equally?
 ### Timeline
 
 <p align="center">
-    <img src="Images/Timeline_Evaluation" width="200">
+    <img src="Images/Timeline_Evaluation.png" width="200">
 </p>
 <p align="center">
     <img src="Images/Gantt_Final_GDD_legend.png" width="200">

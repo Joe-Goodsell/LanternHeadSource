@@ -79,3 +79,10 @@ Assets/Linda_Level.unity.meta
 Packages/packages-lock.json
 ProjectSettings/ShaderGraphSettings.asset
 ProjectSettings/ShaderGraphSettings.asset
+.vsconfig
+Assets/MainScene.unity
+Packages/packages-lock.json
+ProjectSettings/BurstAotSettings_WebGL.json
+ProjectSettings/CommonBurstAotSettings.json
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/ShaderGraphSettings.asset
