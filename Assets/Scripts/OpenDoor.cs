@@ -9,13 +9,16 @@ public class OpenDoor : MonoBehaviour
         Closed
     }
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private SpriteRenderer _closeSideRenderer;
     [SerializeField] private SpriteRenderer _textRenderer;
     [SerializeField] private GameObject _openCollider;
     [SerializeField] private GameObject _closedCollider;
     [SerializeField] private Sprite _openText;
     [SerializeField] private Sprite _closeText;
-    [SerializeField] private Sprite openSprite;
-    [SerializeField] private Sprite closedSprite;
+    [SerializeField] private Sprite openSprite1;
+    [SerializeField] private Sprite closedSprite1;
+    [SerializeField] private Sprite openSprite2;
+    [SerializeField] private Sprite closedSprite2;
     private bool playerIsInteracting;
 
     private State state; 
@@ -49,7 +52,8 @@ public class OpenDoor : MonoBehaviour
         if ( newState == State.Open )
         {
             state = State.Open;
-            _spriteRenderer.sprite = openSprite;
+            _spriteRenderer.sprite = openSprite1;
+            _closeSideRenderer.sprite = openSprite2;
             _openCollider.SetActive(true);
             _closedCollider.SetActive(false);
             _textRenderer.sprite = _closeText;
@@ -57,7 +61,8 @@ public class OpenDoor : MonoBehaviour
         else if ( newState == State.Closed )
         {
             state = State.Closed;
-            _spriteRenderer.sprite = closedSprite;
+            _spriteRenderer.sprite = closedSprite1;
+            _closeSideRenderer.sprite = closedSprite2;
             _openCollider.SetActive(false);
             _closedCollider.SetActive(true);
             _textRenderer.sprite = _openText;
