@@ -42,7 +42,7 @@ placeholder for it [here](GDD.md).
 - In total, 5 users evaluate the game, making notes either digitally or with paper and pencil.
 - The evaluation can be conducted either in person or online.
 - Audio and screen will be recorded during the evaluation.
-- All test participants will receive the same initial information through a specially created [introduction sheet](https://docs.google.com/document/d/1MyIOHr0rkuhWHuxnQEBZPwGPPn3OximRz8KV_PK14sA/edit?usp=sharing), ensuring comparability across sessions, even when conducted by different test leaders.
+- All test participants will receive the same initial information through a specially created [introduction sheet](https://drive.google.com/file/d/1m9LQbf9p-MldEbRprLpEuDZeyxdEA9PV/view?usp=sharing), ensuring comparability across sessions, even when conducted by different test leaders.
 
 Why this method:
 
@@ -57,7 +57,7 @@ Why this method:
 - The user plays the game and answers a questionnaire
 - In total 16-20 users that evaluate our game
 - Feedback can be provided in an open text box
-- All test persons receive the same initial information in the form of a specially created [introduction sheet](https://docs.google.com/document/d/1C9YVU1AvxOqkvNcxTTPU0Uw34qerH1F4MrA_C-L6B2I/edit?usp=sharing)
+- All test persons receive the same initial information in the form of a specially created [introduction sheet](https://drive.google.com/file/d/1fC2D0Q6SZfOMv6WR8zgU3d4ZWYwbsKUm/view?usp=sharing)
 
 Why this method:
 
