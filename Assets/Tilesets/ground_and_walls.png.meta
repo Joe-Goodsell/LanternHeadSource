@@ -218,8 +218,23 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 26, y: -13}
+        - {x: 26, y: 52}
+        - {x: 24, y: 55}
+        - {x: 9, y: 62}
+        - {x: 5, y: 64}
+        - {x: -7, y: 64}
+        - {x: -36, y: 50}
+        - {x: -61, y: 37}
+        - {x: -64, y: 35}
+        - {x: -64, y: -35}
+        - {x: -42, y: -46}
+        - {x: -38, y: -46}
+        - {x: 15, y: -19}
+        - {x: 17, y: -19}
+        - {x: 21, y: -17}
+      tessellationDetail: 0.48
       bones: []
       spriteID: 684b96f2d3c634750ae5243241e3d4ac
       internalID: 386185119
@@ -239,8 +254,27 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 56, y: -39}
+        - {x: 60, y: -37}
+        - {x: 64, y: -34}
+        - {x: 64, y: 34}
+        - {x: 63, y: 35}
+        - {x: 60, y: 37}
+        - {x: 44, y: 45}
+        - {x: 42, y: 45}
+        - {x: 35, y: 50}
+        - {x: 6, y: 64}
+        - {x: -6, y: 64}
+        - {x: -25, y: 55}
+        - {x: -27, y: 52}
+        - {x: -27, y: -13}
+        - {x: -25, y: -15}
+        - {x: -22, y: -17}
+        - {x: 36, y: -46}
+        - {x: 44, y: -46}
+        - {x: 54, y: -41}
+      tessellationDetail: 0.62
       bones: []
       spriteID: 62a9342c640f448e2892522a24da8e0d
       internalID: 363764160
@@ -260,8 +294,34 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: -8, y: -33}
+        - {x: 0, y: -30}
+        - {x: 26, y: -42}
+        - {x: 34, y: -47}
+        - {x: 39, y: -47}
+        - {x: 47, y: -43}
+        - {x: 59, y: -36}
+        - {x: 64, y: -32}
+        - {x: 64, y: 33}
+        - {x: 60, y: 38}
+        - {x: 52, y: 42}
+        - {x: 43, y: 45}
+        - {x: 5, y: 64}
+        - {x: -6, y: 64}
+        - {x: -27, y: 54}
+        - {x: -41, y: 46}
+        - {x: -52, y: 42}
+        - {x: -59, y: 37}
+        - {x: -64, y: 33}
+        - {x: -64, y: -32}
+        - {x: -61, y: -35}
+        - {x: -44, y: -46}
+        - {x: -39, y: -47}
+        - {x: -34, y: -47}
+        - {x: -29, y: -44}
+        - {x: -16, y: -37}
+      tessellationDetail: 0.34
       bones: []
       spriteID: 9c18c65e6594f4abd83e77efbc6e8816
       internalID: 1972231881
@@ -281,8 +341,72 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: -24, y: -41}
+        - {x: -20, y: -39}
+        - {x: -18, y: -37}
+        - {x: -15, y: -37}
+        - {x: -12, y: -38}
+        - {x: -11, y: -38}
+        - {x: -6, y: -37}
+        - {x: -4, y: -35}
+        - {x: -2, y: -35}
+        - {x: 3, y: -34}
+        - {x: 5, y: -36}
+        - {x: 7, y: -36}
+        - {x: 10, y: -39}
+        - {x: 11, y: -39}
+        - {x: 14, y: -36}
+        - {x: 18, y: -41}
+        - {x: 20, y: -40}
+        - {x: 22, y: -42}
+        - {x: 30, y: -42}
+        - {x: 35, y: -47}
+        - {x: 40, y: -47}
+        - {x: 48, y: -43}
+        - {x: 54, y: -38}
+        - {x: 56, y: -38}
+        - {x: 60, y: -36}
+        - {x: 64, y: -33}
+        - {x: 64, y: 34}
+        - {x: 63, y: 35}
+        - {x: 60, y: 37}
+        - {x: 44, y: 45}
+        - {x: 42, y: 45}
+        - {x: 37, y: 48}
+        - {x: 35, y: 50}
+        - {x: 28, y: 53}
+        - {x: 25, y: 55}
+        - {x: 23, y: 55}
+        - {x: 6, y: 64}
+        - {x: -5, y: 64}
+        - {x: -7, y: 63}
+        - {x: -26, y: 54}
+        - {x: -28, y: 52}
+        - {x: -33, y: 50}
+        - {x: -35, y: 48}
+        - {x: -40, y: 45}
+        - {x: -42, y: 45}
+        - {x: -44, y: 43}
+        - {x: -46, y: 43}
+        - {x: -48, y: 41}
+        - {x: -50, y: 41}
+        - {x: -52, y: 39}
+        - {x: -54, y: 39}
+        - {x: -58, y: 37}
+        - {x: -63, y: 33}
+        - {x: -63, y: -32}
+        - {x: -60, y: -35}
+        - {x: -56, y: -36}
+        - {x: -54, y: -38}
+        - {x: -51, y: -40}
+        - {x: -47, y: -41}
+        - {x: -42, y: -45}
+        - {x: -38, y: -47}
+        - {x: -35, y: -47}
+        - {x: -31, y: -45}
+        - {x: -27, y: -41}
+      tessellationDetail: 0.78
       bones: []
       spriteID: c0c1c2484c9424f66b035b1f0df39535
       internalID: 1146190246
@@ -302,8 +426,28 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 29, y: 13}
+        - {x: 28, y: 14}
+        - {x: 28, y: 54}
+        - {x: 26, y: 56}
+        - {x: 10, y: 64}
+        - {x: -8, y: 64}
+        - {x: -16, y: 60}
+        - {x: -34, y: 50}
+        - {x: -47, y: 43}
+        - {x: -62, y: 36}
+        - {x: -64, y: 33}
+        - {x: -64, y: -33}
+        - {x: -63, y: -35}
+        - {x: -52, y: -42}
+        - {x: -43, y: -46}
+        - {x: -7, y: -64}
+        - {x: 11, y: -64}
+        - {x: 18, y: -61}
+        - {x: 24, y: -57}
+        - {x: 29, y: -53}
+      tessellationDetail: 0.42
       bones: []
       spriteID: 6ee20a5e425ae476fadb9c76b14cca0a
       internalID: -79522734
@@ -739,8 +883,8 @@ TextureImporter:
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -785,8 +929,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 49, y: 42}
+        - {x: 41, y: 46}
+        - {x: 37, y: 46}
+        - {x: 4, y: 30}
+        - {x: -5, y: 25}
+        - {x: -21, y: 17}
+        - {x: -26, y: 13}
+        - {x: -26, y: -53}
+        - {x: -24, y: -55}
+        - {x: -6, y: -64}
+        - {x: 6, y: -64}
+        - {x: 64, y: -35}
+        - {x: 64, y: 35}
+      tessellationDetail: 0.62
       bones: []
       spriteID: de4ad3aae530d438ba9e35932594800c
       internalID: -1236405102
@@ -806,8 +963,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 26, y: 13}
+        - {x: 24, y: 15}
+        - {x: 21, y: 17}
+        - {x: -37, y: 46}
+        - {x: -42, y: 46}
+        - {x: -64, y: 34}
+        - {x: -64, y: -35}
+        - {x: -61, y: -37}
+        - {x: -7, y: -64}
+        - {x: 8, y: -64}
+        - {x: 15, y: -61}
+        - {x: 21, y: -57}
+        - {x: 26, y: -53}
+      tessellationDetail: 0.54
       bones: []
       spriteID: e9e6ce1600c12486db2feac4353d01a8
       internalID: 1174754692
@@ -869,8 +1039,27 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 56, y: -39}
+        - {x: 58, y: -39}
+        - {x: 62, y: -37}
+        - {x: 64, y: -35}
+        - {x: 64, y: 35}
+        - {x: 42, y: 46}
+        - {x: 38, y: 46}
+        - {x: 5, y: 30}
+        - {x: 2, y: 27}
+        - {x: -4, y: 30}
+        - {x: -37, y: 46}
+        - {x: -42, y: 46}
+        - {x: -64, y: 34}
+        - {x: -64, y: -35}
+        - {x: -61, y: -37}
+        - {x: -7, y: -64}
+        - {x: 9, y: -64}
+        - {x: 13, y: -62}
+        - {x: 17, y: -59}
+      tessellationDetail: 0.66
       bones: []
       spriteID: 1e45f50667ecd48a083b222f76f1a828
       internalID: -1160669772
@@ -891,7 +1080,7 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: 0.84
       bones: []
       spriteID: caca224f4dfe844778d277708c81e512
       internalID: 678377675
@@ -1016,11 +1205,139 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      physicsShape:
+      - - {x: 57, y: -42}
+        - {x: 61, y: -40}
+        - {x: 64, y: -38}
+        - {x: 64, y: 64}
+        - {x: 20, y: 64}
+        - {x: 22, y: 60}
+        - {x: 23, y: 55}
+        - {x: 27, y: 47}
+        - {x: 27, y: -43}
+        - {x: 28, y: -45}
+        - {x: 37, y: -49}
+        - {x: 45, y: -49}
+        - {x: 55, y: -44}
+      - - {x: 18, y: 64}
+        - {x: -43, y: 64}
+        - {x: -44, y: 63}
+        - {x: -47, y: 56}
+        - {x: -47, y: -35}
+        - {x: -45, y: -37}
+        - {x: -38, y: -37}
+        - {x: -20, y: -27}
+        - {x: -11, y: -23}
+        - {x: 18, y: -9}
+      tessellationDetail: 0.76
       bones: []
       spriteID: 9690d688786504b55b46a3de22ef3fef
       internalID: 1051885745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_and_walls_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb37d0e70c96e49c388f0371fe04472b
+      internalID: 535074975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_and_walls_44
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92c47b0a87764164ac010b41d42f438
+      internalID: 1345501728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_and_walls_45
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa70cc6f0019247e98777c8bca70557a
+      internalID: -1831403750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_and_walls_46
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b08f79b922449b586510ee50918d85
+      internalID: 1762553413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_and_walls_47
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05835c478af4145eca8e41f6f37d41f8
+      internalID: 130787675
       vertices: []
       indices: 
       edges: []
@@ -1076,6 +1393,11 @@ TextureImporter:
       ground_and_walls_40: 582044454
       ground_and_walls_41: 1284440552
       ground_and_walls_42: 1051885745
+      ground_and_walls_43: 535074975
+      ground_and_walls_44: 1345501728
+      ground_and_walls_45: -1831403750
+      ground_and_walls_46: 1762553413
+      ground_and_walls_47: 130787675
       ground_and_walls_5: 363764160
       ground_and_walls_6: 1972231881
       ground_and_walls_7: 1146190246

@@ -22,11 +22,11 @@ public class LanternController : MonoBehaviour
     [SerializeField] private LHController lanternHead;
     [SerializeField] private SpriteRenderer fuelBar;
     [SerializeField] private float _maxIntensity = 3.0f;
-    [SerializeField] private float _minIntensity = 0.0f;
+    [SerializeField] private float _minIntensity = 0.2f;
     [SerializeField] private float _intensityPerScroll = 1.0f;
     [SerializeField] private bool _enableAttack = true;
-    [SerializeField] private float _fuelDecreaseRate = 0.00001f;
-    [SerializeField] private float _currIntensityDecreaseWeight = 0.1f;
+    [SerializeField] private float _fuelDecreaseRate = 0.001f;
+    [SerializeField] private float _currIntensityDecreaseWeight = 0.001f;
 
     public float Fuel 
 	{

@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3041613, y: -0.31195682, z: -0.059835844}
-  m_LocalScale: {x: 0.37, y: 0.37, z: 0.37}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1545111830262145556}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -195831305
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3b169f16a8b3148fba15f0d8ed171358, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -127,7 +127,7 @@ MonoBehaviour:
   - {x: 0.025724664, y: -0.15966336, z: -0.000000017565796}
   m_ShapePathHash: -1910099443
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1488
+  m_InstanceId: 190334
   m_LocalBounds:
     m_Center: {x: -0.019664437, y: -0.036102295, z: 0}
     m_Extent: {x: 0.116138846, y: 0.12897083, z: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Intensity: 0.77
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 01bf126900000000cb9b4be8
+  m_ApplyToSortingLayers: ef76eb1600000000f7d953f4f53303db097e131891971ca463edde7ca7013fd7
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
