@@ -1,14 +1,5 @@
 # Game Design Document
 
-This is a placeholder for the GDD. Your team should replace the content of this
-file with your own GDD from project 1, and continue to maintain it as discussed
-in the project specification. 
-
-Please **do not** update the repository from project 1, all updates to the GDD
-going forward should be made to this file. **Make sure that you keep this file
-named `GDD.md` and don't move it from the root directory of the repository.**
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/0n2F_Zha)
 <p align="left">
     <img src="Images/title.png" width="400">
 </p>
@@ -180,16 +171,19 @@ Other Game Differentiators<br><br>
 <table style="border: none;">
     <tr style="border: none;">
         <td style="border: none;">
-           <ul>
-               <li>Explore the world, finding:
-               <ul>
-                   <li>potions and lantern oil</li>
-                   <li><it>braziers</it>, permanent light sources that can be lit to give the player points</li>
-               </ul>
-               </li>
-               <li>Fight and kill enemies</li>
-               <li>Don't die</li>
-           </ul>
+            <ul>
+                <li>Explore the world, finding:
+                <ul>
+                    <li>potions and lantern oil</li>
+                    <li><it>braziers</it>, permanent light sources that can be lit to give the player points</li>
+                </ul>
+                </li>
+                <li>Fight and kill enemies</li>
+                <li>Don't die</li>
+                <ul>
+                    <li>If the player dies, they can retry the game, which will reset the timer back to 5 minutes.</li>
+                </ul>
+            </ul>
         </td>
         <td style="border: none;">
             <img src="Images/fire_effect.gif" width="200" />

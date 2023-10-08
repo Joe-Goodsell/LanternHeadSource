@@ -42,7 +42,7 @@ placeholder for it [here](GDD.md).
 - In total, 5 users evaluate the game, making notes either digitally or with paper and pencil.
 - The evaluation can be conducted either in person or online.
 - Audio and screen will be recorded during the evaluation.
-- All test participants will receive the same initial information through a specially created [introduction sheet](https://drive.google.com/file/d/1m9LQbf9p-MldEbRprLpEuDZeyxdEA9PV/view?usp=sharing), ensuring comparability across sessions, even when conducted by different test leaders.
+- All test participants will receive the same initial information through a specially created [introduction sheet](https://drive.google.com/file/d/1dLjN_s4AtCu-NaBUUQMKNmOWQ_3XVet7/view?usp=sharing), ensuring comparability across sessions, even when conducted by different test leaders.
 
 Why this method:
 
@@ -57,7 +57,7 @@ Why this method:
 - The user plays the game and answers a questionnaire
 - In total 16-20 users that evaluate our game
 - Feedback can be provided in an open text box
-- All test persons receive the same initial information in the form of a specially created [introduction sheet](https://drive.google.com/file/d/1fC2D0Q6SZfOMv6WR8zgU3d4ZWYwbsKUm/view?usp=sharing)
+- All test persons receive the same initial information in the form of a specially created [introduction sheet](https://drive.google.com/file/d/1rr8IC7QBDed51XXuy9KcfTNWLoqm-V8Z/view?usp=sharing)
 
 ### Why this method?
 
@@ -72,7 +72,7 @@ Why this method:
 [UEQ](https://www.ueq-online.org) and [UEQ+](https://ueqplus.ueq-research.org) focus on the *usability* of the game
 
 
-- UEP evaluates:
+- UEQ evaluates:
     - Efficiency -> how good does the user understand what to do
     - Satisfaction -> is the game easy to play?
     - Usability
@@ -175,7 +175,7 @@ How will you analyse the data?
 Who is responsible for each task?
 - All team members are responsible for recruiting participants for the evaluation. 
 - Creating evaluation plan - Linda
-- Evaluation analysis - Linda &
+- Evaluation analysis - Linda 
 - Implementing changes - everyone
 
 How will you ensure that everyone contributes equally?
