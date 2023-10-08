@@ -33,7 +33,7 @@ placeholder for it [here](GDD.md).
 - Quantitative: Usability questionnaires, Gamification questionnaire
 - Qualitative: Think Aloud, Open-text questions
 
-#### Think-Alound
+#### Think-Aloud
 
 - There will be two evaluation dates: one at an early stage with 2-3 users and a subsequent one after the questionnaire evaluation with an additional 2-3 participants.
 - Each group member conducts this method with at least one person.
@@ -59,47 +59,55 @@ Why this method:
 - Feedback can be provided in an open text box
 - All test persons receive the same initial information in the form of a specially created [introduction sheet](https://drive.google.com/file/d/1fC2D0Q6SZfOMv6WR8zgU3d4ZWYwbsKUm/view?usp=sharing)
 
-Why this method:
+### Why this method?
 
 - Questionnaires provide a consistent set of questions for all participants, ensuring that the feedback is standardised. This allows for easier analysis and comparison of results.
 - With structured responses, such as Likert scales, the data collected can be easily quantified, making it simpler to identify trends, preferences, and areas of improvement.
 - Questionnaires can be distributed to a large number of participants simultaneously. This allows for the collection of a substantial amount of feedback in a relatively short period.
 
-Evaluation consists of two questionnaire parts
+### Evaluation consists of two questionnaire parts
 
-- [UEQ](https://www.ueq-online.org) & [UEQ+](https://ueqplus.ueq-research.org) focus on the usability of the game
-    - User Experience Questionnaire evaluates
-        - Efficiency -> how good does the user understand what to do
-        - Satisfaction -> is the game easy to play?
-        - Usability
-    - Why and explanation UEQ and UEQ+
-        - Standardised UEQ questionnaire for measuring the user experience of interactive products.
-        - UEQ contains 26 items that can be classified into six categories: Attractiveness, Perspicuity, Efficiency, Dependability, Stimulation and Novelty.
-        - The UEQ+ is an extension of the UEQ Questionnaire, which is modular so that it can be optimally adapted to the evaluation of a specific product
-    - [GUESS-18](https://uxpajournal.org/validation-game-user-experience-satisfaction-scale-guess/) assesses the enjoyment and playability of the game
-        - Game User Experience Satisfaction Scale evaluates
-            - Usability/Playability               	
-            - Narratives          	
-            - Play Engrossment      	
-            - Enjoyment     	
-            - Creative Freedom 
-            - Audio Aesthetics 
-            - Personal Gratification 
-            - Social Connectivity 
-            - Visual Aesthetics 
-        - about GUESS
-            - Abridged version of the [GUESS](https://soar.wichita.edu/bitstream/handle/10057/11604/d15018_PHAN_Mikki_SP15%20SEQUESTER.pdf;jsessionid=35F354DE576A784F3DAFB6B59BE24519?sequence=1) (55 items), which is used to evaluate video games
-            - Based on 13 game related questionnaires (measuring motivation, engagement, enjoyment, experience, usability, playability,...)
-            - was created through the process of Item pool creation, followed by an expert review, a pilot study and a final expert review of the statements
-            - The participants are presented with short statements that are recorded on a 7-point Likert scale from "strongly disagree" to "strongly agree".
-        - why GUESS
-            - 7-point scale
-                - This makes it easier for participants to rate, as many tend to avoid the extreme ranges, and at the same time another scale reduces the jumps in meaning between two values.
-            - short statements with good comprehensibility
-                - therefore the subjective impression can be recorded briefly and clearly
-            - Randomised order of question
-                - Avoidance of sequence effects
-            - Social connectivity is not surveyed in the context of our game. In addition, usability/playability is already covered by the UEQ, which is why the evaluation of this questionnaire will not focus on it here. However, it is a good opportunity to compare whether similar results emerge from both surveys. 
+#### User Experience Questionnaire (UEQ and UEQ+)
+
+[UEQ](https://www.ueq-online.org) and [UEQ+](https://ueqplus.ueq-research.org) focus on the *usability* of the game
+
+
+- UEP evaluates:
+    - Efficiency -> how good does the user understand what to do
+    - Satisfaction -> is the game easy to play?
+    - Usability
+- Why and explanation UEQ and UEQ+
+    - Standardised UEQ questionnaire for measuring the user experience of interactive products.
+    - UEQ contains 26 items that can be classified into six categories: Attractiveness, Perspicuity, Efficiency, Dependability, Stimulation and Novelty.
+    - The UEQ+ is an extension of the UEQ Questionnaire, which is modular so that it can be optimally adapted to the evaluation of a specific product
+
+#### Game User Experience Satisfaction Scale (GUESS-18)
+
+[GUESS-18](https://uxpajournal.org/validation-game-user-experience-satisfaction-scale-guess/) assesses the *enjoyment and playability* of the game.
+
+- Game User Experience Satisfaction Scale evaluates
+    - Usability/Playability               	
+    - Narratives          	
+    - Play Engrossment      	
+    - Enjoyment     	
+    - Creative Freedom 
+    - Audio Aesthetics 
+    - Personal Gratification 
+    - Social Connectivity 
+    - Visual Aesthetics 
+- about GUESS
+    - Abridged version of the [GUESS](https://soar.wichita.edu/bitstream/handle/10057/11604/d15018_PHAN_Mikki_SP15%20SEQUESTER.pdf;jsessionid=35F354DE576A784F3DAFB6B59BE24519?sequence=1) (55 items), which is used to evaluate video games
+    - Based on 13 game related questionnaires (measuring motivation, engagement, enjoyment, experience, usability, playability,...)
+    - was created through the process of Item pool creation, followed by an expert review, a pilot study and a final expert review of the statements
+    - The participants are presented with short statements that are recorded on a 7-point Likert scale from "strongly disagree" to "strongly agree".
+- why GUESS
+    - 7-point scale
+        - This makes it easier for participants to rate, as many tend to avoid the extreme ranges, and at the same time another scale reduces the jumps in meaning between two values.
+    - short statements with good comprehensibility
+        - therefore the subjective impression can be recorded briefly and clearly
+    - Randomised order of question
+        - Avoidance of sequence effects
+    - Social connectivity is not surveyed in the context of our game. In addition, usability/playability is already covered by the UEQ, which is why the evaluation of this questionnaire will not focus on it here. However, it is a good opportunity to compare whether similar results emerge from both surveys. 
 
 
 ### Evaluation Process
