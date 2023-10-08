@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public const string Tag = "GameManager";
     
     public const string MenuSceneName = "StartScene";
-    public const string StartSceneName = "NewScene";
+    public const string StartSceneName = "MainScene";
     public const string EndSceneName = "EndScene";
     
     
