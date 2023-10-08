@@ -43,6 +43,7 @@ public class EnemySpawner : MonoBehaviour
 	}
 
 	private void SpawnEnemy() {
+		Debug.Log("Spawning enemy...");
 		Vector3 spawnPosition = new Vector3();
 		int spawnAttempts = 0;
 		// Generate random nearby positions until one is on the tilemap or until max attempts reached

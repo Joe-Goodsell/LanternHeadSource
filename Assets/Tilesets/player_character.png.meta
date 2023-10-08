@@ -126,12 +126,12 @@ TextureImporter:
       name: player_character_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 448
-        width: 64
+        width: 56
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: player_character_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 384
-        width: 64
+        width: 56
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: player_character_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 120
         y: 384
-        width: 64
+        width: 56
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: player_character_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
-        width: 64
+        x: 288
+        y: 384
+        width: 56
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: player_character_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 64
+        x: 64
+        y: 320
+        width: 56
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: player_character_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
+        x: 120
+        y: 320
+        width: 56
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,6 +244,90 @@ TextureImporter:
       bones: []
       spriteID: f32f8bc24ebea4ea9be147e4071b1eca
       internalID: 591316570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_character_6
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 320
+        width: 56
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1830b2a57dbd2497fa618d57441949f1
+      internalID: -1676110755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_character_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 56
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b986bc741a245079bbf633a8476c8d
+      internalID: -1635935565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_character_8
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 256
+        width: 56
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0834effbd0547f6afa38dca3a77562
+      internalID: -1965350547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_character_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 56
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0088e6bf91a49398c53459e47c2ee1
+      internalID: -109976386
       vertices: []
       indices: 
       edges: []
@@ -267,6 +351,10 @@ TextureImporter:
       player_character_3: -100329062
       player_character_4: -254151636
       player_character_5: 591316570
+      player_character_6: -1676110755
+      player_character_7: -1635935565
+      player_character_8: -1965350547
+      player_character_9: -109976386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
