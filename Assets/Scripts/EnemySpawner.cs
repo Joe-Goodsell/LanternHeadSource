@@ -10,14 +10,16 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] private Tilemap tilemap;
 	[SerializeField] private float spawnRadius = 5f;
 	[SerializeField] public int numEnemiesAlive = 0;
-	[SerializeField] private int maxEnemiesAlive = 5;
+	[SerializeField] private float maxEnemiesAlive = 5f;
 	[SerializeField] private int spawnGracePeriod = 600; // How many frames before attempting to respawn an enemy
 	[SerializeField] private GameObject potionPrefab;
 	[SerializeField] private GameObject fuelPrefab;
 	[SerializeField] private int itemDropChance = 25;
+	[SerializeField] private int maxEnemiesIncreaseSeconds = 15;
 	private int gracePeriod = 0;
 	private int maxSpawnAttempts = 10;
 	private List<Vector3> existingTilePositions = new List<Vector3>();
+	private float timeSinceLastIncrement = 0.0f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -28,6 +30,13 @@ public class EnemySpawner : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		timeSinceLastIncrement += Time.deltaTime;
+
+		if (timeSinceLastIncrement > maxEnemiesIncreaseSeconds) {
+			timeSinceLastIncrement -= maxEnemiesIncreaseSeconds;
+			maxEnemiesAlive += 1;
+		}
+
 		if (gracePeriod > 0) {
 			gracePeriod--;
 		} else if (numEnemiesAlive < maxEnemiesAlive) {
