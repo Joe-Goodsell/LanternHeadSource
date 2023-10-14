@@ -12,6 +12,7 @@ public class EnemyBehaviour : MonoBehaviour
 	public EnemySpawner spawner;
     private SpriteRenderer healthBarBorderSprite;
     private SpriteRenderer healthBarFillSprite;
+	private DamageFlash damageFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class EnemyBehaviour : MonoBehaviour
         currHealth = maxHealth;
         healthBarBorderSprite = healthBarBorder.GetComponent<SpriteRenderer>();
         healthBarFillSprite = healthBarFill.GetComponent<SpriteRenderer>();
+		damageFlash = GetComponent<DamageFlash>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class EnemyBehaviour : MonoBehaviour
     public void ReduceHealth(float damage)
     {
         currHealth -= damage;
+		damageFlash.Flash();
         healthBarFill.transform.localScale = new Vector3((currHealth / maxHealth), 
             healthBarFill.transform.localScale.y,
             healthBarFill.transform.localScale.z);

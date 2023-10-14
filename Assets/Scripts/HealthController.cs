@@ -12,6 +12,8 @@ public class HealthController : MonoBehaviour
 
 	[SerializeField] private SpriteRenderer healthBar;
 	[SerializeField] private UnityEvent onDeath;
+	private SpriteRenderer spriteRenderer;
+	private DamageFlash damageFlash;
 
 	private int CurrentHealth
 	{
@@ -38,6 +40,8 @@ public class HealthController : MonoBehaviour
 	void Start()
 	{
 		ResetHealth();
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		damageFlash = GetComponent<DamageFlash>();
 	}
 
 	public void ResetHealth()
@@ -49,6 +53,7 @@ public class HealthController : MonoBehaviour
 	{
 		Debug.Log("taking " + damage + " damage");
 		CurrentHealth = _currentHealth - damage;
+		damageFlash.Flash();
 	}
 
 	public void Heal(int health)
