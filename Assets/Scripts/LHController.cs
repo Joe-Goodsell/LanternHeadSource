@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System.Reflection;
+
+[RequireComponent(typeof(AudioSource))]
 public class LHController : MonoBehaviour
 {
     enum MoveMode
@@ -35,8 +37,14 @@ public class LHController : MonoBehaviour
     [SerializeField] private GameObject lantern;
     [SerializeField] private Collider2D attackCollider;
     [SerializeField] private bool attackReady;
+    [SerializeField] private AudioClip attackClip1;
+    [SerializeField] private AudioClip attackClip2;
+    [SerializeField] private AudioClip attackClip3;
+
     private float attackCd;
     private float _speedBuff;
+    private AudioSource audioSource;
+    private AudioClip[] audioClips;
 
     public float SpeedBuff
 	{
@@ -49,6 +57,9 @@ public class LHController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioClips = new AudioClip[] {attackClip1,attackClip2,attackClip3};
+        
         attackReady = true;
         attackCd = 0.1f;
 
@@ -80,7 +91,7 @@ public class LHController : MonoBehaviour
             Debug.Log("starting dash");
             StartCoroutine(Dash());
         }
-        if (Input.GetKey(KeyCode.Mouse0) && attackReady)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackReady)
         {
             Attack();
         }
@@ -88,6 +99,10 @@ public class LHController : MonoBehaviour
 
     private void Attack()
     {
+        audioSource.clip = audioClips[Random.Range(0,3)];
+        audioSource.Play();
+
+        
         StartCoroutine(AttackCooldown());
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)

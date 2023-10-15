@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class LightInteraction : MonoBehaviour
 {
     [SerializeField] private MonoBehaviour player;
@@ -11,6 +12,8 @@ public class LightInteraction : MonoBehaviour
     [SerializeField] private GameObject glow;
     private bool isLit;
     [SerializeField] private bool playerIsInteracting;
+    [SerializeField] private AudioClip litSound;
+    private AudioSource audioSource;
     private SpriteRenderer textRenderer;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,8 @@ public class LightInteraction : MonoBehaviour
         Debug.Log("LightInteraction initialized");
         helpText.SetActive(false);
         playerIsInteracting = false;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = GameObject.Find("litSound").GetComponent<AudioSource>().clip;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -42,6 +47,9 @@ public class LightInteraction : MonoBehaviour
 
     void SetTo(bool turnOn)
     {
+        if (turnOn && !isLit){
+            audioSource.Play();
+        }
         isLit = turnOn;
         torchFlame.SetActive(turnOn);
         torchLight.SetActive(turnOn);

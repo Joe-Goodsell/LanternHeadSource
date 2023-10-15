@@ -58,7 +58,8 @@ public class GlobalTimer : MonoBehaviour
                 currentTimeStr = string.Format("{0:00}:{1:00}", currentMinute, currentSecond);
             } else if (_currentTime < 0){
                 currentTimeStr = "0.0";
-                this.onTimesUp.Invoke();
+                var st = GameObject.Find("SceneTransition").GetComponent<SceneTransition>();
+                st.GotoEndScene();
             } else {
                 currentTimeStr = _currentTime.ToString("0.0");
             }

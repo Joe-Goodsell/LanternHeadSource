@@ -19,11 +19,40 @@ public class GameManager : MonoBehaviour
     private int _score;
     private float _health;
     private float _fuel;
+    private float _recordTime;
+    private float _startTime;
+    private bool _isVictory;
+    private bool _isFirst;
 
 
     public UnityEvent<int> OnScoreChanged { get; } = new();
     public UnityEvent<float> OnHealthChanged { get; } = new();
     public UnityEvent<float> OnFuelChanged { get; } = new();
+
+    public float RecordTime 
+    {
+        get => this._recordTime;
+        set{
+            this._recordTime = value;
+        }
+    }
+
+    public bool IsVictory 
+    {
+        get => this._isVictory;
+        set{
+            this._isVictory = value;
+        }
+    }
+
+    public bool IsFirst 
+    {
+        get => this._isFirst;
+        set{
+            this._isFirst = value;
+        }
+    }
+    
 
     public int Score
     {
@@ -79,6 +108,8 @@ public class GameManager : MonoBehaviour
         // Temporary values
         Health = 100.0f;
         Fuel = 100.0f;
+        IsVictory = false;
+        IsFirst = true;
 
     }
     
@@ -95,10 +126,12 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == StartSceneName)
+        if (scene.name == StartSceneName){
             Score = 0; 
             Health = 100.0f;
             Fuel = 100.0f;
-
+            IsVictory = false;
+        }
+           
     }
 }

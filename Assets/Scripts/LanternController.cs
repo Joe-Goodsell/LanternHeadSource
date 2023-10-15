@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System.Reflection;
+[RequireComponent(typeof(AudioSource))]
 public class LanternController : MonoBehaviour
 {
     [SerializeField] private Light2D _light2D;
@@ -27,6 +28,9 @@ public class LanternController : MonoBehaviour
     [SerializeField] private bool _enableAttack = true;
     [SerializeField] private float _fuelDecreaseRate = 0.001f;
     [SerializeField] private float _currIntensityDecreaseWeight = 0.001f;
+    [SerializeField] private AudioClip refuelSound;
+    [SerializeField] private AudioClip specialAttackSound;
+    private AudioSource audioSource;
 
     public float Fuel 
 	{
@@ -49,6 +53,7 @@ public class LanternController : MonoBehaviour
         Fuel = maxFuel;
         attackLogic = GetComponent<AttackLogic>();
         lanternHead = GameObject.Find("LanternHead").GetComponent<LHController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -90,6 +95,9 @@ public class LanternController : MonoBehaviour
 
             if (isFocussed && attackLogic.ready && Input.GetKey(KeyCode.Mouse0) && _enableAttack)
             {
+                audioSource.clip = specialAttackSound;
+                audioSource.Play();
+                
                 attackLogic.SpecialAttack();
             }
         }
@@ -106,6 +114,8 @@ public class LanternController : MonoBehaviour
 
     public void Refuel(float fuel)
     {
+        audioSource.clip = refuelSound;
+        audioSource.Play();
         Fuel += fuel;
     }
 

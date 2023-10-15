@@ -10,6 +10,11 @@ public class UISwitchPanel : MonoBehaviour
 
     private RectTransform _currentPanel;
     
+    public RectTransform[] Panel
+    {
+        get => this.panels;
+    }
+
     private void Awake()
     {
         foreach (var panel in this.panels)

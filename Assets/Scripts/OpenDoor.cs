@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class OpenDoor : MonoBehaviour
 {
     enum State {
@@ -19,6 +20,9 @@ public class OpenDoor : MonoBehaviour
     [SerializeField] private Sprite closedSprite1;
     [SerializeField] private Sprite openSprite2;
     [SerializeField] private Sprite closedSprite2;
+    [SerializeField] private AudioClip doorOpen;
+    [SerializeField] private AudioClip doorClose;
+    private AudioSource audioSource;
     private bool playerIsInteracting;
 
     private State state; 
@@ -26,6 +30,7 @@ public class OpenDoor : MonoBehaviour
     void Start()
     {
         playerIsInteracting = false;
+        audioSource = GetComponent<AudioSource>();
         SetState(State.Closed);
     }
 
@@ -66,6 +71,7 @@ public class OpenDoor : MonoBehaviour
             _openCollider.SetActive(false);
             _closedCollider.SetActive(true);
             _textRenderer.sprite = _openText;
+            
         }
     }
 
@@ -74,10 +80,14 @@ public class OpenDoor : MonoBehaviour
         Debug.Log( "flipping door state" );
         if ( state == State.Open )
         {
+            audioSource.clip = doorClose;
+            audioSource.Play();
             SetState( State.Closed );
         } 
         else 
         {
+            audioSource.clip = doorOpen;
+            audioSource.Play();
             SetState( State.Open );
         }
     }
