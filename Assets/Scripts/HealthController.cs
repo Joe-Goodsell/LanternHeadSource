@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
+[RequireComponent(typeof(AudioSource))]
 public class HealthController : MonoBehaviour
 {
 	[SerializeField] private int startingHealth = 100;
@@ -14,6 +15,8 @@ public class HealthController : MonoBehaviour
 	[SerializeField] private UnityEvent onDeath;
 	private SpriteRenderer spriteRenderer;
 	private DamageFlash damageFlash;
+	[SerializeField] private AudioClip healingSound;
+    private AudioSource audioSource;
 
 	private int CurrentHealth
 	{
@@ -42,6 +45,8 @@ public class HealthController : MonoBehaviour
 		ResetHealth();
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		damageFlash = GetComponent<DamageFlash>();
+		audioSource = GetComponent<AudioSource>();
+        
 	}
 
 	public void ResetHealth()
@@ -58,6 +63,8 @@ public class HealthController : MonoBehaviour
 
 	public void Heal(int health)
 	{
+		audioSource.clip = healingSound;
+		audioSource.Play();
 		CurrentHealth += health;
 	}
 
