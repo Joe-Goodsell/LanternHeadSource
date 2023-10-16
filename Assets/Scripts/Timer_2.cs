@@ -23,6 +23,8 @@ public class Timer_2 : GameManagerClient
     void Start()
     {
         _currentTime = _startTime;
+        // Place here so that when player press pause and return to menu, they don't have to read instruction again
+        GameManager.IsFirst = false;
     }
 
     // Update is called once per frame
@@ -39,7 +41,9 @@ public class Timer_2 : GameManagerClient
         } else if (_currentTime < 0){
             currentTimeStr = "0.0";
             GameManager.IsVictory = true;
+            Debug.Log("Set victory");
             GameManager.IsFirst = false;
+            Destroy(gameObject);
             onTimesUp.Invoke();
         } else {
             currentTimeStr = _currentTime.ToString("0.0");
@@ -51,6 +55,6 @@ public class Timer_2 : GameManagerClient
     public void saveRecord()
     {
         GameManager.RecordTime = _startTime - _currentTime;
-        GameManager.IsFirst = false;
     }
+
 }

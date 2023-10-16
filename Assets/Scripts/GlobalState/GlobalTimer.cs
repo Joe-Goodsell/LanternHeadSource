@@ -35,7 +35,6 @@ public class GlobalTimer : MonoBehaviour
             Destroy(gameObject);
 
         // Make this game object persistent even between scene changes.
-        DontDestroyOnLoad(gameObject);
         _currentTime = _startTime;
     }
 

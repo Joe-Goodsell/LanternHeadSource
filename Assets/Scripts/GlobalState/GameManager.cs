@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     private float _startTime;
     private bool _isVictory;
     private bool _isFirst;
+    private int _totalGame;
+    private int _totalVictory;
 
 
     public UnityEvent<int> OnScoreChanged { get; } = new();
@@ -51,6 +53,22 @@ public class GameManager : MonoBehaviour
         set{
             this._isFirst = value;
         }
+    }
+
+    public int TotalGame 
+    {
+        get => this._totalGame;
+        set{
+
+            this._totalGame = value;
+        } 
+    }
+    public int TotalVictory 
+    {
+        get => this._totalVictory;
+        set{
+            this._totalVictory = value;
+        } 
     }
     
 
@@ -85,7 +103,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-
+    public float averageSurvivalTime(){
+        return _recordTime / TotalGame;
+    }
 
 
 
@@ -110,7 +130,8 @@ public class GameManager : MonoBehaviour
         Fuel = 100.0f;
         IsVictory = false;
         IsFirst = true;
-
+        TotalGame = 0;
+        TotalVictory = 0;
     }
     
     public IEnumerator GotoScene(string sceneName, float delay)
