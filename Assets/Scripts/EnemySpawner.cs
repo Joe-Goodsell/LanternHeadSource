@@ -8,7 +8,8 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] private GameObject enemyPrefab;
 	[SerializeField] private GameObject player;
 	[SerializeField] private Tilemap tilemap;
-	[SerializeField] private float spawnRadius = 5f;
+	[SerializeField] private float maxSpawnRadius = 5f;
+	[SerializeField] private float minSpawnRadius = 1f;
 	[SerializeField] public int numEnemiesAlive = 0;
 	[SerializeField] private float maxEnemiesAlive = 5f;
 	[SerializeField] private int spawnGracePeriod = 600; // How many frames before attempting to respawn an enemy
@@ -58,12 +59,14 @@ public class EnemySpawner : MonoBehaviour
 		// Generate random nearby positions until one is on the tilemap or until max attempts reached
 		do {
 			spawnPosition = new Vector3(
-				Random.Range(transform.position.x - spawnRadius, transform.position.x + spawnRadius),
-				Random.Range(transform.position.y - spawnRadius, transform.position.y + spawnRadius),
+				Random.Range(transform.position.x - maxSpawnRadius, transform.position.x + maxSpawnRadius),
+				Random.Range(transform.position.y - maxSpawnRadius, transform.position.y + maxSpawnRadius),
 				0
 			);
 			spawnAttempts++;
-		} while (!IsOnTilemap(spawnPosition) && spawnAttempts < maxSpawnAttempts);
+		} while (!IsOnTilemap(spawnPosition) &&
+				spawnAttempts < maxSpawnAttempts &&
+				Vector3.Distance(spawnPosition, player.GetComponent<Transform>().position) > minSpawnRadius);
 
 		// Spawn enemy if max attempts not reached, and increment numEnemiesAlive
 		if (spawnAttempts < maxSpawnAttempts) {
