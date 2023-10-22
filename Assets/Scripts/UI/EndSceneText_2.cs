@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
-public class EndSceneText : GameManagerClient
+public class EndSceneText_2 : GameManagerClient
 {
     [SerializeField] private TextMeshProUGUI endSceneText;
 

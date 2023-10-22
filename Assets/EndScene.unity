@@ -667,8 +667,8 @@ GameObject:
   - component: {fileID: 553357651}
   - component: {fileID: 553357650}
   - component: {fileID: 553357649}
-  - component: {fileID: 553357652}
   - component: {fileID: 553357653}
+  - component: {fileID: 553357654}
   m_Layer: 5
   m_Name: VictoryPage
   m_TagString: Untagged
@@ -736,19 +736,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &553357652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553357647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a75f83e55c96f46b2abcdade7943de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endSceneText: {fileID: 1591067159}
 --- !u!114 &553357653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,6 +749,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStatText: {fileID: 1235205796}
+--- !u!114 &553357654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553357647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ba9b0adde30de4b8568aa167f67e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endSceneText: {fileID: 1591067159}
 --- !u!1 &872195987
 GameObject:
   m_ObjectHideFlags: 0
