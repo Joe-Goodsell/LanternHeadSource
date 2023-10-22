@@ -34,7 +34,6 @@ public class CandleLight : MonoBehaviour
     IEnumerator Flicker()
     {
         while (true) {
-            Debug.Log("flickering");
             coroutineActive = true;
             // step is smaller when light is brighter
             var randomStep = randomizer.NextDouble() * (2 * flickerStep) - flickerStep; 
