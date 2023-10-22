@@ -13,7 +13,7 @@ public class LightInteraction : MonoBehaviour
     [SerializeField] private SpriteRenderer snuffEffectRend;
     [SerializeField] private List<Sprite> snuffSprites;
     [SerializeField] private float snuffEffectFs;
-    private bool isLit;
+    public bool isLit;
     [SerializeField] private bool playerIsInteracting;
     private SpriteRenderer textRenderer;
     [SerializeField] private bool isTimed;
