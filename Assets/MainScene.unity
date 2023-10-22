@@ -92250,7 +92250,7 @@ GameObject:
   - component: {fileID: 1522943745}
   - component: {fileID: 1522943744}
   m_Layer: 0
-  m_Name: Props_Linda
+  m_Name: Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
