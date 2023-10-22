@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 70
       width: 53
       height: 50
-    spriteID: da523a9f1521984418cc43ee378ca2a9
+    spriteID: c3fd148b0d63d4228ae3e413517186e4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 4
       width: 50
       height: 58
-    spriteID: d78440b5e90a16d4ebfd5ce20841ee43
+    spriteID: e9f2a56d99eac46e59c1eef0fd7abea4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 4
       width: 49
       height: 62
-    spriteID: d8f6b809fe6279e4ab6ebfb25c873f89
+    spriteID: a6e83c59160724729b9812204838b3fc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 74
       width: 44
       height: 62
-    spriteID: 9abf7842ef2ea974cadf66d7b14a367a
+    spriteID: 653435085f57543139bd3b8d77894f88
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 144
       width: 39
       height: 63
-    spriteID: eba42f34e4c3ac14286dcb7e4f760081
+    spriteID: 72cc371473ba2482289491050c340f08
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -235,7 +235,7 @@ ScriptedImporter:
         y: 1
         width: 53
         height: 50
-      spriteId: da523a9f1521984418cc43ee378ca2a9
+      spriteId: c3fd148b0d63d4228ae3e413517186e4
     - name: Enemy_1_Animation_Frame_1
       frameIndex: 1
       cellRect:
@@ -243,7 +243,7 @@ ScriptedImporter:
         y: 1
         width: 50
         height: 58
-      spriteId: d78440b5e90a16d4ebfd5ce20841ee43
+      spriteId: e9f2a56d99eac46e59c1eef0fd7abea4
     - name: Enemy_1_Animation_Frame_2
       frameIndex: 2
       cellRect:
@@ -251,7 +251,7 @@ ScriptedImporter:
         y: 1
         width: 49
         height: 62
-      spriteId: d8f6b809fe6279e4ab6ebfb25c873f89
+      spriteId: a6e83c59160724729b9812204838b3fc
     - name: Enemy_1_Animation_Frame_3
       frameIndex: 3
       cellRect:
@@ -259,7 +259,7 @@ ScriptedImporter:
         y: 1
         width: 44
         height: 62
-      spriteId: 9abf7842ef2ea974cadf66d7b14a367a
+      spriteId: 653435085f57543139bd3b8d77894f88
     - name: Enemy_1_Animation_Frame_4
       frameIndex: 4
       cellRect:
@@ -267,7 +267,7 @@ ScriptedImporter:
         y: 1
         width: 39
         height: 63
-      spriteId: eba42f34e4c3ac14286dcb7e4f760081
+      spriteId: 72cc371473ba2482289491050c340f08
     linkedCells: []
     parentIndex: -1
   platformSettings: []

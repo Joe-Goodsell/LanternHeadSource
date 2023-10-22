@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 6780432458188194291}
   - component: {fileID: 1188946117861822979}
   - component: {fileID: 4907478371764686904}
-  - component: {fileID: -77137296644031035}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -84,11 +83,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d495d44addf6f4a488818ca74fdf7dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.5
+  dashSpeed: 2.5
   target: {fileID: 0}
-  damage: 10
+  damage: 30
   visionRange: 10
   wanderRadius: 2.5
+  attackDistance: 2
+  sprites:
+  - {fileID: -2853817077538804091, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
+  - {fileID: 5287863300971719231, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
+  - {fileID: -8652218253912084796, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
+  - {fileID: -7294040245943038959, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
+  - {fileID: 865462561594612643, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
+  - {fileID: -8652218253912084796, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
+  - {fileID: -2853817077538804091, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
+  attackAnimFs: 15
+  attackCd: 3
+  _spriteRenderer: {fileID: 2500831985738391500}
+  attackReady: 0
 --- !u!114 &2710404397844973016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +198,7 @@ MonoBehaviour:
   - {x: 0.058112264, y: 0.016319215, z: 0}
   m_ShapePathHash: -1637763723
   m_Mesh: {fileID: 0}
-  m_InstanceId: 184802
+  m_InstanceId: 255844
   m_LocalBounds:
     m_Center: {x: 0.008825779, y: -0.018356368, z: 0}
     m_Extent: {x: 0.049286485, y: 0.034675583, z: 0}
@@ -251,20 +264,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-77137296644031035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4299243846780599681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07d7a8efc42dbc84d85e1c7d9c94f7fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: 84d20b89075a09f47aba0ab10d77ef54, type: 2}
-  duration: 0.12
 --- !u!1 &5283385266696990268
 GameObject:
   m_ObjectHideFlags: 0

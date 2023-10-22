@@ -74,10 +74,10 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotSpace: 1
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
-    spritePadding: 0
+    spritePadding: 12
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
@@ -86,16 +86,16 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotSpace: 1
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
-    spritePadding: 0
+    spritePadding: 12
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638328288264504280
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: torch
     originalName: 
-    pivot: {x: 0.625, y: -0.86956525}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 8
-      height: 23
+      width: 20
+      height: 35
     spriteID: 231ffde7eed6e44d381bc72b88ec82fc
     spriteBone: []
     spriteOutline: []
@@ -139,6 +139,106 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: torch_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 47
+      width: 20
+      height: 35
+    spriteID: 272bea0adc6ad4be49449e78ec05f0e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 47}
+  - name: torch_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 4
+      width: 20
+      height: 35
+    spriteID: 20cb71c7717374eacb953ea07a18eef9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 4}
+  - name: torch_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 47
+      width: 20
+      height: 35
+    spriteID: b4b5d05281dad4a42a0af65aed7d6a0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 47}
+  - name: torch_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 4
+      width: 20
+      height: 35
+    spriteID: b1a4031bb99de493c9a9e0f0ce2c95b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 4}
+  - name: torch_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 47
+      width: 20
+      height: 35
+    spriteID: 613a8dc6b8b4a46d0bb93bc7c204d5eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 47}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -148,7 +248,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: torch
+    - name: torch_Frame_0
       frameIndex: 0
       cellRect:
         x: 27
@@ -156,9 +256,97 @@ ScriptedImporter:
         width: 8
         height: 23
       spriteId: 231ffde7eed6e44d381bc72b88ec82fc
+    - name: torch_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 27
+        y: 20
+        width: 8
+        height: 23
+      spriteId: 272bea0adc6ad4be49449e78ec05f0e0
+    - name: torch_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 27
+        y: 20
+        width: 8
+        height: 23
+      spriteId: 20cb71c7717374eacb953ea07a18eef9
+    - name: torch_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 27
+        y: 20
+        width: 8
+        height: 23
+      spriteId: b4b5d05281dad4a42a0af65aed7d6a0d
+    - name: torch_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 27
+        y: 20
+        width: 8
+        height: 23
+      spriteId: b1a4031bb99de493c9a9e0f0ce2c95b0
+    - name: torch_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 27
+        y: 20
+        width: 8
+        height: 23
+      spriteId: 613a8dc6b8b4a46d0bb93bc7c204d5eb
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}

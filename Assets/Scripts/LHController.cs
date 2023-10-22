@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System.Reflection;
-
 [RequireComponent(typeof(AudioSource))]
+
 public class LHController : MonoBehaviour
 {
     enum MoveMode
     {
         Normal,
-        Dash
+        Dash,
+        Attack
     }
 
     [SerializeField] private List<Sprite> _NorthSprites;
@@ -37,14 +38,12 @@ public class LHController : MonoBehaviour
     [SerializeField] private GameObject lantern;
     [SerializeField] private Collider2D attackCollider;
     [SerializeField] private bool attackReady;
-    [SerializeField] private AudioClip attackClip1;
-    [SerializeField] private AudioClip attackClip2;
-    [SerializeField] private AudioClip attackClip3;
-
-    private float attackCd;
+    [SerializeField] private float attackAnimFs;
+    [SerializeField] private float attackCd;
+    private bool isAttackAnim;
+    private List<Sprite> currList;
+    
     private float _speedBuff;
-    private AudioSource audioSource;
-    private AudioClip[] audioClips;
 
     public float SpeedBuff
 	{
@@ -54,18 +53,21 @@ public class LHController : MonoBehaviour
 			this._speedBuff = value;
 		}
 	}
+    [SerializeField] private AudioClip attackClip1;
+    [SerializeField] private AudioClip attackClip2;
+    [SerializeField] private AudioClip attackClip3;
+    private AudioSource audioSource;
+    private AudioClip[] audioClips;
+
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioClips = new AudioClip[] {attackClip1,attackClip2,attackClip3};
-        
         attackReady = true;
-        attackCd = 0.1f;
-
+        isAttackAnim = false;
+        attackAnimFs = 15;
 
         //player movement settings
-        baselineSpeed = 0.7f;
+        baselineSpeed = 1.4f;
         currSpeed = baselineSpeed;
         _speedBuff = 1.0f;
         moveMode = MoveMode.Normal;
@@ -73,15 +75,18 @@ public class LHController : MonoBehaviour
         dashSpeed = baselineSpeed * 10f;
         dashDuration = 0.1f;
         dashCd = 2.0f;
+        audioSource = GetComponent<AudioSource>();
+        audioClips = new AudioClip[] {attackClip1,attackClip2,attackClip3};
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        if (moveMode != MoveMode.Dash) // no need to update sprites during a Dash
+        if (moveMode == MoveMode.Normal) // no need to update sprites during a Dash
         {
-            List<Sprite> currList = GetSprites();
+            currList = GetSprites();
             currSprite = currList[0];
             _spriteRenderer.sprite = currSprite;
             _LightSprite.SetValue(_light2D, currSprite); 
@@ -91,7 +96,7 @@ public class LHController : MonoBehaviour
             Debug.Log("starting dash");
             StartCoroutine(Dash());
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attackReady)
+        if (Input.GetKey(KeyCode.Mouse0) && attackReady)
         {
             Attack();
         }
@@ -102,8 +107,8 @@ public class LHController : MonoBehaviour
         audioSource.clip = audioClips[Random.Range(0,3)];
         audioSource.Play();
 
-        
-        StartCoroutine(AttackCooldown());
+//        StartCoroutine(AttackCooldown());
+        StartCoroutine(PlayAttackAnimation());
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
         {
@@ -116,12 +121,21 @@ public class LHController : MonoBehaviour
         }
     }
 
-    IEnumerator AttackCooldown()
+    IEnumerator PlayAttackAnimation()
     {
         attackReady = false;
-        yield return new WaitForSeconds(attackCd);
+        Debug.Log(">>> Playing attack animation <<<");
+        moveMode = MoveMode.Attack;
+        foreach (Sprite sprite in currList)
+        {
+            _spriteRenderer.sprite = sprite;            
+            yield return new WaitForSeconds(1/attackAnimFs);
+        }
+        moveMode = MoveMode.Normal;
         attackReady = true;
+        Debug.Log("*** Attack animation complete ***");
     }
+
 
     IEnumerator Dash()
     {
@@ -132,13 +146,13 @@ public class LHController : MonoBehaviour
     }
 
 
-
     IEnumerator StartDashCd()
     {
         dashReady = false;
         yield return new WaitForSeconds(dashCd);
         dashReady = true;
     }
+
 
     void Move()
     {
@@ -157,6 +171,7 @@ public class LHController : MonoBehaviour
 
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
     }
+
 
     List<Sprite> GetSprites()
     {

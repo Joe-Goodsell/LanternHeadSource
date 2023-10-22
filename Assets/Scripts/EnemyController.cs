@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    enum State
+    {
+        Normal,
+        Attack
+    }
 	[SerializeField] private float speed = 0.5f;
+    [SerializeField] private float dashSpeed = 2.5f;
 	[SerializeField] public GameObject target;
-	[SerializeField] private int damage = 10;
+	[SerializeField] private int damage = 30;
 	[SerializeField] private float visionRange = 2.5f;
 	[SerializeField] private float wanderRadius = 2.5f;
+    [SerializeField] private float attackDistance;
+    [SerializeField] private List<Sprite> sprites;
+    [SerializeField] private float attackAnimFs;
+    [SerializeField] private float attackCd;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private bool attackReady;
+    private State state;
 	private Transform _transform;
 	private Transform targetTransform;
 	private float immunityTime = 2f;
@@ -18,6 +31,8 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
 	void Start()
 	{
+        state = State.Normal;
+        attackReady = true;
 		_transform = GetComponent<Transform>();
 		targetTransform = target.GetComponent<Transform>();
 
@@ -31,6 +46,12 @@ public class EnemyController : MonoBehaviour
 	// Move to last known player position then wander randomly
 	void Update()
 	{
+        if (state == State.Attack)
+        {
+            _transform.position += (destination - _transform.position).normalized * dashSpeed * Time.deltaTime;
+            return;
+        }
+
 		if (target == null)
 		{
 			return;
@@ -55,8 +76,34 @@ public class EnemyController : MonoBehaviour
 		}
 
 		// Move to destination
-		_transform.position += (destination - _transform.position).normalized * speed * Time.deltaTime;
+        if (distToTarget < attackDistance && attackReady)
+        {
+            StartCoroutine(Attack());
+        } else 
+        {
+            _transform.position += (destination - _transform.position).normalized * speed * Time.deltaTime;
+        }
 	}
+
+    IEnumerator Attack()
+    {
+        state = State.Attack;
+        StartCoroutine(AttackCooldown());
+        Debug.Log("attacking player");
+        foreach (Sprite sprite in sprites)
+        {
+            _spriteRenderer.sprite = sprite;
+            yield return new WaitForSeconds(1/attackAnimFs);
+        }
+        state = State.Normal;
+    }
+
+    IEnumerator AttackCooldown()
+    {
+        attackReady = false;
+        yield return new WaitForSeconds(attackCd);
+        attackReady = true;
+    }
 
 	IEnumerator Immunity()
 	{
@@ -67,7 +114,7 @@ public class EnemyController : MonoBehaviour
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Player" && !isImmune)
+		if (collision.gameObject.tag == "Player" && !isImmune && state == State.Attack)
 		{
 			HealthController healthController = collision.gameObject.GetComponent<HealthController>();
 			healthController.TakeDamage(damage);

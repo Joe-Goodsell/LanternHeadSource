@@ -9,8 +9,6 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] private GameObject helpText;
     [SerializeField] private GameObject pickup;
     [SerializeField] private bool playerIsInteracting;
-    [SerializeField] private AudioClip pickUpSound;
-    private AudioSource audioSource;
     private SpriteRenderer textRenderer;
     private HealthController healthController;
     private LanternController lanternController;
@@ -24,7 +22,7 @@ public class ItemPickup : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         lantern = GameObject.FindWithTag("Lantern");
         healthController = player.GetComponent<HealthController>();
-        lanternController = lantern.GetComponent<LanternController>();  
+        lanternController = lantern.GetComponent<LanternController>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -54,7 +52,7 @@ public class ItemPickup : MonoBehaviour
             {
                 textRenderer.enabled = false;
                 if (pickup.tag == "HealthPotion")
-                { 
+                {
                     healthController.Heal(15);
                 }
                 else if (pickup.tag == "LanternFuel")
@@ -65,5 +63,4 @@ public class ItemPickup : MonoBehaviour
             }
         }
     }
-    
 }
