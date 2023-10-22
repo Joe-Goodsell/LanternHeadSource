@@ -74,16 +74,14 @@ public class RangedEnemyController : MonoBehaviour
 		if (hit.collider == null && (Vector2.Distance(_transform.position, targetTransform.position) < visionRange)) {
 			// If has line of sight, move to player
 			destination = targetTransform.position;
+			// Move to destination
+			if (distToTarget < attackDistance && attackReady)
+			{
+				StartCoroutine(Attack((Vector2) vecToTarget));
+			}
 		}
 
-		// Move to destination
-        if (distToTarget < attackDistance && attackReady)
-        {
-            StartCoroutine(Attack((Vector2) vecToTarget));
-        } else 
-        {
-            _transform.position += (destination - _transform.position).normalized * speed * Time.deltaTime;
-        }
+		_transform.position += (destination - _transform.position).normalized * speed * Time.deltaTime;
 	}
 
     IEnumerator Attack(Vector2 target)
