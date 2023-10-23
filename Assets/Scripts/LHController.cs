@@ -77,7 +77,6 @@ public class LHController : MonoBehaviour
         dashCd = 2.0f;
         audioSource = GetComponent<AudioSource>();
         audioClips = new AudioClip[] {attackClip1,attackClip2,attackClip3};
-
     }
 
     // Update is called once per frame
@@ -107,7 +106,7 @@ public class LHController : MonoBehaviour
         audioSource.clip = audioClips[Random.Range(0,3)];
         audioSource.Play();
 
-//        StartCoroutine(AttackCooldown());
+        // StartCoroutine(AttackCooldown());
         StartCoroutine(PlayAttackAnimation());
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
@@ -132,6 +131,7 @@ public class LHController : MonoBehaviour
             yield return new WaitForSeconds(1/attackAnimFs);
         }
         moveMode = MoveMode.Normal;
+        yield return new WaitForSeconds(attackCd);
         attackReady = true;
         Debug.Log("*** Attack animation complete ***");
     }
