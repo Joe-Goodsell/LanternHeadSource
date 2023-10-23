@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PauseAndResume : MonoBehaviour
 {
     private bool pause;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject lanternHead;
+    [SerializeField] private UnityEvent onResume;
 
     void Start()
     {
@@ -41,6 +43,7 @@ public class PauseAndResume : MonoBehaviour
     public void Resume()
     {
         pause = false;
+        onResume.Invoke();
         pauseMenu.SetActive(false);
         lanternHead.SetActive(true);
         Time.timeScale = 1;
