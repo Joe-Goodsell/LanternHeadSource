@@ -125,6 +125,12 @@ public class LHController : MonoBehaviour
         attackReady = false;
         Debug.Log(">>> Playing attack animation <<<");
         moveMode = MoveMode.Attack;
+
+		// Add delay if there's no animation (other animations have 8 sprites)
+		if (currList.Count == 1) {
+			yield return new WaitForSeconds(7/attackAnimFs);
+		}
+
         foreach (Sprite sprite in currList)
         {
             _spriteRenderer.sprite = sprite;            
