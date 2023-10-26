@@ -47,6 +47,12 @@ public class LanternController : MonoBehaviour
 			fuelBar.transform.localScale = new Vector3((this._fuel / maxFuel),1,1); 
 		}
 	}
+
+    public bool EnableAttack
+    {
+        get {return this._enableAttack;}
+    }
+
     // Start is called before the first frame update
     void Start()
     {
