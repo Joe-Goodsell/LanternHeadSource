@@ -20,6 +20,7 @@ public class LightInteraction : MonoBehaviour
     [SerializeField] private float timer;
 
     [SerializeField] private AudioClip litSound;
+    [SerializeField] private AudioClip snuffSound;
     private AudioSource audioSource;
  
     // Start is called before the first frame update
@@ -30,7 +31,8 @@ public class LightInteraction : MonoBehaviour
         helpText.SetActive(false);
         playerIsInteracting = false;
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = GameObject.Find("litSound").GetComponent<AudioSource>().clip;
+        litSound = GameObject.Find("litSound").GetComponent<AudioSource>().clip;
+        snuffSound = GameObject.Find("snuff").GetComponent<AudioSource>().clip;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -66,6 +68,8 @@ public class LightInteraction : MonoBehaviour
     IEnumerator SnuffAnimation()
     {
         isLit = false;
+        audioSource.clip = snuffSound;
+        audioSource.Play();
         Debug.Log("snuffing torch... ");
         StartCoroutine(torchLight.GetComponent<CandleLight>().Fade());
         torchFlame.SetActive(false);
@@ -104,6 +108,7 @@ public class LightInteraction : MonoBehaviour
     void SetTo(bool turnOn)
     {
         if (turnOn && !isLit) {
+            audioSource.clip = litSound;
             audioSource.Play();
         }
         isLit = turnOn;
