@@ -86,7 +86,7 @@ MonoBehaviour:
   speed: 0.5
   dashSpeed: 2.5
   target: {fileID: 0}
-  damage: 30
+  damage: 15
   visionRange: 10
   wanderRadius: 2.5
   attackDistance: 2

@@ -53,11 +53,11 @@ public class ItemPickup : MonoBehaviour
                 textRenderer.enabled = false;
                 if (pickup.tag == "HealthPotion")
                 {
-                    healthController.Heal(15);
+                    healthController.Heal(25);
                 }
                 else if (pickup.tag == "LanternFuel")
                 {
-                    lanternController.Refuel(15);
+                    lanternController.Refuel(25);
                 }
                 Destroy(pickup);
             }
