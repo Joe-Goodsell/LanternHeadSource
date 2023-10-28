@@ -1,0 +1,1032 @@
+fileFormatVersion: 2
+guid: 2b79851998914454fb56b20ce2b5af01
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Waterfall_Wall_Middle_Left_Frame_0
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 108
+      height: 566
+    spriteID: f72fe96930818ec41aee347c0bd8c823
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_1
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 578
+      width: 108
+      height: 566
+    spriteID: da84ac15888cd8c40a5596ceb3c35d5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_2
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: b8328536a50960f4fb31690802325dfc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_3
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 120
+      y: 4
+      width: 108
+      height: 566
+    spriteID: 04b17787c2c062c4cae40fc2fb50aaa4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 120, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_4
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 120
+      y: 578
+      width: 108
+      height: 566
+    spriteID: d93e863a35b077d4f8a266f3b517bcbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 120, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_5
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 120
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: f27e209b944fa8947a5835c4d3e181ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 120, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_6
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 4
+      width: 108
+      height: 566
+    spriteID: a871735d15bf3794ebb80167085bae1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 236, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_7
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 578
+      width: 108
+      height: 566
+    spriteID: 79d36a2910124d946bc2af87e20e3e8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 236, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_8
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: 6ee052d91ea8d544c85c419ef8f10ced
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 236, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_9
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 4
+      width: 108
+      height: 566
+    spriteID: 5670f4981eb5b0a4eb6b8cbc7cecbfae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 352, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_10
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 578
+      width: 108
+      height: 566
+    spriteID: 51b4dcc9fc9cefe458155ae9b208436d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 352, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_11
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: 78703de7388c16849ad1850861acaca3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 352, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_12
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 468
+      y: 4
+      width: 108
+      height: 566
+    spriteID: 697b80bc733334141bdfe318857ec0ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 468, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_13
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 468
+      y: 578
+      width: 108
+      height: 566
+    spriteID: a141a58387285af4bb6a2ce7243796e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 468, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_14
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 468
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: 47c3d9a84d8bc9449b5afca09c1f5cfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 468, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_15
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 584
+      y: 4
+      width: 108
+      height: 566
+    spriteID: 6f3414410cc35f6449601aba2bdcd53a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 584, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_16
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 584
+      y: 578
+      width: 108
+      height: 566
+    spriteID: b321c8bb873d063418c33e0373db3cdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 584, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_17
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 584
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: 5cc4c8d6c2f78e94b8e1ca3f4d6962e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 584, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_18
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 700
+      y: 4
+      width: 108
+      height: 566
+    spriteID: 59ca9ffa7b14eee4aba236449d8c6088
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 700, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_19
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 700
+      y: 578
+      width: 108
+      height: 566
+    spriteID: 72162166d79053c4798dd6f2dba484d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 700, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_20
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 700
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: eb558c50efabdc04dbb2e1e68bb2df8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 700, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_21
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 816
+      y: 4
+      width: 108
+      height: 566
+    spriteID: e98dd58b09679f04c8b147ac404671e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 816, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_22
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 816
+      y: 578
+      width: 108
+      height: 566
+    spriteID: 4fac6a311843aa14db34352753a35f97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 816, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_23
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 816
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: 6ad63a859d2775d49bfad5fb22e538e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 816, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_24
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 4
+      width: 108
+      height: 566
+    spriteID: b3d138d0de81c1e4a80ec84d0f2da8e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_25
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 578
+      width: 108
+      height: 566
+    spriteID: 08df9983b25040c4194d1b05d7e068b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_26
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: 039bc7d6cb84e454e90ce9a743623c8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_27
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1048
+      y: 4
+      width: 108
+      height: 566
+    spriteID: 85a88f34cb9badf41ac26865896a18c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1048, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_28
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1048
+      y: 578
+      width: 108
+      height: 566
+    spriteID: f84c95f582e75e3449413bac0f8aef81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1048, y: 578}
+  - name: Waterfall_Wall_Middle_Left_Frame_29
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1048
+      y: 1152
+      width: 108
+      height: 566
+    spriteID: 4fd350136154faf46be5f8e4597fb4d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1048, y: 1152}
+  - name: Waterfall_Wall_Middle_Left_Frame_30
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1164
+      y: 4
+      width: 108
+      height: 566
+    spriteID: ab861bb8120a2af4aaa5da32dacdea60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1164, y: 4}
+  - name: Waterfall_Wall_Middle_Left_Frame_31
+    originalName: 
+    pivot: {x: 0.41666666, y: 0.8056537}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1164
+      y: 578
+      width: 108
+      height: 566
+    spriteID: 47ac748849daffe4ab2f0664a842c40e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1164, y: 578}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1449479461
+    name: Waterfall_Wall_Middle_Left
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Waterfall_Wall_Middle_Left_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: f72fe96930818ec41aee347c0bd8c823
+    - name: Waterfall_Wall_Middle_Left_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: da84ac15888cd8c40a5596ceb3c35d5a
+    - name: Waterfall_Wall_Middle_Left_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: b8328536a50960f4fb31690802325dfc
+    - name: Waterfall_Wall_Middle_Left_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 04b17787c2c062c4cae40fc2fb50aaa4
+    - name: Waterfall_Wall_Middle_Left_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: d93e863a35b077d4f8a266f3b517bcbb
+    - name: Waterfall_Wall_Middle_Left_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: f27e209b944fa8947a5835c4d3e181ff
+    - name: Waterfall_Wall_Middle_Left_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: a871735d15bf3794ebb80167085bae1a
+    - name: Waterfall_Wall_Middle_Left_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 79d36a2910124d946bc2af87e20e3e8f
+    - name: Waterfall_Wall_Middle_Left_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 6ee052d91ea8d544c85c419ef8f10ced
+    - name: Waterfall_Wall_Middle_Left_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 5670f4981eb5b0a4eb6b8cbc7cecbfae
+    - name: Waterfall_Wall_Middle_Left_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 51b4dcc9fc9cefe458155ae9b208436d
+    - name: Waterfall_Wall_Middle_Left_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 78703de7388c16849ad1850861acaca3
+    - name: Waterfall_Wall_Middle_Left_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 697b80bc733334141bdfe318857ec0ca
+    - name: Waterfall_Wall_Middle_Left_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: a141a58387285af4bb6a2ce7243796e3
+    - name: Waterfall_Wall_Middle_Left_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 47c3d9a84d8bc9449b5afca09c1f5cfd
+    - name: Waterfall_Wall_Middle_Left_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 6f3414410cc35f6449601aba2bdcd53a
+    - name: Waterfall_Wall_Middle_Left_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: b321c8bb873d063418c33e0373db3cdb
+    - name: Waterfall_Wall_Middle_Left_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 5cc4c8d6c2f78e94b8e1ca3f4d6962e6
+    - name: Waterfall_Wall_Middle_Left_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 59ca9ffa7b14eee4aba236449d8c6088
+    - name: Waterfall_Wall_Middle_Left_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 72162166d79053c4798dd6f2dba484d6
+    - name: Waterfall_Wall_Middle_Left_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: eb558c50efabdc04dbb2e1e68bb2df8a
+    - name: Waterfall_Wall_Middle_Left_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: e98dd58b09679f04c8b147ac404671e1
+    - name: Waterfall_Wall_Middle_Left_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 4fac6a311843aa14db34352753a35f97
+    - name: Waterfall_Wall_Middle_Left_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 6ad63a859d2775d49bfad5fb22e538e0
+    - name: Waterfall_Wall_Middle_Left_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: b3d138d0de81c1e4a80ec84d0f2da8e7
+    - name: Waterfall_Wall_Middle_Left_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 08df9983b25040c4194d1b05d7e068b1
+    - name: Waterfall_Wall_Middle_Left_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 039bc7d6cb84e454e90ce9a743623c8c
+    - name: Waterfall_Wall_Middle_Left_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 85a88f34cb9badf41ac26865896a18c3
+    - name: Waterfall_Wall_Middle_Left_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: f84c95f582e75e3449413bac0f8aef81
+    - name: Waterfall_Wall_Middle_Left_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 4fd350136154faf46be5f8e4597fb4d6
+    - name: Waterfall_Wall_Middle_Left_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: ab861bb8120a2af4aaa5da32dacdea60
+    - name: Waterfall_Wall_Middle_Left_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: -456
+        width: 108
+        height: 566
+      spriteId: 47ac748849daffe4ab2f0664a842c40e
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 90, y: 110}
