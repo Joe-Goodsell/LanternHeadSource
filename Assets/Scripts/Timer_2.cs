@@ -12,6 +12,7 @@ public class Timer_2 : GameManagerClient
     [SerializeField] private TextMeshProUGUI countDown;
     [SerializeField] private UnityEvent onTimesUp;
     [SerializeField] private float _currentTime;
+    [SerializeField] private Animator dawnAnimator;
     
    
     public float CurrentTime 
@@ -25,6 +26,7 @@ public class Timer_2 : GameManagerClient
         _currentTime = _startTime;
         // Place here so that when player press pause and return to menu, they don't have to read instruction again
         GameManager.IsFirst = false;
+        dawnAnimator = GameObject.Find("Dawn").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,6 +48,7 @@ public class Timer_2 : GameManagerClient
             Destroy(gameObject);
             onTimesUp.Invoke();
         } else {
+            dawnAnimator.SetBool("StartCountDown", true);
             currentTimeStr = _currentTime.ToString("0.0");
         }
 
