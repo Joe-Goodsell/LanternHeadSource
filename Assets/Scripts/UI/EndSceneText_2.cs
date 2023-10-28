@@ -16,7 +16,7 @@ public class EndSceneText_2 : GameManagerClient
         Debug.Log(timeSurvived);
         int currentSecond = (int) timeSurvived % 60;
         int currentMinute = (int) Math.Floor(timeSurvived / 60);
-        string victoryText = "Congratulations. You made it.";
+        string victoryText = "Congratulations. You protected the central fire and survived for 5 minutes.";
         string defeatText = string.Format("You survived for {0:00}:{1:00}", currentMinute, currentSecond); 
 
         Debug.Log(GameManager.IsVictory);

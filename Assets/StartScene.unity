@@ -1947,7 +1947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &521705189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2808,18 +2808,18 @@ MonoBehaviour:
 
     | LeftShift
 
-    | LMB
+    | Left Click
 
-    | Hold RMB
-
-    | LMB (while focussed)
+    | Hold Right Mouse Button
 
     |
-    E
+    Left Click (while focussed)
+
+    | E
 
     | Mouse Scroll
 
-    | Esc'
+    | Esc '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740a2c63ff1bc4047a000cd2201e012a, type: 2}
   m_sharedMaterial: {fileID: -3309170271305919097, guid: 740a2c63ff1bc4047a000cd2201e012a, type: 2}
@@ -2913,7 +2913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &695958243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3176,14 +3176,14 @@ MonoBehaviour:
 
     | LeftShift
 
-    | LMB
+    | Left Click
 
-    | Hold RMB
-
-    | LMB (while focussed)
+    | Hold Right Mouse Button
 
     |
-    E
+    Left Click (while focussed)
+
+    | E
 
     | Mouse Scroll
 
@@ -5011,7 +5011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1073875046
 RectTransform:
   m_ObjectHideFlags: 0
