@@ -64,7 +64,7 @@ public class LHController : MonoBehaviour
     {
         attackReady = true;
         isAttackAnim = false;
-        attackAnimFs = 15;
+        attackAnimFs = 25;
 
         //player movement settings
         baselineSpeed = 1.4f;
@@ -115,7 +115,7 @@ public class LHController : MonoBehaviour
             EnemyBehaviour enemyBehaviour = enemy.GetComponent<EnemyBehaviour>(); 
             if (attackCollider.IsTouching(enemyCollider))
             {
-                enemyBehaviour.ReduceHealth(10f); 
+                enemyBehaviour.ReduceHealth(20f); 
             }
         }
     }
