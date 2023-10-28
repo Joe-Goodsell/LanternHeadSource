@@ -17,6 +17,7 @@ public class HealthController : MonoBehaviour
 	private DamageFlash damageFlash;
 	[SerializeField] private AudioClip healingSound;
     private AudioSource audioSource;
+	[SerializeField] private GameObject bloodSplatter;
 
 	private int CurrentHealth
 	{
@@ -59,6 +60,7 @@ public class HealthController : MonoBehaviour
 		Debug.Log("taking " + damage + " damage");
 		CurrentHealth = _currentHealth - damage;
 		damageFlash.Flash();
+		Instantiate(bloodSplatter, GetComponent<Transform>().position, Quaternion.identity);
 	}
 
 	public void Heal(int health)
