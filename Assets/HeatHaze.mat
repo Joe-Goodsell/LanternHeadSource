@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HeatHaze
-  m_Shader: {fileID: 4800000, guid: 372d2e9003b5ba042b17ef669f3de33e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0414b9bed826f0d4fabd4679ff4d8d13, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -35,21 +35,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Distortion: 0.03
     - _EnableExternalAlpha: 0
-    - _ShockWaveStrength: -0.1
-    - _Size: 0.05
-    - _WaveDistanceFromCenter: 0.54
-    - _alpha: 0.51
-    - _amount: 0.55
-    - _spread: 0.31
-    - _spreadDistance: 0.5
-    - _waveStrength: 0.5
+    - _Speed: 10
+    - _alpha: 0.5
+    - _amount: 0.5
+    - _spread: 0.5
     - _width: 0.5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
