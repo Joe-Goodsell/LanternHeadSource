@@ -10,6 +10,7 @@ TagManager:
   - HealthPotion
   - GameManager
   - GlobalTimer
+  - LightSource
   layers:
   - Default
   - TransparentFX
@@ -70,4 +71,7 @@ TagManager:
     locked: 0
   - name: Pause
     uniqueID: 723420305
+    locked: 0
+  - name: Camera
+    uniqueID: 833357601
     locked: 0
