@@ -12,12 +12,17 @@ public class FireMiddle : MonoBehaviour
     [SerializeField] private float stateChangeDelay = 30f; // 30 sec delay because in the beginning all light sources are not lit
     [SerializeField] private bool canChangeState = false;
     [SerializeField] private int currentState = 2; // default second sprite, so that the fire is lit in the beginning
+    [SerializeField] private float countdownTime = 15f; // grace period to relight a light if none are lit
+    private IEnumerator cd;
+    private bool cdActive;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = fireSprites[currentState];
         StartCoroutine(InitialStateDelay());
+        cd = Countdown();
+        cdActive = false;
     }
 
     IEnumerator InitialStateDelay()
@@ -51,8 +56,32 @@ public class FireMiddle : MonoBehaviour
             {
                 ChangeSpriteForState(newState);
                 currentState = newState;
+                if (currentState == 0 && !cdActive) {
+                   StartCoroutine(cd); 
+                   cdActive = true;
+                   StartCdVFX();
+                }
+                if (currentState > 0 && cdActive) {
+                    StopCoroutine(cd);
+                    cdActive = false;
+                    StopCdVFX();
+                }
             }
         }
+    }
+
+    void StartCdVFX() {
+
+    } 
+
+    void StopCdVFX() {
+
+    }
+
+    IEnumerator Countdown()
+    {
+        yield return new WaitForSeconds(countdownTime);
+        this.onDeath.Invoke();
     }
 
     int DetermineState(float litPercentage)
@@ -70,13 +99,7 @@ public class FireMiddle : MonoBehaviour
         if (state >= 0 && state < fireSprites.Length)
         {
             spriteRenderer.sprite = fireSprites[state];
-
-            if (state == 0)
-            {
-                this.onDeath.Invoke();
-            }
-        }
-        else
+        } else
         {
             Debug.LogError("Invalid state or not enough sprites provided.");
         }
