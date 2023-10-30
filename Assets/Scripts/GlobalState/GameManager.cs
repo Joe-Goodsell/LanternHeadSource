@@ -15,10 +15,7 @@ public class GameManager : MonoBehaviour
     public const string StartSceneName = "MainScene";
     public const string EndSceneName = "EndScene";
     
-    
-    private int _score;
-    private float _health;
-    private float _fuel;
+
     private float _recordTime;
     private float _startTime;
     private bool _isVictory;
@@ -72,35 +69,7 @@ public class GameManager : MonoBehaviour
     }
     
 
-    public int Score
-    {
-        get => this._score;
-        set
-        {
-            this._score = value;
-            OnScoreChanged.Invoke(this._score);
-        }
-    }
-
-    public float Health
-    {
-        get => this._health;
-        set
-        {
-            this._health = value;
-            OnHealthChanged.Invoke(this._health);
-        }
-    }
-
-    public float Fuel
-    {
-        get => this._fuel;
-        set
-        {
-            this._fuel = value;
-            OnFuelChanged.Invoke(this._fuel);
-        }
-    }
+    
 
 
     public float averageSurvivalTime(){
@@ -123,11 +92,6 @@ public class GameManager : MonoBehaviour
         // Hook into scene loaded events.
         SceneManager.sceneLoaded += OnSceneLoaded;
 
-        // Init global game state values and/or set defaults.
-        Score = 0;
-        // Temporary values
-        Health = 100.0f;
-        Fuel = 100.0f;
         IsVictory = false;
         IsFirst = true;
         TotalGame = 0;
@@ -148,9 +112,6 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == StartSceneName){
-            Score = 0; 
-            Health = 100.0f;
-            Fuel = 100.0f;
             IsVictory = false;
         }
            
