@@ -12,6 +12,8 @@ public class AttackLogic : MonoBehaviour
     [SerializeField] private float normalInnerAngle;
     [SerializeField] private float fuelCost;
     [SerializeField] private float cdTime;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip specialAttackHit;
     public bool isAttacking { get; private set;}
     public bool ready { get; private set;}
 
@@ -26,6 +28,7 @@ public class AttackLogic : MonoBehaviour
         normalColor = _light2D.color;
         normalIntensity = _light2D.intensity;
         normalInnerAngle = _light2D.pointLightInnerAngle;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -85,6 +88,7 @@ public class AttackLogic : MonoBehaviour
                 else {
                     damage = damage;
                 }
+                audioSource.PlayOneShot(specialAttackHit);
                 hit.collider.gameObject.GetComponent<EnemyBehaviour>().ReduceHealth(damage); // Write ReduceHealth method in Enemy class.
             }
         }

@@ -2913,7 +2913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &695958243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6837,7 +6837,11 @@ MonoBehaviour:
 
 
     |
-    Special attack is disabled when fuel level < 30%'
+    Special attack is disabled when fuel level < 30%
+
+
+    | Movement speed decreases
+    when fuel level < 50%'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740a2c63ff1bc4047a000cd2201e012a, type: 2}
   m_sharedMaterial: {fileID: -3309170271305919097, guid: 740a2c63ff1bc4047a000cd2201e012a, type: 2}

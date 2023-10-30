@@ -56,8 +56,9 @@ public class LHController : MonoBehaviour
     [SerializeField] private AudioClip attackClip1;
     [SerializeField] private AudioClip attackClip2;
     [SerializeField] private AudioClip attackClip3;
+    [SerializeField] private AudioClip attackHit;
     private AudioSource audioSource;
-    private AudioClip[] audioClips;
+    private AudioClip[] attackClips;
 
     // Start is called before the first frame update
     void Start()
@@ -76,7 +77,7 @@ public class LHController : MonoBehaviour
         dashDuration = 0.1f;
         dashCd = 2.0f;
         audioSource = GetComponent<AudioSource>();
-        audioClips = new AudioClip[] {attackClip1,attackClip2,attackClip3};
+        attackClips = new AudioClip[] {attackClip1,attackClip2,attackClip3};
     }
 
     // Update is called once per frame
@@ -103,7 +104,7 @@ public class LHController : MonoBehaviour
 
     private void Attack()
     {
-        audioSource.clip = audioClips[Random.Range(0,3)];
+        audioSource.clip = attackClips[Random.Range(0,3)];
         audioSource.Play();
 
         // StartCoroutine(AttackCooldown());
@@ -115,6 +116,7 @@ public class LHController : MonoBehaviour
             EnemyBehaviour enemyBehaviour = enemy.GetComponent<EnemyBehaviour>(); 
             if (attackCollider.IsTouching(enemyCollider))
             {
+                audioSource.PlayOneShot(attackHit);
                 enemyBehaviour.ReduceHealth(20f); 
             }
         }
