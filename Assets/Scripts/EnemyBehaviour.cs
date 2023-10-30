@@ -9,6 +9,9 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float currHealth;
     [SerializeField] private GameObject healthBarBorder;
     [SerializeField] private GameObject healthBarFill;
+	[SerializeField] private GameObject bloodSplatter;
+	[SerializeField] private int deathParticles = 30;
+	[SerializeField] private int particleDivisor = 7;
 	public EnemySpawner spawner;
     private SpriteRenderer healthBarBorderSprite;
     private SpriteRenderer healthBarFillSprite;
@@ -30,12 +33,20 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void ReduceHealth(float damage)
     {
+		// Spawn damage particles
+		var bloodParticleSystem = Instantiate(bloodSplatter, transform.position, Quaternion.identity).GetComponent<ParticleSystem>().main;
+		bloodParticleSystem.startColor = Color.black;
+		bloodParticleSystem.gravityModifier = 0f;
+		bloodParticleSystem.startSpeed = 0.7f;
+
         currHealth -= damage;
         healthBarFill.transform.localScale = new Vector3((currHealth / maxHealth), 
             healthBarFill.transform.localScale.y,
             healthBarFill.transform.localScale.z);
         if (currHealth <= 0)
         {
+			bloodParticleSystem.maxParticles = deathParticles;
+
 			// Let spawner know they died (Manually added enemies have no spawner)
 			if (spawner != null) {
 				spawner.numEnemiesAlive--;
@@ -45,6 +56,7 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(enemy);
         } else
         {
+			bloodParticleSystem.maxParticles = (int) damage / particleDivisor;
             StartCoroutine(DisplayHealth());
         }
     }

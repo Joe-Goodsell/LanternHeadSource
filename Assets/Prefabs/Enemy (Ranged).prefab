@@ -88,6 +88,9 @@ MonoBehaviour:
   currHealth: 0
   healthBarBorder: {fileID: 7763734186572066725}
   healthBarFill: {fileID: 5283385266696990268}
+  bloodSplatter: {fileID: 8397840147510016764, guid: fd70018e8ec57b942932ebc90b14916d, type: 3}
+  deathParticles: 30
+  particleDivisor: 7
   spawner: {fileID: 0}
 --- !u!212 &2500831985738391500
 SpriteRenderer:
