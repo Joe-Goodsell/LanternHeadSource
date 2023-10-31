@@ -229,6 +229,7 @@ Other Game Differentiators<br><br>
 - Around 6 enemy attacks will reduce the player to 0 health
 
 ### Enemy Spawning and Behaviour
+
 - Enemies attempt to spawn in a random position in a radius of 5 around the player.
 - Enemies will attempt to find valid spawn positions up to 10 times before a spawn fails.
 - If the spawn was successful the spawner will wait 7.5 seconds before attempting to spawn another, otherwise it will wait a quarter of that time.
@@ -295,9 +296,9 @@ Inspiration for games where light is important for gameplay include Cryospace an
 - Depending on how many light sources are lit, the size of the fire changes (calculation of the states in the table below)
 - The light sources can also be blown out again by enemies or by a random snuff effect that we have implemented (Therefore, the player must constantly light the light sources and cannot light them only once at the beginning and then hide)
 
-| State             | 0      | 1      | 2      | 3      | 4      | 5       |
-| ------------------| ------ | ------ | ------ | ------ | ------ | ------- |
-| Lightsources lit  | 0%     | 1-20%  | 21-40% | 41-60% | 61-80% | 81-100% |
+| State            | 0   | 1     | 2      | 3      | 4      | 5       |
+| ---------------- | --- | ----- | ------ | ------ | ------ | ------- |
+| Lightsources lit | 0%  | 1-20% | 21-40% | 41-60% | 61-80% | 81-100% |
 
 ### Camera/View
 
@@ -499,7 +500,7 @@ Our team loves the pixel art style and thinks that it will be the best fit for o
 
 <br>
 
-<b>List of Candidate [Sound Effects](https://github.com/COMP30019/project-1-knibbe/tree/42b209116b04df27b42ec9345d7ecce6760bd225/SoundEffects)</b>
+<b>List of Candidate Sound Effects</b>
 | Sound Effects | References |
 | -------- | -------- |
 | Speical Attack | [Fuel explosion](https://mixkit.co/free-sound-effects/fire/) |
@@ -753,5 +754,5 @@ Our team loves the pixel art style and thinks that it will be the best fit for o
 | Time constraints (work, other subjects)                                             | Good time management, efficient working, equal distributed tasks |
 | Unity, GitHub or Scripting problems                                                 | Attend classes, ask questions early enough, own research         |
 | Merge conflicts                                                                     | Utilize Communication channel to schedule commits                |
-| Creating own assets, very time consuming                                            | distributet the work to two people                               |     
-| evaluations got delayed due to time issues                                          | did evaluations later than planned, shorter time for analysis
+| Creating own assets, very time consuming                                            | distributet the work to two people                               |
+| evaluations got delayed due to time issues                                          | did evaluations later than planned, shorter time for analysis    |
