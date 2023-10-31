@@ -507,7 +507,9 @@ The evaluations have shown us that we have succeeded in our goal of creating an 
 
 ## Shaders and Special Effects
 
-We developed two custom shaders for our game: the [Heat Haze Shader]("Assets/HeatHaze.shader") and the [Enemy Special Attack Shader]("Assets/EnemySpecialAttack.shader"). These shaders explored the power of the \_CameraSortingLayerTexture in shader language to create distinct distortion effects that integrated with the in-game scene and make more appeling visual effects.
+We developed two custom shaders for our game: the [Heat Haze Shader]("Assets/HeatHaze.shader") and the [Enemy Special Attack Shader]("Assets/EnemySpecialAttack.shader"). The *HeatHaze* shader displaces pixels captured by the `CameraSortingLayerTexture` according to the intensity of the alpha channel of a sampled pseudo-noise texture, then displaces in `x` by the cosine of time and in `y` by the sine of time, creating a wavy effect. The heat haze is applied to various torches and candles in the game. 
+
+These shaders explored the power of the `CameraSortingLayerTexture` in shader language to create distinct distortion effects that integrated with the in-game scene and make more appealing visual effects.
 
 Drawing inspiration from [this tutorial]("https://www.youtube.com/watch?v=-spc1GJAtLY"), we discovered that through manipulating unity layer settings, we could create a transparent shader capable of manipulating the camera view to introduce interesting distortion effects to our game environment.
 
@@ -516,12 +518,6 @@ The Heat Haze Shader utilized the \_CameraSortingLayerTexture and incorporating 
 On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the visual impact of our enemy attacks. This shader integrates the CameraCaptureLayer with the smoothstep function, which effectively interpolates values to create a captivating void orb. When shot by the enemy, player will see a transparent orb that distorts the game environment, immersing players in a visually dynamic experience. Also, we incorporated dynamic sizing for the orb with the game time to further enhance the visual effects.
 
 [Detail of the particle effects]
-
-<p align="center">
-    <img src="Images/bloodgif.gif" width="500">
-    <img src="Images/enemypopgif.gif" width="500">
-</p>
-
 
 <p align="center">
     <img src="Images/enemypopgif.gif" width=300>
