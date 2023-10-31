@@ -515,7 +515,7 @@ Drawing inspiration from [this tutorial]("https://www.youtube.com/watch?v=-spc1G
 
 The Heat Haze Shader utilized the \_CameraSortingLayerTexture and incorporating a custom noise texture that inspired by [this tutorial]("https://lindenreidblog.com/2018/03/05/heat-distortion-shader-tutorial/") to simulate random distortion patterns, closely resembling the visual dynamics of a real heat haze.
 
-On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the visual impact of our enemy attacks. This shader integrates the CameraCaptureLayer with the smoothstep function, which effectively interpolates values to create a captivating void orb. When shot by the enemy, player will see a transparent orb that distorts the game environment, immersing players in a visually dynamic experience. Also, we incorporated dynamic sizing for the orb with the game time to further enhance the visual effects.
+On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the visual impact of our enemy attacks. This shader integrates the \_CameraSortingLayerTexture with the smoothstep function, which effectively interpolates values to create a captivating void orb. When shot by the enemy, player will see a transparent orb that distorts the game environment, immersing players in a visually dynamic experience. Also, we incorporated dynamic sizing for the orb with the game time to further enhance the visual effects.
 
 [Detail of the particle effects]
 
