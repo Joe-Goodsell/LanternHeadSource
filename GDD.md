@@ -228,6 +228,17 @@ Other Game Differentiators<br><br>
 
 - Around 6 enemy attacks will reduce the player to 0 health
 
+### Enemy Spawning and Behaviour
+- Enemies attempt to spawn in a random position in a radius of 5 around the player.
+- Enemies will attempt to find valid spawn positions up to 10 times before a spawn fails.
+- Whether the spawn was successful or not the spawner will wait 600 frames before attempting to spawn another.
+- Each successful attempt has a 25% chance of spawning a ranged enemy and a 75% chance of spawning a melee enemy.
+- Enemies will despawn if their distance from the player passes 7.
+- Spawning will continue for as long as the number of living enemies is less than 5.
+- Enemies will wander around until they have line of sight of the player, and will move to the players last known position when line of sight is lost
+- Ranged enemies will wait and fire from their vision range while the player is still visible
+- All enemies have a 50% chance of dropping either a health potion or fuel, with equal probability
+
 ### Lantern/Light feature
 
 <table>
