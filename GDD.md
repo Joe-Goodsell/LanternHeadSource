@@ -400,10 +400,10 @@ The game will take place entirely indoors. The level design will take inspiratio
 
 <p align="center">
         <img src="Images/Game_Layout.png" width="500">
-        <p align="center">
+        <p align="center"> The world will feature sections ranging from grand halls to claustrophobic corridors.
 </p>
 
-The world will feature sections ranging from grand halls to claustrophobic corridors.
+
 
 ### Game World Graphics and Physics
 
