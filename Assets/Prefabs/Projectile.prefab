@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8289066536807668953}
   - component: {fileID: 5761971078166599656}
   - component: {fileID: 2923109771302272641}
+  - component: {fileID: 5650797116245736754}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -55,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9717949d4484a6b4aac6c7aed90932e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -195831305
-  m_SortingLayer: 1
+  m_SortingLayerID: 833357601
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,67 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 707608329, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -147676657, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 715567545, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 278798265, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1015866189, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1377502148, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1569279712, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -750454118, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -277052442, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -432572811, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 49545287, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 850376536, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -56933596, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 559198911, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1436133512, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1281189503, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 630398716, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 27013464, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1187452274, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1038769648, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 2110077189, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1981847492, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 889310963, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1052371551, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1508350952, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -438533190, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1352503671, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -267438611, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1557032120, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 787974601, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 762282784, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1696658482, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -680322249, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -159155933, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -785219225, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1750050594, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1825369779, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1152695757, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 392573282, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1132841939, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 10280939, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 397657364, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1493358817, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -328503947, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1180680170, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1377299164, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -898086623, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1257235678, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 1138966626, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1482573872, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 2040050924, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 948926606, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 111853403, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1888428820, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 384540139, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -538333351, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1512469994, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -979946409, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -1769870697, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: 2141454568, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
-  - {fileID: -283899325, guid: b82d1f5019d3c45449529c29a6e0a618, type: 3}
+  - {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   spriteRenderer: {fileID: 7705860872327823415}
   fs: 60
   bobRate: 0
@@ -227,3 +168,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d720fb054bec64020865ea24d6b201c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &5650797116245736754
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892555621933676842}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
