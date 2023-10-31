@@ -507,7 +507,15 @@ The evaluations have shown us that we have succeeded in our goal of creating an 
 
 ## Shaders and Special Effects
 
-TODO (due milestone 3) - see specification for details
+We developed two custom shaders for our game: the [Heat Haze Shader]("Assets/HeatHaze.shader") and the [Enemy Special Attack Shader]("Assets/EnemySpecialAttack.shader"). These shaders explored the power of the \_CameraSortingLayerTexturein shader language to create distinct distortion effects that integrated with the in-game scene and make more appeling visual effects.
+
+Drawing inspiration from [this tutorial]("https://www.youtube.com/watch?v=-spc1GJAtLY"), we discovered that through manipulating unity layer settings, we could create a transparent shader capable of manipulating the camera view to introduce interesting distortion effects to our game environment.
+
+The Heat Haze Shader utilized the \_CameraSortingLayerTexture and incorporating a custom noise texture that inspired by [this tutorial]("https://lindenreidblog.com/2018/03/05/heat-distortion-shader-tutorial/") to simulate random distortion patterns, closely resembling the visual dynamics of a real heat haze.
+
+On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the visual impact of our enemy attacks. This shader integrates the CameraCaptureLayer with the smoothstep function, which effectively interpolates values to create a captivating void orb. When shot by the enemy, player will see a transparent orb that distorts the game environment, immersing players in a visually dynamic experience. Also, we incorporated dynamic sizing for the orb with the game time to further enhance the visual effects.
+
+[Detail of the particle effects]
 
 ## Summary of Contributions
 
