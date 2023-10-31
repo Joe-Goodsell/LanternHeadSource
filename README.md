@@ -543,11 +543,6 @@ Enemies spawn the same prefab as players on taking damage but modify some values
 </p>
 
 
-<p align="center">
-    <img src="Images/enemypopgif.gif" width=300>
-    <img src="Images/bloodgif.gif" width=300>
-</p>
-
 ## Summary of Contributions
 
 | Task                       | Main Responsibility | Collaboration |
