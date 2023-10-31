@@ -234,7 +234,7 @@ Other Game Differentiators<br><br>
 - If the spawn was successful the spawner will wait 600 frames before attempting to spawn another, otherwise it will wait a quarter of that time.
 - Each successful attempt has a 25% chance of spawning a ranged enemy and a 75% chance of spawning a melee enemy.
 - Enemies will despawn if their distance from the player passes 7.
-- Spawning will continue for as long as the number of living enemies is less than 5.
+- Spawning will continue for as long as the number of living enemies is less than 5 + the number of minutes since game start.
 - Enemies will wander around until they have line of sight of the player, and will move to the players last known position when line of sight is lost
 - Ranged enemies will wait and fire from their vision range while the player is still visible
 - All enemies have a 50% chance of dropping either a health potion or fuel, with equal probability
