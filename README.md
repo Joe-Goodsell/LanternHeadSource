@@ -507,7 +507,7 @@ The evaluations have shown us that we have succeeded in our goal of creating an 
 
 ## Shaders and Special Effects
 
-We developed two custom shaders for our game: the [Heat Haze Shader]("Assets/HeatHaze.shader") and the [Enemy Special Attack Shader]("Assets/EnemySpecialAttack.shader"). These shaders explored the power of the \_CameraSortingLayerTexturein shader language to create distinct distortion effects that integrated with the in-game scene and make more appeling visual effects.
+We developed two custom shaders for our game: the [Heat Haze Shader]("Assets/HeatHaze.shader") and the [Enemy Special Attack Shader]("Assets/EnemySpecialAttack.shader"). These shaders explored the power of the \_CameraSortingLayerTexture in shader language to create distinct distortion effects that integrated with the in-game scene and make more appeling visual effects.
 
 Drawing inspiration from [this tutorial]("https://www.youtube.com/watch?v=-spc1GJAtLY"), we discovered that through manipulating unity layer settings, we could create a transparent shader capable of manipulating the camera view to introduce interesting distortion effects to our game environment.
 
