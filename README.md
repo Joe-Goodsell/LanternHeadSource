@@ -516,10 +516,28 @@ The Heat Haze Shader utilized the \_CameraSortingLayerTexture and incorporating 
 On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the visual impact of our enemy attacks. This shader integrates the CameraCaptureLayer with the smoothstep function, which effectively interpolates values to create a captivating void orb. When shot by the enemy, player will see a transparent orb that distorts the game environment, immersing players in a visually dynamic experience. Also, we incorporated dynamic sizing for the orb with the game time to further enhance the visual effects.
 
 [Detail of the particle effects]
+### Damage Particle System
+#### Player
+* BloodSplatter Particle System object with matching script is spawned at the player when they take damage.
+* Particles last 0.5 seconds each, move at 1.0f under 0.7f gravity, and shrink faster the longer they exist.
+* Blood particles are generated in a burst of 30, initially moving in a semicircle upwards.
+* The particle system is destroyed 1 second after it is created.
+* Particles collide with the environment and are affected by light, since that felt the most immersive when testing.
 
 <p align="center">
     <img src="Images/bloodgif.gif" width="500">
-    <img src="Images/enemypopgif.gif" width="500">
+</p>
+
+#### Enemies
+Enemies spawn the same prefab as players on taking damage but modify some values after instantiation:
+1. The colour is set to black to match their shadow theme
+2. Gravity is turned off to make them feel weightless and ethereal
+3. Particle start speed is set to 0.7f for the same reason
+4. The number of particles spawned is set to 1/7th the damage dealt, giving a feeling of impact to stronger attacks
+5. The full 30 particles are spawned on death to show the enemies bursting or dispersing for immersion and to give a indication they died since health bars don't show on enemy death
+
+<p align="center">
+	<img src="Images/enemypopgif.gif" width="500">
 </p>
 
 
