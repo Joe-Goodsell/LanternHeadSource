@@ -283,6 +283,22 @@ Inspiration for games where light is important for gameplay include Cryospace an
   Gameplay still from Cryospace showing limited visibility and a player controlled light source
 </p>
 
+### Central Fire
+
+<p align="center">
+    <img src="Images/central_fire.png" width="300">
+</p>
+
+- Fire need to stay lit, for that to happen the player needs to light torches and candles that are spread across the map
+- If the fire goes out, the player dies
+- Since there is no light source lit at the beginning, we have built in a delay of 30 seconds.
+- Depending on how many light sources are lit, the size of the fire changes (calculation of the states in the table below)
+- The light sources can also be blown out again by enemies or by a random snuff effect that we have implemented (Therefore, the player must constantly light the light sources and cannot light them only once at the beginning and then hide)
+
+| State             | 0      | 1      | 2      | 3      | 4      | 5       |
+| ------------------| ------ | ------ | ------ | ------ | ------ | ------- |
+| Lightsources lit  | 0%     | 1-20%  | 21-40% | 41-60% | 61-80% | 81-100% |
+
 ### Camera/View
 
 - Fixed rotation 3rd person isometric with approx. 45° viewing angle
@@ -320,7 +336,7 @@ Actual in-game camera view
 </p>
 
 - Left Shift to _dash_, briefly increasing movement speed.
-- Escape button to show pause menu while in game
+- Escape button to show pause menu while in game (Implemented so that the player can check the controls again during the game)
 
 ### Progression
 
@@ -520,6 +536,10 @@ Our team loves the pixel art style and thinks that it will be the best fit for o
 <p align="center">
     <img id="ui_mockup" src="Images/UI.png" width="600">
 </p>
+
+- Before the game starts we included a short introduction to the game.
+- It will show after the first start and explains backstory, controls and game environment
+- Intro won't show again after the player died.
 
 ## Technology and Tools
 
@@ -733,3 +753,5 @@ Our team loves the pixel art style and thinks that it will be the best fit for o
 | Time constraints (work, other subjects)                                             | Good time management, efficient working, equal distributed tasks |
 | Unity, GitHub or Scripting problems                                                 | Attend classes, ask questions early enough, own research         |
 | Merge conflicts                                                                     | Utilize Communication channel to schedule commits                |
+| Creating own assets, very time consuming                                            | distributet the work to two people                               |     
+| evaluations got delayed due to time issues                                          | did evaluations later than planned, shorter time for analysis
