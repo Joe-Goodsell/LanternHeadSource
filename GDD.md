@@ -35,7 +35,7 @@
 <table style="border: none;">
     <tr style="border: none;">
         <td style="border: none;">
-            Tasked with protecting a sacred light from the encroaching darkness, they must navigate the night and evade the darkness's minions. Chased by the "darkness" and its zealous supporters, the acolyte's mission is to ensure the flame remains lit, representing hope for another day. With just 5 minutes until dawn, every second counts, for if the flame is extinguished, fear will spread unchecked throughout the land.
+            Tasked with protecting a sacred light from the encroaching darkness, they must navigate the night and evade the minions of the dark. Chased by the "darkness" and its zealous supporters, the acolyte's mission is to ensure the flame remains lit, representing hope for another day. With just 5 minutes until dawn, every second counts, for if the flame is extinguished, fear will spread unchecked throughout the land.
         </td>
         <td style="border: none;">
             <img src="Images/Core_concept_1.jpg"/>

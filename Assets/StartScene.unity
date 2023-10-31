@@ -2230,7 +2230,7 @@ MonoBehaviour:
     temple as you struggle to keep the darkness out. As a reward for your devotion,
     you have been transformed into a living lantern\n\nTasked with protecting a sacred
     light from the encroaching darkness, you must navigate the night and evade the
-    darkness's minions. \n\nChased by the \"darkness\" and its zealous supporters,
+    minions of the dark.\n\nChased by the \"darkness\" and its zealous supporters,
     your mission is to ensure the flame remains lit, representing hope for another
     day. \n"
   m_isRightToLeft: 0
@@ -2913,7 +2913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &695958243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5415,7 +5415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1135505499
 RectTransform:
   m_ObjectHideFlags: 0

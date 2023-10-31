@@ -9,26 +9,29 @@ public class GameUIUpdates : MonoBehaviour
     [SerializeField] private GameObject specialAttack;
     [SerializeField] private LanternController lanternController;
     [SerializeField] private AttackLogic attackLogic;
+    private bool coroutineStarted;
+    private int litLights;
     
     // Start is called before the first frame update
     void Start()
     {
         lanternController = GameObject.Find("LanternLight").GetComponent<LanternController>();
         attackLogic = GameObject.Find("LanternLight").GetComponent<AttackLogic>();
+        StartCoroutine(candleWarning());
     }
 
     // Update is called once per frame
     void Update()
     {
-        int litLights = 0;
+        litLights = 0;
 
-            foreach (var light in GameObject.FindGameObjectsWithTag("LightSource"))
+        foreach (var light in GameObject.FindGameObjectsWithTag("LightSource"))
+        {
+            if (light.GetComponent<LightInteraction>().isLit) 
             {
-                if (light.GetComponent<LightInteraction>().isLit) 
-                {
-                    litLights++;
-                }
+                litLights++;
             }
+        }
         
         string candleCountStr = string.Format(": {0}", litLights);
         candleCount.text = candleCountStr;
@@ -42,5 +45,29 @@ public class GameUIUpdates : MonoBehaviour
             specialAttack.SetActive(false);
         }
 
+    }
+
+    IEnumerator candleWarning()
+    {
+        coroutineStarted = true;
+        candleCount.faceColor = new Color32(255,0,0,255);
+        while (true)
+        {
+            if (litLights <= 1)
+            {
+                while(litLights <= 1)
+                {
+                    yield return new WaitForSeconds(0.5f);
+                    candleCount.faceColor = new Color32(255,0,0,0);
+                    yield return new WaitForSeconds(0.5f);
+                    candleCount.faceColor = new Color32(255,0,0,255);
+                }
+            }
+            else
+            {
+                candleCount.faceColor = new Color32(255,255,255,255);
+                yield return null;
+            }
+        }   
     }
 }
