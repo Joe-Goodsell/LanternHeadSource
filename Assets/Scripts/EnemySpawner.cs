@@ -32,8 +32,11 @@ public class EnemySpawner : MonoBehaviour
 		if (gracePeriod > 0) {
 			gracePeriod--;
 		} else if (numEnemiesAlive < maxEnemiesAlive) {
-			SpawnEnemy();
-			gracePeriod = spawnGracePeriod;
+			if (SpawnEnemy()) {
+				gracePeriod = spawnGracePeriod;
+			} else {
+				gracePeriod = spawnGracePeriod / 4;
+			}
 		}
 	}
 
@@ -43,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
 		return tilemap.HasTile(tilemap.WorldToCell(position));
 	}
 
-	private void SpawnEnemy() {
+	private bool SpawnEnemy() {
 		Debug.Log("Spawning enemy...");
 		Vector3 spawnPosition = new Vector3();
 		int spawnAttempts = 0;
@@ -80,8 +83,10 @@ public class EnemySpawner : MonoBehaviour
             }
 			numEnemiesAlive++;
 			Debug.Log("Spawn Successful");
+			return true;
 		} else {
 			Debug.Log("Spawn Failed");
+			return false;
 		}
 	}
 

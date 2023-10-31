@@ -231,7 +231,7 @@ Other Game Differentiators<br><br>
 ### Enemy Spawning and Behaviour
 - Enemies attempt to spawn in a random position in a radius of 5 around the player.
 - Enemies will attempt to find valid spawn positions up to 10 times before a spawn fails.
-- Whether the spawn was successful or not the spawner will wait 600 frames before attempting to spawn another.
+- If the spawn was successful the spawner will wait 600 frames before attempting to spawn another, otherwise it will wait a quarter of that time.
 - Each successful attempt has a 25% chance of spawning a ranged enemy and a 75% chance of spawning a melee enemy.
 - Enemies will despawn if their distance from the player passes 7.
 - Spawning will continue for as long as the number of living enemies is less than 5.
