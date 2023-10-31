@@ -72,9 +72,8 @@ public class EnemyController : MonoBehaviour
 		// Despawn if too far from player
 		if (distToTarget > despawnRadius)
 		{
-			// Doing it this way to update spawner
 			Debug.Log("Despawning enemy...");
-			GetComponent<EnemyBehaviour>().ReduceHealth(1000);
+			GetComponent<EnemyBehaviour>().Despawn();
 		}
 
 		RaycastHit2D hit = Physics2D.Linecast(_transform.position, targetTransform.position, (1<<6));
