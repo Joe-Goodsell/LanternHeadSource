@@ -534,7 +534,7 @@ Enemies spawn the same prefab as players on taking damage but modify some values
 2. Gravity is turned off to make them feel weightless and ethereal
 3. Particle start speed is set to 0.7f for the same reason
 4. The number of particles spawned is set to 1/7th the damage dealt, giving a feeling of impact to stronger attacks
-5. The full 30 particles are spawned on death to show the enemies bursting or dispersing for immersion and to give a indication they died since health bars don't show on enemy death
+5. The full 30 particles are spawned on death to show the enemies bursting or dispersing for immersion and to give an indication they died since health bars don't show on enemy death
 
 <p align="center">
 	<img src="Images/enemypopgif.gif" width="500">
