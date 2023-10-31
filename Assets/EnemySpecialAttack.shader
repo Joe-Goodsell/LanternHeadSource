@@ -1,13 +1,11 @@
-
-Shader "Unlit/NewSurfaceShader"
+Shader "Unlit/EnemyAttackEffect"
 {
     Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-        _waveStrength ("_waveStrength", Range(0.01, 1.0)) = 0.5
+        _waveStrength ("_waveStrength", Range(0.01, 1.0)) = 0.25
         _spreadDistance ("_spreadDistance", Range(0.01, 1.0)) = 0.5
-        // can produce ring shape if reduce the value
-		_width ("_width", Range(0.01, 1.0)) = 0.5
+		_width ("_width", Range(0.01, 1.0)) = 0.8
 	}
 	SubShader
 	{
@@ -55,15 +53,13 @@ Shader "Unlit/NewSurfaceShader"
 			fixed4 frag(vertOut v) : SV_Target
 			{
 				float2 center = float2(0.5, 0.5);
-                float spreadDistance = abs(sin(_Time.y)) * _spreadDistance; // change the sin function for different spreading speed
-
+                float spreadDistance = 0.2 + abs(sin(_Time.y / 1.5) * _spreadDistance); // change the sin function for different spreading speed
+				// float spreadDistance = _spreadDistance;
 				float len = length(v.uv - center);
-                float outer_map = 1.0 - smoothstep(spreadDistance - _width, spreadDistance, len);
-                float inner_map = smoothstep(spreadDistance - _width * 2.0, spreadDistance - _width, len);
+                float map = 1.0 - smoothstep(spreadDistance - _width, spreadDistance, len);
+				float map_2 = smoothstep(spreadDistance + _width, spreadDistance, len);
 
-                float map = outer_map * inner_map;
-
-                float2 displacment = normalize(v.uv - center) * _waveStrength * map;
+                float2 displacment = normalize(v.uv - center) * _waveStrength * map * map_2;
                 float4 col = tex2D(_CameraSortingLayerTexture, v.screenPos - float4(displacment.xy, 0, 0));
 				return col;
 			}
