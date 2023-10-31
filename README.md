@@ -517,6 +517,12 @@ On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the
 
 [Detail of the particle effects]
 
+
+<p align="center">
+    <img src="Images/enemypopgif.gif" width=300>
+    <img src="Images/bloodgif.gif" width=300>
+</p>
+
 ## Summary of Contributions
 
 | Task                       | Main Responsibility | Collaboration |
