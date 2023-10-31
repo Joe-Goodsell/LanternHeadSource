@@ -61,6 +61,14 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+	public void Despawn() {
+		// Let spawner know they despawned
+		if (spawner != null) {
+			spawner.numEnemiesAlive--;
+		}
+		Destroy(enemy);
+	}
+
     IEnumerator DisplayHealth()
     {
         healthBarFillSprite.enabled = true;

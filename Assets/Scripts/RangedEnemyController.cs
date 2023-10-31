@@ -75,7 +75,7 @@ public class RangedEnemyController : MonoBehaviour
 		{
 			// Doing it this way to update spawner
 			Debug.Log("Despawning enemy...");
-			GetComponent<EnemyBehaviour>().ReduceHealth(1000);
+			GetComponent<EnemyBehaviour>().Despawn();
 		}
 
 		RaycastHit2D hit = Physics2D.Linecast(_transform.position, targetTransform.position, (1<<6));
