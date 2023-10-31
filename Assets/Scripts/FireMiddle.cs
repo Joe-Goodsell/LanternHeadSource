@@ -2,24 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering.Universal;
 using TMPro;
 
+[RequireComponent(typeof(Light2D))]
 public class FireMiddle : MonoBehaviour
 {
-    public Sprite[] fireSprites;
+    [SerializeField] GameObject[] _flames;
+    [SerializeField] Light2D _light;
+    [SerializeField] Light2D _glow;
     [SerializeField] private UnityEvent onDeath;
-    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float stateChangeDelay = 30f; // 30 sec delay because in the beginning all light sources are not lit
     [SerializeField] private bool canChangeState = false;
     [SerializeField] private int currentState = 2; // default second sprite, so that the fire is lit in the beginning
     [SerializeField] private float countdownTime = 15f; // grace period to relight a light if none are lit
+    private float maxIntensityLight;
+    private float maxIntensityGlow;
+    private Vector3 maxFlameScaling;
     private IEnumerator cd;
     private bool cdActive;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = fireSprites[currentState];
+        maxIntensityLight = _light.intensity;
+        maxIntensityGlow = _glow.intensity;
+        maxFlameScaling = _flames[0].transform.localScale;
         StartCoroutine(InitialStateDelay());
         cd = Countdown();
         cdActive = false;
@@ -54,28 +61,18 @@ public class FireMiddle : MonoBehaviour
 
             if (newState != currentState)
             {
-                ChangeSpriteForState(newState);
+                SetIntensity(newState);
                 currentState = newState;
                 if (currentState == 0 && !cdActive) {
                    StartCoroutine(cd); 
                    cdActive = true;
-                   StartCdVFX();
                 }
                 if (currentState > 0 && cdActive) {
                     StopCoroutine(cd);
                     cdActive = false;
-                    StopCdVFX();
                 }
             }
         }
-    }
-
-    void StartCdVFX() {
-
-    } 
-
-    void StopCdVFX() {
-
     }
 
     IEnumerator Countdown()
@@ -94,14 +91,15 @@ public class FireMiddle : MonoBehaviour
         return 5;
     }
 
-    void ChangeSpriteForState(int state)
+    void SetIntensity(int state)
     {
-        if (state >= 0 && state < fireSprites.Length)
+        _light.intensity = maxIntensityLight * (state / 5.0f);
+        _glow.intensity = maxIntensityGlow * (state / 5.0f);
+        
+        Vector3 scaling = maxFlameScaling * (System.Math.Min((state + 1) / 5.0f, 1.0f));
+        foreach (GameObject flame in _flames)
         {
-            spriteRenderer.sprite = fireSprites[state];
-        } else
-        {
-            Debug.LogError("Invalid state or not enough sprites provided.");
+            flame.transform.localScale = scaling;
         }
     }
 }

@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlphaTex:
-        m_Texture: {fileID: 2800000, guid: 52818c56da0504cccb69ce223baa2f40, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a2d55284130643b08e344de28c0fb5d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 83975bd9ae9054d1b881a17082761bf5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 72abd9f6e3d6444e39ab13705a27e2fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -45,9 +45,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Distortion: 0.0009
+    - _Distortion: 0.0045
     - _EnableExternalAlpha: 0
-    - _Speed: 197.5
+    - _Speed: 243.5
     - _alpha: 0.96
     - _amount: 0.07
     - _spread: 0.162

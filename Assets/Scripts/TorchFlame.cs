@@ -11,7 +11,9 @@ public class TorchFlame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        currFrame = 0;
+        System.Random rand = new System.Random(3023);
+        int startFrame = rand.Next(0,100); // ensures flames aren't perfectly synchronised
+        currFrame = startFrame;
     }
 
     // Update is called once per frame
