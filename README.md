@@ -191,7 +191,303 @@ How will you ensure that everyone contributes equally?
 
 ## Evaluation Report
 
-TODO (due milestone 3) - see specification for details
+### Definition of Objectives
+The primary objectives of the evaluations were to assess the game's usability and the overall enjoyment derived by the players. In preparation for the evaluations, three primary goals were identified:
+1.	Goal: Can users survive for 5 minutes? (Determining the game's difficulty level)
+2.	Goal: Achieve high usability and enjoyment scores.
+3.	Goal: Are the game controls and mechanics intuitive for the average player?
+
+### Evaluation Methods
+The goals were evaluated using two main methods:
+- Quantitative: Usability questionnaires UEQ, UEQ+, and a Gamification questionnaire GUESS-18
+- Qualitative: Think Aloud technique and Open-text questions.
+
+### Preparations
+- Designed an Introduction Sheet for both types of evaluations.
+- The Introduction Sheet informed participants about the game's progression, the evaluation process, and their legal rights.
+- For participant selection, the following criteria were considered:
+    -   Age: 18 and above (to ensure participants are of legal age).
+    - Interested in gaming, especially survival games and video games.
+    - Proficient in English.
+    - No prior knowledge about the game.
+    - For questionnaire-based evaluations, the participant must not have played the game using the Think Aloud technique.
+
+### Execution
+
+#### •	Evaluation Methodologies
+1.	Think Aloud: This method involves participants verbalizing their thoughts while playing the game. It provides qualitative insights into the players' mental models and their interactions with the game system.
+2.	Questionnaire Evaluation: Participants play the game independently after being briefed with the Introduction Sheet. Post gameplay, they provide feedback using the provided questionnaires which were made available via a Google Survey link.
+
+#### •	Evaluation Process (uniform for all evaluations)
+1.	Introduction to the game (via the Introduction Sheet).
+2.	Game-play session (Think-Aloud method involved verbalizing thoughts).
+3.	Filling in the questionnaire or providing comments about the game.
+
+
+### Think Aloud Evaluations (1st and 3rd Evaluation)
+- Total of 5 participants
+- Conducted in person with the experimenter in the room, though out of direct sight to avoid influencing participants.
+- Every participant was given the same introductory information via the Introduction Sheet to ensure consistent feedback.
+- During gameplay, participants verbalized their thoughts.
+- Post-game, participants provided verbal feedback, allowing for qualitative insights and specific feedback.
+
+### Questionnaire Evaluation (2nd Evaluation)
+-  14 participants ranging from ages 21 to 62.
+    - Relatively small sample size
+        - A smaller sample size might not capture the diversity of opinions and experiences of the broader audience
+        - However, the results still offer preliminary insights and could point toward trends
+- Participants were provided with the Introduction Sheet, followed by independent gameplay. They subsequently evaluated the game using the UEQ, UEQ+, and GUESS-18 questionnaires.
+
+### Data Analysis
+- Tools designed for Excel were employed for evaluation data analysis.
+- For UEQ and UEQ+ questionnaires, Dr. Martin Schrepp's data analysis tool was utilized.
+- For GUESS-18, William J. Shelstad's data analysis tool was deployed.
+
+### Game Improvements 
+
+#### After Evaluation 1
+- Based on Feedback:
+
+<table>
+    <thead>
+        <tr>
+            <th>Feedback</th>
+            <th>Improvements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>No introduction</td>
+            <td>Added introduction to the game</td>
+        </tr>
+        <tr>
+            <td>Audio would be nice</td>
+            <td>Added audio</td>
+        </tr>
+        <tr>
+            <td>No semi-transparent walls (hard to navigate)</td>
+            <td>Tried to implement, but in the end, due to the difficulty and other priorities, it was not implemented</td>
+        </tr>
+        <tr>
+            <td>What is the green performance indicator?</td>
+            <td>Icons added for indicator explanations; Symbol added indicating when a special attack is available</td>
+        </tr>
+        <tr>
+            <td>More motivation and the need to move / explore</td>
+            <td>Game mechanic added so that the player must always turn on light sources that turn off randomly over time or are turned off by enemies; if no light source is on, the player loses</td>
+        </tr>
+        <tr>
+            <td>Increase enemy speed (easy to run away)</td>
+            <td>Adjusted to a balanced level</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Can enemy go through doors? (Should be possible)</td>
+            <td>Collider issues fixed</td>
+        </tr>
+        <tr>
+            <td>Dash on different control would be preferred</td>
+            <td>No changes as we think it is a good choice and only one person gave this feedback, waiting to see if the same feedback comes out in the next evaluation, then it can still be changed</td>
+        </tr>
+    </tbody>
+</table>
+
+- Based on observations by the game instructor:
+    - Fixed more collision problems.
+    -    Pause button (so player can check controls again).
+    - Changes to level design and the number of light sources (too much light, which took away the mysterious and tense moment).
+    - Game difficulty still too easy (too few enemies, so spawn count and time adjusted, added another type of enemy).
+    - After 2 successful attempts, no end scene was shown - problems fixed.
+
+
+#### After Evaluation 2
+The numbers behind the feedback indicate how many player gave this response
+
+<table>
+    <thead>
+        <tr>
+            <th>Feedback</th>
+            <th>Improvements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Won with just staying in the first room, re-lighting 2 torches (no enemy spawned) (1)</td>
+            <td>Adjustments to the spawn function made</td>
+        </tr>
+        <tr>
+            <td>Didn't know what LMB and RMB in the controls means (1)</td>
+            <td>UI adjustments made -> fully written out</td>
+        </tr>
+        <tr>
+            <td>Problems with boundaries (1)</td>
+            <td>Fixed colliders on walls</td>
+        </tr>
+        <tr>
+            <td>No see-through walls (1)</td>
+            <td>None. Tried to implement, but in the end, due to the difficulty and other priorities, it was not implemented</td>
+        </tr>
+        <tr>
+            <td>Improve collision on objects (3)</td>
+            <td>Adjusted colliders of objects</td>
+        </tr>
+        <tr>
+            <td>Change winning page: "could be done for the player so feel "achieved" after survival (1)</td>
+            <td>Adjustments made in the introduction (Purpose of fire and light sources that need to be kept running; Objective more precisely defined -> that you must survive 5 minutes)</td>
+        </tr>
+        <tr>
+            <td>Player won the game but didn’t know why (1)</td>
+            <td>End screen improved</td>
+        </tr>
+        <tr>
+            <td>Add more attacks (1)</td>
+            <td>None. Not desired by us or deemed necessary, however, if there was ongoing development, it would definitely be conceivable</td>
+        </tr>
+        <tr>
+            <td>Be more mousepad friendly (2)</td>
+            <td>None, as we did not intend to play with a mousepad (we should have been more precise in our introduction sheet)</td>
+        </tr>
+        <tr>
+            <td>Visual Feedback in combat missing (2)</td>
+            <td>Added for both player and enemy hits; brief flash effect when hit (character turns white); Blood splatter when "lanternhead" is hit</td>
+        </tr>
+        <tr>
+            <td>Need more health on your character and maybe some weapon pick-ups to spice things up (1)</td>
+            <td>None. Health-Value is our game decision. However, in further development, it is conceivable that more weapons could be integrated</td>
+        </tr>
+        <tr>
+            <td>Sound effect should be added to indicate minions are close by (especially the black ones)...</td>
+            <td>No change wanted. <br> - Player needs to learn during the gameplay how to handle it. <br> - Part of the gameplay and narrative: Shadows make no noise</td>
+        </tr>
+    </tbody>
+</table>
+
+#### After Evaluation 3
+
+<table>
+    <thead>
+        <tr>
+            <th>Feedback</th>
+            <th>Improvements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Minor wording suggestion on the introduction slide in our game</td>
+            <td>Changed as suggested</td>
+        </tr>
+        <tr>
+            <td>Waterfall was a weak point, as players could go out of bounds</td>
+            <td>Added collider</td>
+        </tr>
+        <tr>
+            <td>Colorful objects seemed to have a specific purpose, because they were so noticeable, players tried to figure out whether they could collect or destroy them.</td>
+            <td>No changes made, as these belonged to the level design and, in case there is no more lantern light, served as small light sources for orientation.</td>
+        </tr>
+        <tr>
+            <td>Central part should have more indications to it. <br>- Because then the player gets a better feeling to where the centre of the map is and when to expect the edge of the map <br>- Would be sad to miss it as it an important part of the narrative
+            </td>
+            <td>Added lightsource to the fire and animated asset</td>
+        </tr>
+    </tbody>
+</table>
+
+### Final Assessment of Goals
+
+#### Goal 1: Can users survive for 5 minutes? 
+
+- After Evaluation 1: The game was perceived as too easy, necessitating adjustments.
+- After Evaluation 2: All but one player managed to win the game at least once. Crucially, no players won on their initial attempt, hinting at an appropriate level of challenge.
+- After Evaluation 3: While players did not achieve victory on their debut, every participant eventually had a successful run, indicating a well-balanced difficulty level.
+
+<p align="center">
+    <img src="Images/Playthroughs.png" width="500">
+    <p align="center">Bar chart showcases data from 14 participants' playthroughs of our game, delineating total playthroughs from victories. Blue bars depict total playthroughs, while orange bars signify wins.
+    </p>
+</p>
+
+##### Conclusion
+The evaluation helped us to develop our game to a balanced level of difficulty, so that it is not too difficult and therefore winnable, but also challenging for the players.
+
+#### Goal 2: High usability and fun scores
+
+##### UEQ Results
+
+<p align="center">
+    <img src="Images/UEQ_1.png" width="390">
+    <img src="Images/Legend_UEQ.png" width="100">
+</p>
+
+- The graph presents a spectrum of mean values for the contrasting attributes of the UEQ questionnaire. The scale ranges from -3 to 3, with 0 being neutral. 
+- The majority of attributes received positive or near-neutral feedback. Respondents seemed to appreciate the games creativity, interest level, cutting-edge nature, security, clarity, and friendliness. However, there were mixed feelings about the games speed, supportiveness, complexity, and organization.
+
+<p align="center">
+    <img src="Images/UEQ_2.png" width="500">
+</p>
+
+- The graph illustrates the mean values for the categories of the UEQ. 
+- The lines indicate the variance among the ratings
+- Most of the criteria received positive feedback, highlighting Attractiveness, Perspicuity, and Novelty as the standout positive attributes. 
+- The mean value for Dependability is just below neutral, suggesting that there are some concerns about the reliability or consistency of the game among the respondents.
+
+##### Conclusions 
+- The game stands out as attractive, novel, and clear. Users largely had a positive reception to its presentation, design, and functionality. 
+- Attractiveness: Users were drawn to the game's aesthetics, lauding it for its stimulating and novel design elements.
+- Clarity: The game's mechanics and objectives were mostly clear, which is testament to the product's user-friendly design.
+- Dependability & Efficiency: Feedback suggests that some gameplay elements were not consistent, which could affect the gameplay experience. Specific comments on problems related to movement dynamics, hitboxes and boundaries explain the survey results.
+
+##### UEQ+ Results
+
+<p align="center">
+    <img src="Images/UEQ+_1.png" width="500">
+</p>
+
+- The graph displays the mean values for attributes from the UEQ+. 
+- The game generally receives positive feedback on its Clarity and Intuitive Use, suggesting ease of understanding and navigation. 
+- Visual Aesthetics and Novelty are also seen in a favourable light, albeit less pronounced. 
+- Acoustics and Value are areas where the perception is more neutral, hinting at potential areas for enhancement.
+
+<p align="center">
+    <img src="Images/UEQ+_2.png" width="500">
+</p>
+
+- This graph presents the "Importance Ratings" for various attributes
+- Each attribute has been evaluated on a scale from -3 to 3, with the bars representing the mean importance score and the lines indicating the variance among the ratings. 
+- All attributes are perceived as somewhat important, with none dipping into the negative zone. 
+- "Value" and "Acoustics" are rated as more critical than attributes like "Intuitive Use" and "Clarity". 
+- There's a noticeable variance in ratings for several attributes, suggesting diverse opinions among respondents about the relative importance of certain criteria.
+
+##### Conclusions
+- Clarity: Indicates that users find the interface straightforward.
+- Intuitive Use: Large variances in the evaluation. This variance is most likely also due to the comments of dissatisfaction of the mousepad users, who indicated control problems as feedback.
+- Visual Aesthetics: Users generally appreciate the visual aspects, but there's potential to further elevate this aspect.
+- Acoustics: Due to the high importance rating, the result is to be considered rather negative
+
+##### GUESS-18 Results
+
+<p align="center">
+    <img src="Images/GUESS.png" width="500">
+</p>
+
+- This radar chart illustrates the "Means of GUESS Subscales". 
+- The chart is structured with values ranging from 1 to 7, indicating the mean score for each of the subscales. (1 – lowest score, 7 – highest score). 
+- The radar chart gives an overview of user perceptions across multiple facets of their gameplay. 
+- The highest-rated attributes are "Usability" and "Visual Aesthetics", both of which surpass scores of 4.5. 
+- Enjoyment has a score very similar to Play Engrossment, suggesting users find the experience moderately enjoyable but not exceptionally so.
+
+##### Conclusions
+- Usability: With a score nearing 5 out of 7, the game offers a user experience that is mostly intuitive and user-friendly.
+- Enjoyment: Scoring similarly to Play Engrossment, the game provides a moderate level of enjoyment. Possible enhancement for Player Engagement and Enjoyment could have been a more immersive narrative or storyline but due to the subjects timeframe not adjusted after this evaluation.
+- Visual Aesthetics: Visual elements score close to 5, showcasing their appeal to users. 
+- Audio Aesthetics: The audio elements are slightly behind the visual elements with 4.5. The lack of direct comments on these elements may indicate that users found them satisfactory but not outstanding.
+
+#### Goal 3: Are the controls and mechanics intuitive for the average player?
+- Evaluation 1: Players found the controls largely intuitive, with only the dash function receiving comments.
+- Evaluation 2: The majority perceived the controls as intuitive. However, some found it challenging to play using a mousepad. Clarity regarding optimal controls, specifically in the introduction, could have mitigated this feedback.
+- Evaluation 3: Feedback was consistent with previous evaluations, with players expressing that the controls felt intuitive.
+
+##### Conclusion
+The evaluations have shown us that we have succeeded in our goal of creating an intuitive use for the average player.
 
 ## Shaders and Special Effects
 
