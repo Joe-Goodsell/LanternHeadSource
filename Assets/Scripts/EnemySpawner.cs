@@ -63,8 +63,8 @@ public class EnemySpawner : MonoBehaviour
 		// Generate random nearby positions until one is on the tilemap or until max attempts reached
 		do {
 			spawnPosition = new Vector3(
-				Random.Range(transform.position.x - spawnRadius, transform.position.x + spawnRadius),
-				Random.Range(transform.position.y - spawnRadius, transform.position.y + spawnRadius),
+				Random.Range(player.transform.position.x - spawnRadius, player.transform.position.x + spawnRadius),
+				Random.Range(player.transform.position.y - spawnRadius, player.transform.position.y + spawnRadius),
 				0
 			);
 			spawnAttempts++;
