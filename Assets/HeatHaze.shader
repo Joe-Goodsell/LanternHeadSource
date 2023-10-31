@@ -1,16 +1,17 @@
 
-Shader "Unlit/NewSurfaceShader"
+Shader "Unlit/HeatHazeShader"
 {
     Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-        // _NoiseTex("NoiseTex", 2D) = "white" {}
-        _Distortion("Distortion", Range(0,0.1)) = 0.05
-        _Speed("Speed", Range(0,50)) = 10
-        _amount ("_amount", Range(0.01, 1.0)) = 0.5
-        _spread ("_spread", Range(0.01, 1.0)) = 0.5
-        _width ("_width", Range(0.01, 1.0)) = 0.5
-        _alpha ("_alpha", Range(0.01, 1.0)) = 0.5
+        _AlphaTex ("AlphaTexture", 2D) = "white" {}
+        _NoiseTex("NoiseTex", 2D) = "white" {}
+        _Distortion("Distortion", Range(0,0.1)) = 0.005
+        _Speed("Speed", Range(0,500)) = 50 
+        _amount ("_amount", Range(0.01, 1.0)) = 0.05
+        _spread ("_spread", Range(0.01, 1.0)) = 0.05
+        _width ("_width", Range(0.01, 1.0)) = 0.05
+        _alpha ("_alpha", Range(0.01, 1.0)) = 0.05
 	}
 	SubShader
 	{
@@ -27,6 +28,7 @@ Shader "Unlit/NewSurfaceShader"
 			uniform sampler2D _MainTex;
             sampler2D _NoiseTex;
             sampler2D _CameraSortingLayerTexture;
+            sampler2D _AlphaTex;
             float4 _MainTex_ST;
             float _amount;
             float _spread;
@@ -117,13 +119,15 @@ Shader "Unlit/NewSurfaceShader"
 			// Implementation of the fragment shader
 			fixed4 frag(vertOut v) : SV_Target
 			{
-				// float4 noiseTex = tex2D(_NoiseTex, v.uv);
-                v.screenPos.x += cos(_Time * _Speed) * Unity_SimpleNoise_float(v.uv,75) * _Distortion; // increase the second argument for more distorted effect
-                v.screenPos.y += sin(_Time * _Speed) * Unity_SimpleNoise_float(v.uv,50) * _Distortion;
+                float strength = tex2Dlod(_AlphaTex, float4 (v.uv, 0, 0)).a;
+				float noise = tex2Dlod(_NoiseTex, float4 (v.uv, 0, 0)).a;
 
-                float4 color = tex2D(_CameraSortingLayerTexture, v.screenPos);
+                v.screenPos.x -= cos(_Time * _Speed * noise) * _Distortion * strength; // increase the second argument for more distorted effect
+                v.screenPos.y -= sin(_Time * _Speed * noise) * _Distortion * strength;
+
+                float4 color = tex2Dlod(_CameraSortingLayerTexture, float4 (v.screenPos.xy, 0, 0));
                 
-				return float4(color.xyz, _alpha);
+				return float4(color);
 			}
 			ENDCG
 		}
