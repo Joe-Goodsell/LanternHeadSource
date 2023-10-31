@@ -515,7 +515,11 @@ Drawing inspiration from [this tutorial]("https://www.youtube.com/watch?v=-spc1G
 
 The Heat Haze Shader utilized the `CameraSortingLayerTexture` and incorporating a custom noise texture that inspired by [this tutorial]("https://lindenreidblog.com/2018/03/05/heat-distortion-shader-tutorial/") to simulate random distortion patterns, closely resembling the visual dynamics of a real heat haze.
 
+[Click here for the Heat Haze effect](https://drive.google.com/file/d/1luGvsgK1eYyT0Xd18oKIiZMMQNA9TDOE/view?usp=sharing)
+
 On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the visual impact of our enemy attacks. This shader integrates the `CameraSortingLayerTexture` with the smoothstep function, which effectively interpolates values to create a captivating void orb. When shot by the enemy, player will see a transparent orb that distorts the game environment, immersing players in a visually dynamic experience. Also, we incorporated dynamic sizing for the orb with the game time to further enhance the visual effects.
+
+[Click here for the Enemy Special Attack effect](https://drive.google.com/file/d/1_x5gNXHtKNCtpo8iVLikuD9jPpI5Z8N3/view?usp=sharing)
 
 ### [Damage Particle System](Assets/Prefabs/BloodSplatter.prefab)
 
@@ -535,11 +539,11 @@ On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the
 
 Enemies spawn the same prefab as players on taking damage but modify some values after instantiation:
 
-1. The colour is set to black to match their shadow theme
-2. Gravity is turned off to make them feel weightless and ethereal
-3. Particle start speed is set to 0.7f for the same reason
-4. The number of particles spawned is set to 1/7th the damage dealt, giving a feeling of impact to stronger attacks
-5. The full 30 particles are spawned on death to show the enemies bursting or dispersing for immersion and to give an indication they died since health bars don't show on enemy death
+- The colour is set to black to match their shadow theme
+- Gravity is turned off to make them feel weightless and ethereal
+- Particle start speed is set to 0.7f for the same reason
+- The number of particles spawned is set to 1/7th the damage dealt, giving a feeling of impact to stronger attacks
+- The full 30 particles are spawned on death to show the enemies bursting or dispersing for immersion and to give an indication they died since health bars don't show on enemy death
 
 <p align="center">
 	<img src="Images/enemypopgif.gif" width="500">
