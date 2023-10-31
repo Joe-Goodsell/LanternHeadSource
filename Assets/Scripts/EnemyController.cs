@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
 	[SerializeField] private int damage = 30;
 	[SerializeField] private float visionRange = 2.5f;
 	[SerializeField] private float wanderRadius = 2.5f;
+	[SerializeField] private float despawnRadius = 7f;
     [SerializeField] private float attackDistance;
     [SerializeField] private List<Sprite> sprites;
     [SerializeField] private float attackAnimFs;
@@ -67,6 +68,14 @@ public class EnemyController : MonoBehaviour
 		Vector3 vecToTarget = targetTransform.position - _transform.position;
 		float distToTarget = vecToTarget.magnitude;
 		vecToTarget.Normalize();
+
+		// Despawn if too far from player
+		if (distToTarget > despawnRadius)
+		{
+			// Doing it this way to update spawner
+			Debug.Log("Despawning enemy...");
+			GetComponent<EnemyBehaviour>().ReduceHealth(1000);
+		}
 
 		RaycastHit2D hit = Physics2D.Linecast(_transform.position, targetTransform.position, (1<<6));
 

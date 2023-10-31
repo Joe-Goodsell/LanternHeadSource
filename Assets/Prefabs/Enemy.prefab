@@ -89,6 +89,7 @@ MonoBehaviour:
   damage: 15
   visionRange: 10
   wanderRadius: 2.5
+  despawnRadius: 7
   attackDistance: 2
   sprites:
   - {fileID: -2853817077538804091, guid: 443e6b36d2428f74aa9164ce36320c8f, type: 3}
