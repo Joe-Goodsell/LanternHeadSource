@@ -1,5 +1,3 @@
-# Game Design Document
-
 <p align="left">
     <img src="Images/title.png" width="400">
 </p>
