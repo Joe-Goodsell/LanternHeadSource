@@ -1,572 +1,498 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/CibnTZFQ)
+# Game Design Document
 
-# Project 2 Report
-
-Read the [project 2
-specification](https://github.com/COMP30019/Project-2-Specification) for
-details on what needs to be covered here. You may modify this template as you see fit, but please
-keep the same general structure and headings.
-
-Remember that you must also continue to maintain the Game Design Document (GDD)
-in the `GDD.md` file (as discussed in the specification). We've provided a
-placeholder for it [here](GDD.md).
-
-## Table of Contents
-
-- [Evaluation Plan](#evaluation-plan)
-- [Evaluation Report](#evaluation-report)
-- [Shaders and Special Effects](#shaders-and-special-effects)
-- [Summary of Contributions](#summary-of-contributions)
-- [References and External Resources](#references-and-external-resources)
-
-## Evaluation Plan
-
-### Evaluation Goals
-
-- Can users survive for 5 minutes? (is it too hard)
-- High usability and fun scores
-- Are the controls and mechanics intuitive for the average player?
-
-### Evaluation Techniques
-
-- Quantitative: Usability questionnaires, Gamification questionnaire
-- Qualitative: Think Aloud, Open-text questions
-
-#### Think-Aloud
-
-- There will be two evaluation dates: one at an early stage with 2-3 users and a subsequent one after the questionnaire evaluation with an additional 2-3 participants.
-- Each group member conducts this method with at least one person.
-- The user plays the game and will be asked to comment on the game at the end:
-  - Positive/negative/general comments.
-- In total, 5 users evaluate the game, making notes either digitally or with paper and pencil.
-- The evaluation can be conducted either in person or online.
-- Audio and screen will be recorded during the evaluation.
-- All test participants will receive the same initial information through a specially created [introduction sheet](https://drive.google.com/file/d/1dLjN_s4AtCu-NaBUUQMKNmOWQ_3XVet7/view?usp=sharing), ensuring comparability across sessions, even when conducted by different test leaders.
-
-Why this method:
-
-- by vocalising thoughts, reactions, and decision making the user gives great insights which will help us understand the cognitive processes and offer valuable feedback for game improvements
-- We have chosen for an early implementation of the think-aloud method, as this allows us to get first impressions of unexpected inputs and ways of thinking. Furthermore we will be able to fix major bugs at an early stage if necessary.
-- We chose a smaller number of test subjects because of the greater time required to carry out and evaluate the study.
-
-#### Questionnaire
-
-- Each group member finds 4-5 people to evaluate our game
-- The user plays the game and answers a questionnaire
-- In total 16-20 users that evaluate our game
-- Feedback can be provided in an open text box
-- All test persons receive the same initial information in the form of a specially created [introduction sheet](https://drive.google.com/file/d/1rr8IC7QBDed51XXuy9KcfTNWLoqm-V8Z/view?usp=sharing)
-
-### Why this method?
-
-- Questionnaires provide a consistent set of questions for all participants, ensuring that the feedback is standardised. This allows for easier analysis and comparison of results.
-- With structured responses, such as Likert scales, the data collected can be easily quantified, making it simpler to identify trends, preferences, and areas of improvement.
-- Questionnaires can be distributed to a large number of participants simultaneously. This allows for the collection of a substantial amount of feedback in a relatively short period.
-
-### Evaluation consists of two questionnaire parts
-
-#### User Experience Questionnaire (UEQ and UEQ+)
-
-[UEQ](https://www.ueq-online.org) and [UEQ+](https://ueqplus.ueq-research.org) focus on the _usability_ of the game
-
-- UEQ evaluates:
-  - Efficiency -> how good does the user understand what to do
-  - Satisfaction -> is the game easy to play?
-  - Usability
-- Why and explanation UEQ and UEQ+
-  - Standardised UEQ questionnaire for measuring the user experience of interactive products.
-  - UEQ contains 26 items that can be classified into six categories: Attractiveness, Perspicuity, Efficiency, Dependability, Stimulation and Novelty.
-  - The UEQ+ is an extension of the UEQ Questionnaire, which is modular so that it can be optimally adapted to the evaluation of a specific product
-
-#### Game User Experience Satisfaction Scale (GUESS-18)
-
-[GUESS-18](https://uxpajournal.org/validation-game-user-experience-satisfaction-scale-guess/) assesses the _enjoyment and playability_ of the game.
-
-- Game User Experience Satisfaction Scale evaluates
-  - Usability/Playability
-  - Narratives
-  - Play Engrossment
-  - Enjoyment
-  - Creative Freedom
-  - Audio Aesthetics
-  - Personal Gratification
-  - Social Connectivity
-  - Visual Aesthetics
-- about GUESS
-  - Abridged version of the [GUESS](https://soar.wichita.edu/bitstream/handle/10057/11604/d15018_PHAN_Mikki_SP15%20SEQUESTER.pdf;jsessionid=35F354DE576A784F3DAFB6B59BE24519?sequence=1) (55 items), which is used to evaluate video games
-  - Based on 13 game related questionnaires (measuring motivation, engagement, enjoyment, experience, usability, playability,...)
-  - was created through the process of Item pool creation, followed by an expert review, a pilot study and a final expert review of the statements
-  - The participants are presented with short statements that are recorded on a 7-point Likert scale from "strongly disagree" to "strongly agree".
-- why GUESS
-  - 7-point scale
-    - This makes it easier for participants to rate, as many tend to avoid the extreme ranges, and at the same time another scale reduces the jumps in meaning between two values.
-  - short statements with good comprehensibility
-    - therefore the subjective impression can be recorded briefly and clearly
-  - Randomised order of question
-    - Avoidance of sequence effects
-  - Social connectivity is not surveyed in the context of our game. In addition, usability/playability is already covered by the UEQ, which is why the evaluation of this questionnaire will not focus on it here. However, it is a good opportunity to compare whether similar results emerge from both surveys.
-
-### Evaluation Process
-
-1. Introduction before the game (Introduction Sheet)
-   - This informs the participants about the evaluation process and their legal options. At the same time, an introduction sheet offers the possibility to provide the players with information about the task to be carried out as well as instructions on how to participate in the evaluation.
-2. User plays the game (Think-Aloud: with verbalizations)
-3. Fill in [questionnaire](https://forms.gle/sWCzxHNidSN8rj7f6) / Commenting on the game (Think-Aloud)
-
-### Participants
-
-- Think-Aloud: Each group member recruits at least one person (friends & family) - in total 5 participants will be recruited for this method
-- Questionnaires: Each group member recruits 4-5 people (friends, family, uni)
-
-What qualifying criteria will you use to ensure that they are representative of your target audience?
-
-- Age: 18+ (open end, so you’re of legal age and allowed to participate in survey)
-- Interested in gaming, survival games, video games
-- English speaking
-- No prior information about the game (only given information of introduction sheet)
-- For questionnaire evaluation (person has not played the game in the process of the Think Aloud method)
-
-All participants receive the same information exclusively through the Introduction Sheet in advance to ensure that the players are not influenced or receive different amounts of information in advance due to different experiment leaders conducting the experiment.
-
-### Data Collection
-
-What sort of data is being collected?
-
-- Quantitative data
-  - responses from questionnaires
-  - metrics such as completion rates
-- Qualitative data
-  - feedback from Think-Aloud method
-  - open-text responses
-
-How will you collect the data?
-
-- Think-Aloud
-- Questionnaires
-
-What tools will you use?
-
-- Think-Aloud: Take notes in digital form or with pen and paper, audio and screen recording
-- Questionnaire: Google Forms
-
-### Data Analysis
-
-How will you analyse the data?
-
-- Data analysis tools for Excel are used to evaluate the evaluation.
-- For the evaluation of the [UEQ](https://docs.google.com/spreadsheets/d/1ep9RGBhArVEjROU2To2whGNUHLM-hauG/edit?usp=sharing&ouid=113135577092675312398&rtpof=true&sd=true) and the [UEQ+](https://docs.google.com/spreadsheets/d/10Rlr6XrActTDj76iGxTL37rfgIx--SUs/edit?usp=sharing&ouid=113135577092675312398&rtpof=true&sd=true) Questionnaire, the respective data analysis tool by Dr. Martin Schrepp is used.
-- For the evaluation of the [GUESS-18](https://docs.google.com/spreadsheets/d/1VvqeABXb-Vwt2shMZ4wBmDfe7cELBSEn/edit?usp=sharing&ouid=113135577092675312398&rtpof=true&sd=true), the data analysis tool by William J. Shelstad is used.
-
-<br>
-
-- Make graphics for report and evaluation of our goals
-- Draw conclusions on usability improvements
-- Draw conclusions on game-fun
-- Create work plan to solve identified issues
-- If one user makes a comment, do you act on it? Do you need multiple people to have commented on the same thing?
-  - we will decide on each issue independently
-  - if only one person points out a major problem or something we consider as very important, we will definitely make changes
-  - smaller, not game relevant points have to be discussed in the group whether they should be changed or not (also if more than one person mentioned the minor issue)
-
-### Responsibilities
-
-Who is responsible for each task?
-
-- All team members are responsible for recruiting participants for the evaluation.
-- Creating evaluation plan - Linda
-- Evaluation analysis - Linda
-- Implementing changes - everyone
-
-How will you ensure that everyone contributes equally?
-
-- Most of the things are done by everyone therefore it is contributed equally already
-- Other tasks that are not contributed to in equal measure will balance out through implementation
-
-### Timeline
-
-<p align="center">
-    <img src="Images/Timeline_Evaluation.png" style="max-width: 100%;">
-    <img src="Images/Gantt_Final_GDD_legend.png" style="max-width: 100%;">
+<p align="left">
+    <img src="Images/title.png" width="400">
 </p>
 
-## Evaluation Report
+## Table of contents
 
-### Definition of Objectives
+- [Game Overview](#game-overview)
+- [Characters](#characters)
+- [Gameplay and Mechanics](#gameplay-and-mechanics)
+- [World Design](#world-design)
+- [Art and Audio](#art-and-audio)
+- [User Interface](#user-interface)
+- [Technology and Tools](#technology-and-tools)
+- [Team Communication, Timeline, and Task Assignment](#team-communication-timeline-and-task-assignment)
+- [Possible Challenges](#possible-challenges)
 
-The primary objectives of the evaluations were to assess the game's usability and the overall enjoyment derived by the players. In preparation for the evaluations, three primary goals were identified:
+## Game Overview
 
-1. Goal: Can users survive for 5 minutes? (Determining the game's difficulty level)
-2. Goal: Achieve high usability and enjoyment scores.
-3. Goal: Are the game controls and mechanics intuitive for the average player?
-
-### Evaluation Methods
-
-The goals were evaluated using two main methods:
-
-- Quantitative: Usability questionnaires UEQ, UEQ+, and a Gamification questionnaire GUESS-18
-- Qualitative: Think Aloud technique and Open-text questions.
-
-### Preparations
-
-- Designed an Introduction Sheet for both types of evaluations.
-- The Introduction Sheet informed participants about the game's progression, the evaluation process, and their legal rights.
-- For participant selection, the following criteria were considered:
-  - Age: 18 and above (to ensure participants are of legal age).
-  - Interested in gaming, especially survival games and video games.
-  - Proficient in English.
-  - No prior knowledge about the game.
-  - For questionnaire-based evaluations, the participant must not have played the game using the Think Aloud technique.
-
-### Execution
-
-#### • Evaluation Methodologies
-
-1. Think Aloud: This method involves participants verbalizing their thoughts while playing the game. It provides qualitative insights into the players' mental models and their interactions with the game system.
-2. Questionnaire Evaluation: Participants play the game independently after being briefed with the Introduction Sheet. Post gameplay, they provide feedback using the provided questionnaires which were made available via a Google Survey link.
-
-#### • Evaluation Process (uniform for all evaluations)
-
-1. Introduction to the game (via the Introduction Sheet).
-2. Game-play session (Think-Aloud method involved verbalizing thoughts).
-3. Filling in the questionnaire or providing comments about the game.
-
-### Think Aloud Evaluations (1st and 3rd Evaluation)
-
-- Total of 5 participants
-- Conducted in person with the experimenter in the room, though out of direct sight to avoid influencing participants.
-- Every participant was given the same introductory information via the Introduction Sheet to ensure consistent feedback.
-- During gameplay, participants verbalized their thoughts.
-- Post-game, participants provided verbal feedback, allowing for qualitative insights and specific feedback.
-
-### Questionnaire Evaluation (2nd Evaluation)
-
-- 14 participants ranging from ages 21 to 62.
-  - Relatively small sample size
-    - A smaller sample size might not capture the diversity of opinions and experiences of the broader audience
-    - However, the results still offer preliminary insights and could point toward trends
-- Participants were provided with the Introduction Sheet, followed by independent gameplay. They subsequently evaluated the game using the UEQ, UEQ+, and GUESS-18 questionnaires.
-
-### Data Analysis
-
-- Tools designed for Excel were employed for evaluation data analysis.
-- For UEQ and UEQ+ questionnaires, Dr. Martin Schrepp's data analysis tool was utilized.
-- For GUESS-18, William J. Shelstad's data analysis tool was deployed.
-
-### Game Improvements
-
-#### After Evaluation 1
-
-- Based on Feedback:
-
-<table>
-    <thead>
-        <tr>
-            <th>Feedback</th>
-            <th>Improvements</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>No introduction</td>
-            <td>Added introduction to the game</td>
-        </tr>
-        <tr>
-            <td>Audio would be nice</td>
-            <td>Added audio</td>
-        </tr>
-        <tr>
-            <td>No semi-transparent walls (hard to navigate)</td>
-            <td>Tried to implement, but in the end, due to the difficulty and other priorities, it was not implemented</td>
-        </tr>
-        <tr>
-            <td>What is the green performance indicator?</td>
-            <td>Icons added for indicator explanations; Symbol added indicating when a special attack is available</td>
-        </tr>
-        <tr>
-            <td>More motivation and the need to move / explore</td>
-            <td>Game mechanic added so that the player must always turn on light sources that turn off randomly over time or are turned off by enemies; if no light source is on, the player loses</td>
-        </tr>
-        <tr>
-            <td>Increase enemy speed (easy to run away)</td>
-            <td>Adjusted to a balanced level</td>
-        </tr>
-        </tr>
-        <tr>
-            <td>Can enemy go through doors? (Should be possible)</td>
-            <td>Collider issues fixed</td>
-        </tr>
-        <tr>
-            <td>Dash on different control would be preferred</td>
-            <td>No changes as we think it is a good choice and only one person gave this feedback, waiting to see if the same feedback comes out in the next evaluation, then it can still be changed</td>
-        </tr>
-    </tbody>
+<table style="border: none;">
+    <tr style="border: none;">
+        <td style="border: none;">
+            Lantern Head™️ is an isometric, rogue-lite(-like) action/horror game in which light and shadow are a core gameplay element. Fight enemies, explore the world, and keep the flame alive 🔥
+        </td>
+        <td style="border: none;">
+            <img src="Images/character_mockup.png" width="500">
+            <p>Created with Aseprite</p>
+        </td>
+    </tr>
 </table>
 
-- Based on observations by the game instructor:
-  - Fixed more collision problems.
-  - Pause button (so player can check controls again).
-  - Changes to level design and the number of light sources (too much light, which took away the mysterious and tense moment).
-  - Game difficulty still too easy (too few enemies, so spawn count and time adjusted, added another type of enemy).
-  - After 2 successful attempts, no end scene was shown - problems fixed.
+### Core Concept
 
-#### After Evaluation 2
-
-The numbers behind the feedback indicate how many player gave this response
-
-<table>
-    <thead>
-        <tr>
-            <th>Feedback</th>
-            <th>Improvements</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Won with just staying in the first room, re-lighting 2 torches (no enemy spawned) (1)</td>
-            <td>Adjustments to the spawn function made</td>
-        </tr>
-        <tr>
-            <td>Didn't know what LMB and RMB in the controls means (1)</td>
-            <td>UI adjustments made -> fully written out</td>
-        </tr>
-        <tr>
-            <td>Problems with boundaries (1)</td>
-            <td>Fixed colliders on walls</td>
-        </tr>
-        <tr>
-            <td>No see-through walls (1)</td>
-            <td>None. Tried to implement, but in the end, due to the difficulty and other priorities, it was not implemented</td>
-        </tr>
-        <tr>
-            <td>Improve collision on objects (3)</td>
-            <td>Adjusted colliders of objects</td>
-        </tr>
-        <tr>
-            <td>Change winning page: "could be done for the player so feel "achieved" after survival (1)</td>
-            <td>Adjustments made in the introduction (Purpose of fire and light sources that need to be kept running; Objective more precisely defined -> that you must survive 5 minutes)</td>
-        </tr>
-        <tr>
-            <td>Player won the game but didn’t know why (1)</td>
-            <td>End screen improved</td>
-        </tr>
-        <tr>
-            <td>Add more attacks (1)</td>
-            <td>None. Not desired by us or deemed necessary, however, if there was ongoing development, it would definitely be conceivable</td>
-        </tr>
-        <tr>
-            <td>Be more mousepad friendly (2)</td>
-            <td>None, as we did not intend to play with a mousepad (we should have been more precise in our introduction sheet)</td>
-        </tr>
-        <tr>
-            <td>Visual Feedback in combat missing (2)</td>
-            <td>Added for both player and enemy hits; brief flash effect when hit (character turns white); Blood splatter when "lanternhead" is hit</td>
-        </tr>
-        <tr>
-            <td>Need more health on your character and maybe some weapon pick-ups to spice things up (1)</td>
-            <td>None. Health-Value is our game decision. However, in further development, it is conceivable that more weapons could be integrated</td>
-        </tr>
-        <tr>
-            <td>Sound effect should be added to indicate minions are close by (especially the black ones)...</td>
-            <td>No change wanted. <br> - Player needs to learn during the gameplay how to handle it. <br> - Part of the gameplay and narrative: Shadows make no noise</td>
-        </tr>
-    </tbody>
+<table style="border: none;">
+    <tr style="border: none;">
+        <td style="border: none;">
+            Tasked with protecting a sacred light from the encroaching darkness, they must navigate the night and evade the minions of the dark. Chased by the "darkness" and its zealous supporters, the acolyte's mission is to ensure the flame remains lit, representing hope for another day. With just 5 minutes until dawn, every second counts, for if the flame is extinguished, fear will spread unchecked throughout the land.
+        </td>
+        <td style="border: none;">
+            <img src="Images/Core_concept_1.jpg"/>
+        </td>
+    </tr>
 </table>
 
-#### After Evaluation 3
+### Genre
+
+<p align="center"><b>Horror Survival</b></p>
 
 <table>
-    <thead>
+    <tr>
+        <td>
+            <img src="Images/Eternal_Darkness.jpg" alt="">
+        </td>
+        <td >
+            <img src="Images/Outlast.jpg" alt="">
+        </td>
+            <td>
+                 <img src="Images/Unknown_1.jpg" alt="">
+        </td>
+    </tr>
+</table>
+<p align="center">Eternal Darkness (l.), Outlast (m.), Unknown (r.)</p>
+<br>
+
+```mermaid
+    graph TD;
+    A{Target Audience}-->B(diverse & broad due to WebGL);
+    B-->C(age);
+    C-->D(12+);
+    D-->E(especially 13-30);
+    B-->F(gamers);
+    B-->G(horror and suspense game enthusiasts);
+    B-->H(university students);
+    F-->E
+    H-->E
+```
+
+### Unique Selling Points
+
+<table style="border: none;">
+    <tr style="border: none;">
+        <td style="border: none;">
+            <b>Light</b>💡<br>
+            Acting as both a pivotal navigational guide and a direct indicator of health. Also, its glow is the only means to reveal concealed enemies.
+        </td>
+        <td style="border: none;">
+            <img src="Images/APlagueTale.jpg" width="500" />
+            <p align="center">Inspiration: A Plague Tale</p>
+        </td>
+    </tr>
+</table>
+Other Game Differentiators<br><br>
+
+- Pixel art style
+- Strategy (resource utilization, how to deal with the enemy)
+
+## Characters
+
+1.  Main Character
+
+    - The last keeper of the flame, tending to their god’s decaying temple as they struggle to keep the darkness out. As a reward for their devotion, they have been transformed into a living lantern.
+
+        <p align="center">
+            <img src="Images/character_mockup.png" width="200">
+            <br>Image created using Aseprite
+        </p>
+
+    - Inspiration:
+
+    <table>
         <tr>
-            <th>Feedback</th>
-            <th>Improvements</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Minor wording suggestion on the introduction slide in our game</td>
-            <td>Changed as suggested</td>
-        </tr>
-        <tr>
-            <td>Waterfall was a weak point, as players could go out of bounds</td>
-            <td>Added collider</td>
-        </tr>
-        <tr>
-            <td>Colorful objects seemed to have a specific purpose, because they were so noticeable, players tried to figure out whether they could collect or destroy them.</td>
-            <td>No changes made, as these belonged to the level design and, in case there is no more lantern light, served as small light sources for orientation.</td>
-        </tr>
-        <tr>
-            <td>Central part should have more indications to it. <br>- Because then the player gets a better feeling to where the centre of the map is and when to expect the edge of the map <br>- Would be sad to miss it as it an important part of the narrative
+            <td>
+                <img src="Images/Eyes-Wide-Shut.png" alt="">
             </td>
-            <td>Added lightsource to the fire and animated asset</td>
+            <td >
+                <img src="Images/TheGreenKnight.png" alt="">
+            </td>
+            <td>
+                <img src="Images/SilentHill_1.png" alt="">
+            </td>
+        </tr>
+    </table>
+    <p align="center">Eyes Wide Shut (l.), The Green Knight (m.), SilentHill (r.)</p>
+    <br>
+
+2.  Shadow Enemy
+
+    - Shadow/ghost-looking creatures. More details described in [Enemies and Combat](#enemies-and-combat)
+
+    - Inspiration:
+
+    <table>
+        <tr>
+            <td>
+                <img src="Images/enemy_reference_1.png" alt="" width="300">
+            </td>
+            <td >
+                <img src="Images/enemy_reference_2.png" alt="" width="200">
+            </td>
+            <td>
+                <img src="Images/Endoparasitic.png" alt="" width="300">
+            </td>
+        </tr>
+    </table>
+    <p align="center">Nosferatu (1922) (l.), Crawling Horror from Don't Starve (m.), Endoparasitic (r.)</p>
+    <br>
+
+    - Actual enemy look
+    <table>
+        <tr>
+            <td>
+                <img src="Images/Enemy_1.png" alt="" width="300">
+            </td>
+            <td >
+                <img src="Images/Enemy_2.png" alt="" width="200">
+            </td>
+            <td>
+                <img src="Images/Enemy_3.png" alt="" width="300">
+            </td>
+        </tr>
+    </table>
+
+## Gameplay and Mechanics
+
+### Core Gameplay Loop
+
+<table style="border: none;">
+    <tr style="border: none;">
+        <td style="border: none;">
+            <ul>
+                <li>Explore the world, finding:
+                <ul>
+                    <li>health potions and lantern fuel</li>
+                    <li>torch and candles, lit to keep the central fire lit</li>
+                </ul>
+                </li>
+                <li>Fight and kill enemies</li>
+                <li>Don't die</li>
+                <ul>
+                    <li>If the player dies, they can retry the game, which will reset the timer back to 5 minutes.</li>
+                </ul>
+            </ul>
+        </td>
+        <td style="border: none;">
+            <img src="Images/fire_effect.gif" width="200" />
+            <a href="https://codemanu.itch.io/pixelart-effect-pack">Source</a>
+        </td>
+    </tr>
+</table>
+
+### Player Movement
+
+- 8-directional movement system (N, NE, E, SE, S, SW, W, NW)
+- Walking backwards incurs speed penalty
+
+### Enemies and Combat
+
+- Enemies are ghost-like creatures with a melee attack or ranged attack
+<p align="center">
+    <img src="Images/enemy_reference_1.png" width="400">
+    <br>Source: Nosferatu (1922)
+</p>
+
+<b>Health & Stats</b>
+
+<table>
+    <thead>
+        <tr>
+            <th>Attack type (player)</th>
+            <th>Description</th>
+            <th>Damage Shadow Enemy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Melee attack</td>
+            <td>Close-combat attack performed with hands</td>
+            <td>35%</td>
+        </tr>
+        <tr>
+            <td>Lantern attack</td>
+            <td>Beam of light emanating from the player character damages any enemies in its path</td>
+            <td>45%</td>
         </tr>
     </tbody>
 </table>
 
-### Final Assessment of Goals
+- Around 6 enemy attacks will reduce the player to 0 health
 
-#### Goal 1: Can users survive for 5 minutes?
+### Enemy Spawning and Behaviour
 
-- After Evaluation 1: The game was perceived as too easy, necessitating adjustments.
-- After Evaluation 2: All but one player managed to win the game at least once. Crucially, no players won on their initial attempt, hinting at an appropriate level of challenge.
-- After Evaluation 3: While players did not achieve victory on their debut, every participant eventually had a successful run, indicating a well-balanced difficulty level.
+- Enemies attempt to spawn in a random position in a radius of 5 around the player.
+- Enemies will attempt to find valid spawn positions up to 10 times before a spawn fails.
+- If the spawn was successful the spawner will wait 7.5 seconds before attempting to spawn another, otherwise it will wait a quarter of that time.
+- Each successful attempt has a 25% chance of spawning a ranged enemy and a 75% chance of spawning a melee enemy.
+- Enemies will despawn if their distance from the player passes 7.
+- Spawning will continue for as long as the number of living enemies is less than 5 + the number of minutes since game start.
+- Enemies will wander around until they have line of sight of the player, and will move to the players last known position when line of sight is lost
+- Ranged enemies will wait and fire from their vision range while the player is still visible
+- All enemies have a 50% chance of dropping either a health potion or fuel, with equal probability
+
+### Lantern/Light feature
+
+<table>
+    <thead>
+        <tr>
+            <th>Fuel level</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0-10%</td>
+            <td>30% decreased movement speed <br> No use of special attack possible</td>
+        </tr>
+        <tr>
+            <td>11-30%</td>
+            <td>15% decreased movement speed<br> No use of lantern attack possible</td>
+        </tr>
+        <tr>
+            <td>31-50%</td>
+            <td>5% decreased movement speed<br> Lantern attack possible - 1/5th of fuel reserves per attack (half of the damage points apply)</td>
+        </tr>
+        <tr>
+            <td>51-70%</td>
+            <td>ormal movement speed<br> Lantern attack possible - 1/5th of fuel reserves per attack</td>
+        </tr>
+        <tr>
+            <td>71-90%</td>
+            <td>5% increased movement speed<br> Lantern attack possible - 1/5th of fuel reserves per attack</td>
+        </tr>
+        <tr>
+            <td>91-100% </td>
+            <td>10% increased movement speed<br> Lantern attack possible - 1/5th of fuel reserves per attack (double of the damage points apply)</td>
+        </tr>
+    </tbody>
+</table>
+
+Inspiration for games where light is important for gameplay include Cryospace and Amnesia: The Dark Descent.
 
 <p align="center">
-    <img src="Images/Playthroughs.png" width="500">
-    <p align="center">Bar chart showcases data from 14 participants' playthroughs of our game, delineating total playthroughs from victories. Blue bars depict total playthroughs, while orange bars signify wins.
+  <br/><a href="https://www.dsogaming.com/news/cryospace-is-a-new-isometric-horror-game-heavily-inspired-by-alien-and-philip-k-dick-novels/"><img src="Images/Cryospace.jpg" width="600"></a><br/>
+  Gameplay still from Cryospace showing limited visibility and a player controlled light source
+</p>
+
+### Central Fire
+
+<p align="center">
+    <img src="Images/central_fire.png" width="300">
+</p>
+
+- Fire need to stay lit, for that to happen the player needs to light torches and candles that are spread across the map
+- If the fire goes out, the player dies
+- Since there is no light source lit at the beginning, we have built in a delay of 30 seconds.
+- Depending on how many light sources are lit, the size of the fire changes (calculation of the states in the table below)
+- The light sources can also be blown out again by enemies or by a random snuff effect that we have implemented (Therefore, the player must constantly light the light sources and cannot light them only once at the beginning and then hide)
+
+| State            | 0   | 1     | 2      | 3      | 4      | 5       |
+| ---------------- | --- | ----- | ------ | ------ | ------ | ------- |
+| Lightsources lit | 0%  | 1-20% | 21-40% | 41-60% | 61-80% | 81-100% |
+
+### Camera/View
+
+- Fixed rotation 3rd person isometric with approx. 45° viewing angle
+- Player is locked to centre of screen (camera moves with player movement)
+- When the player reaches the edge of the game world, they will be slightly off centre; this allows the player to see more of the game world while near its edge.
+  - This is demonstrated in the diagram below. Note how in FOV 2 the player is off-centre.
+
+<p align="center">
+    <img src="Images/camera_movement.png" width="400">
+</p>
+   
+- We have decided to use a moving camera as it can make the gameplay feel more dynamic - well suited to the action/horror genre
+
+Underrail (2015) is a good example of the intended viewing angle:
+
+<p align="center">
+<img src="Images/underrail_screenshot.jpg" width="300">
+</p>
+And Synthetik (2018) uses a camera locked to the players movements:
+<p align="center">
+<img src="Images/synthetik_screenshot.jpeg" width="300">
+</p>
+
+Actual in-game camera view
+
+<p align="center">
+    <img src="Images/Camera_view.png" width="400">
+</p>
+
+### Controls
+
+<p align="center">
+    <img src="Images/Keyboard_edit_crop.png" width="500">
+    <img src="Images/Mouse_edit_1.png" width="287">
+</p>
+
+- Left Shift to _dash_, briefly increasing movement speed.
+- Escape button to show pause menu while in game (Implemented so that the player can check the controls again during the game)
+
+### Progression
+
+As a roguelite-inspired game, Lantern Head features permadeath and items that do not persist between playthroughs.
+
+Within a single playthrough, difficulty will increase due to
+attrition of resources if the player overuses their potions/lantern oil
+
+## World Design
+
+Lantern Head takes place within the confines of an abandoned religious compound, in the style of an old-world monastery or cathedral.
+
+This temple shows signs of advanced decay, as plant growth gradually reclaims the crumbling masonry, giving the player the sense that they are the last defender of this place against the unknown and wild forces outside its walls.
+
+One inspiration for this is the abandoned 12th-century Monastery of Santa Maria de Seiça in Portugal:
+
+<p align="center">
+    <img src="Images/Mosteiro-de-Santa-Maria-de-Seiça-1-van-1.jpg" width="300">
+    <img src="Images/Mosteiro-de-Santa-Maria-de-Seiça-1-van-1-6.jpg" width="140">
+
+And this abandoned church photographed by Roman Robroek:
+
+<p align="center">
+    <img src="Images/roman-robroek-abandoned-churches-12.jpeg" width="300">
+</p>
+
+Other inspirations:
+
+<table>
+    <tr>
+        <td >
+            <img src="Images/Minecraft.jpg" alt="">
+        </td>
+        <td>
+            <img src="Images/Amnesia_TheDarkDescent.jpg" alt="">
+        </td>
+        <td>
+            <img src="Images/TheGreenKnight_2.png" alt="">
+        </td>
+    </tr>
+</table>
+<p align="center">Minecraft (l.), Amnesia - The Dark Descent (m.), The Green Knight (r.)</p>
+
+Actual in-game environment
+
+<table>
+    <tr>
+        <td >
+            <img src="Images/Game_Environment_1.png" alt="" width="600">
+        </td>
+        <td>
+            <img src="Images/Game_Environment_2.png" alt="" width="600">
+        </td>
+    </tr>
+</table>
+
+### Layout
+
+The game will take place entirely indoors. The level design will take inspiration from real-life religious buildings.
+
+<p align="center">
+        <img src="Images/Game_Layout.png" width="500">
+        <p align="center"> The world will feature sections ranging from grand halls to claustrophobic corridors.
+</p>
+
+
+
+### Game World Graphics and Physics
+
+The game world will be rendered in "2.5D" using a pixel art tileset. The tilemap will be overlayed with a static collider for simple player-object and enemy-object collisions.
+
+No elements in the game world will require other physics simulation.
+
+Light and shadow is an important gameplay element in Lantern Head. Lighting will be handled by Unity's 2D Universal Render Pipeline (URP), which enables 2D objects (such as sprites) to interact with light and cast shadows as if they were 3D objects.
+
+Towards the very end of the game, the sun will begin to rise. It is intended that a gradient of light intensity and color will provide a visual to hint the player that they are close to finish the game. A global lighting gradient mockup, with respect to game time, can be seen below.
+
+<p align="center">
+    <img src="Images/dawn_gradient.png" width="600">
+    <p align="center">Demonstration of color change across the 5 minutes of game time. Created using Aseprite.
     </p>
 </p>
 
-##### Conclusion
+### Interactivity
 
-The evaluation helped us to develop our game to a balanced level of difficulty, so that it is not too difficult and therefore winnable, but also challenging for the players.
-
-#### Goal 2: High usability and fun scores
-
-##### UEQ Results
-
+- _Environmental lighting_: candles and torches. Able to be snuffed out by enemies and relit by the player
 <p align="center">
-    <img src="Images/UEQ_1.png" width="390">
-    <img src="Images/Legend_UEQ.png" width="100">
+    <figure>
+        <img src="Images/candles_lighting.png" width="100">
+    </figure>
 </p>
 
-- The graph presents a spectrum of mean values for the contrasting attributes of the UEQ questionnaire. The scale ranges from -3 to 3, with 0 being neutral.
-- The majority of attributes received positive or near-neutral feedback. Respondents seemed to appreciate the games creativity, interest level, cutting-edge nature, security, clarity, and friendliness. However, there were mixed feelings about the games speed, supportiveness, complexity, and organization.
-
+- _Oil containers_: found throughout map, essential for refilling player's lantern
 <p align="center">
-    <img src="Images/UEQ_2.png" width="500">
+    <figure>
+        <img src="Images/lantern_oil_mockup.png" width="100">
+    </figure>
 </p>
 
-- The graph illustrates the mean values for the categories of the UEQ.
-- The lines indicate the variance among the ratings
-- Most of the criteria received positive feedback, highlighting Attractiveness, Perspicuity, and Novelty as the standout positive attributes.
-- The mean value for Dependability is just below neutral, suggesting that there are some concerns about the reliability or consistency of the game among the respondents.
-
-##### Conclusions
-
-- The game stands out as attractive, novel, and clear. Users largely had a positive reception to its presentation, design, and functionality.
-- Attractiveness: Users were drawn to the game's aesthetics, lauding it for its stimulating and novel design elements.
-- Clarity: The game's mechanics and objectives were mostly clear, which is testament to the product's user-friendly design.
-- Dependability & Efficiency: Feedback suggests that some gameplay elements were not consistent, which could affect the gameplay experience. Specific comments on problems related to movement dynamics, hitboxes and boundaries explain the survey results.
-
-##### UEQ+ Results
-
+- _Health potions_ to heal player character
 <p align="center">
-    <img src="Images/UEQ+_1.png" width="500">
+    <figure>
+        <img src="Images/health_potion_mockup.png" width="100">
+    </figure>
 </p>
 
-- The graph displays the mean values for attributes from the UEQ+.
-- The game generally receives positive feedback on its Clarity and Intuitive Use, suggesting ease of understanding and navigation.
-- Visual Aesthetics and Novelty are also seen in a favourable light, albeit less pronounced.
-- Acoustics and Value are areas where the perception is more neutral, hinting at potential areas for enhancement.
+- _Doors_: manually opened to enter certain rooms
+
+## Art and Audio
+
+<b> Art Style: Pixel Art </b>
+
+Our team loves the pixel art style and thinks that it will be the best fit for our game for the following reasons:
+
+- <b>Unique Aesthetic Appeal</b>: Utilizing pixel art for a horror game adds a distinctive visual charm that stands out in a genre dominated by realistic graphics.
+- <b>Engage player's imagination</b>: Pixel art invites players to engage their imaginations, filling in the gaps between pixels with their perceptions of fear. This active participation can intensify the player's overall horror experience.
+- <b>Showcase the potential of pixel art style</b>: Pushing the boundaries of pixel art by demonstrating that pixel art can effectively evoke fear, suspense, and mystery.
+
+<b>Color and Atmosphere</b>: The game is going to implement a high contrast between light and shadow with mainly dark blue or green color to build an overall suspenseful and dark atmosphere
+
+<b> Concept Art and References for the Art Style </b>
 
 <p align="center">
-    <img src="Images/UEQ+_2.png" width="500">
+    <img src="Images/art_style_reference_1.png" width="300">
+    <br>Image generated by Automatic 1111
 </p>
-
-- This graph presents the "Importance Ratings" for various attributes
-- Each attribute has been evaluated on a scale from -3 to 3, with the bars representing the mean importance score and the lines indicating the variance among the ratings.
-- All attributes are perceived as somewhat important, with none dipping into the negative zone.
-- "Value" and "Acoustics" are rated as more critical than attributes like "Intuitive Use" and "Clarity".
-- There's a noticeable variance in ratings for several attributes, suggesting diverse opinions among respondents about the relative importance of certain criteria.
-
-##### Conclusions
-
-- Clarity: Indicates that users find the interface straightforward.
-- Intuitive Use: Large variances in the evaluation. This variance is most likely also due to the comments of dissatisfaction of the mousepad users, who indicated control problems as feedback.
-- Visual Aesthetics: Users generally appreciate the visual aspects, but there's potential to further elevate this aspect.
-- Acoustics: Due to the high importance rating, the result is to be considered rather negative
-
-##### GUESS-18 Results
-
 <p align="center">
-    <img src="Images/GUESS.png" width="500">
+    <img src="Images/art_style_reference_2.png" width="500">
+    <br>Source: The Witch's House
 </p>
-
-- This radar chart illustrates the "Means of GUESS Subscales".
-- The chart is structured with values ranging from 1 to 7, indicating the mean score for each of the subscales. (1 – lowest score, 7 – highest score).
-- The radar chart gives an overview of user perceptions across multiple facets of their gameplay.
-- The highest-rated attributes are "Usability" and "Visual Aesthetics", both of which surpass scores of 4.5.
-- Enjoyment has a score very similar to Play Engrossment, suggesting users find the experience moderately enjoyable but not exceptionally so.
-
-##### Conclusions
-
-- Usability: With a score nearing 5 out of 7, the game offers a user experience that is mostly intuitive and user-friendly.
-- Enjoyment: Scoring similarly to Play Engrossment, the game provides a moderate level of enjoyment. Possible enhancement for Player Engagement and Enjoyment could have been a more immersive narrative or storyline but due to the subjects timeframe not adjusted after this evaluation.
-- Visual Aesthetics: Visual elements score close to 5, showcasing their appeal to users.
-- Audio Aesthetics: The audio elements are slightly behind the visual elements with 4.5. The lack of direct comments on these elements may indicate that users found them satisfactory but not outstanding.
-
-#### Goal 3: Are the controls and mechanics intuitive for the average player?
-
-- Evaluation 1: Players found the controls largely intuitive, with only the dash function receiving comments.
-- Evaluation 2: The majority perceived the controls as intuitive. However, some found it challenging to play using a mousepad. Clarity regarding optimal controls, specifically in the introduction, could have mitigated this feedback.
-- Evaluation 3: Feedback was consistent with previous evaluations, with players expressing that the controls felt intuitive.
-
-##### Conclusion
-
-The evaluations have shown us that we have succeeded in our goal of creating an intuitive use for the average player.
-
-## Shaders and Special Effects
-
-We developed two custom shaders for our game: the [Heat Haze Shader](Assets/HeatHaze.shader) and the [Enemy Special Attack Shader](Assets/EnemySpecialAttack.shader). The _HeatHaze_ shader displaces pixels captured by the `CameraSortingLayerTexture` according to the intensity of the alpha channel of a sampled pseudo-noise texture, then displaces in `x` by the cosine of time and in `y` by the sine of time, creating a wavy effect. The heat haze is applied to various torches and candles in the game.
-
-These shaders explored the power of the `CameraSortingLayerTexture` in shader language to create distinct distortion effects that integrated with the in-game scene and make more appealing visual effects.
-
-Drawing inspiration from [this tutorial]("https://www.youtube.com/watch?v=-spc1GJAtLY"), we discovered that through manipulating unity layer settings, we could create a transparent shader capable of manipulating the camera view to introduce interesting distortion effects to our game environment.
-
-The Heat Haze Shader utilized the `CameraSortingLayerTexture` and incorporating a custom noise texture that inspired by [this tutorial]("https://lindenreidblog.com/2018/03/05/heat-distortion-shader-tutorial/") to simulate random distortion patterns, closely resembling the visual dynamics of a real heat haze.
-
-[Click here for the Heat Haze effect](https://drive.google.com/file/d/1luGvsgK1eYyT0Xd18oKIiZMMQNA9TDOE/view?usp=sharing)
-
-On the other hand, the 'Enemy Special Attack Shader' was designed to enhance the visual impact of our enemy attacks. This shader integrates the `CameraSortingLayerTexture` with the smoothstep function, which effectively interpolates values to create a captivating void orb. When shot by the enemy, player will see a transparent orb that distorts the game environment, immersing players in a visually dynamic experience. Also, we incorporated dynamic sizing for the orb with the game time to further enhance the visual effects.
-
-[Click here for the Enemy Special Attack effect](https://drive.google.com/file/d/1_x5gNXHtKNCtpo8iVLikuD9jPpI5Z8N3/view?usp=sharing)
-
-### [Damage Particle System](Assets/Prefabs/BloodSplatter.prefab)
-
-#### Player
-
-- BloodSplatter Particle System object with matching script is spawned at the player when they take damage.
-- Particles last 0.5 seconds each, move at 1.0f under 0.7f gravity, and shrink faster the longer they exist.
-- Blood particles are generated in a burst of 30, initially moving in a semicircle upwards.
-- The particle system is destroyed 1 second after it is created.
-- Particles collide with the environment and are affected by light, since that felt the most immersive when testing.
-
 <p align="center">
-    <img src="Images/bloodgif.gif" width="500">
+    <img src="Images/art_style_reference_3.jpg" width="300">
+    <img src="Images/art_style_reference_4.jpg" width="300">
+    <br>Images generated by Adobe Firefly
 </p>
 
-#### Enemies
+<br>
 
-Enemies spawn the same prefab as players on taking damage but modify some values after instantiation:
+<b>Game audio mainly source from:</b>
 
-- The colour is set to black to match their shadow theme
-- Gravity is turned off to make them feel weightless and ethereal
-- Particle start speed is set to 0.7f for the same reason
-- The number of particles spawned is set to 1/7th the damage dealt, giving a feeling of impact to stronger attacks
-- The full 30 particles are spawned on death to show the enemies bursting or dispersing for immersion and to give an indication they died since health bars don't show on enemy death
+1. [Opengameart.org](https://opengameart.org/)
+2. [Pixabay](https://pixabay.com/)
+3. [Youtube](https://www.youtube.com/)
 
-<p align="center">
-	<img src="Images/enemypopgif.gif" width="500">
-</p>
+<b>Feelings / Styles that we want to convey through the soundtracks and sound effects</b>
 
-## Summary of Contributions
+- Minimalistic
+- Suspenseful
+- Dark
+- Gothic
 
-| Task                       | Main Responsibility | Collaboration |
-| -------------------------- | ------------------- | ------------- |
-| Project Management         | Linda               | All others    |
-| Ideas                      | -                   | All           |
-| Game Design Document       | -                   | All           |
-| Art & Design               | Joe                 | All others    |
-| Audio                      | Katherine           | All others    |
-| Development                | All                 | -             |
-| Testing                    | Muhammed            | All others    |
-| Evaluation                 | Linda               | All others    |
-| Shader and Special Effects | All                 | All           |
+<br>
 
-## References and External Resources
-
-<b>Soundtracks</b>
-| Soundtracks | References|
+<b>List of Candidate Soundtracks</b>
+| Soundtracks | Sources|
 | -------- | -------- |
 | Starting Screen | [György Ligeti - Atmospheres](https://youtu.be/RCNzwdLwA8g?t=289) |
 | In-game Background | [Brandon75689 - Cave Theme](https://opengameart.org/content/cave-theme)|
@@ -574,12 +500,11 @@ Enemies spawn the same prefab as players on taking damage but modify some values
 
 <br>
 
-<b>Sound Effects</b>
+<b>List of Candidate Sound Effects</b>
 | Sound Effects | References |
 | -------- | -------- |
 | Speical Attack | [Fuel explosion](https://mixkit.co/free-sound-effects/fire/) |
 | Melee Attack | [Opengameart.org - 3 melee sounds](https://opengameart.org/content/3-melee-sounds/) |
-| Attack Hit| [Opengameart.org - Fleshy Fight Sounds](https://opengameart.org/content/fleshy-fight-sounds) |
 | Open Door | [Pixabay - Door open and close](https://pixabay.com/sound-effects/door-open-and-close-65541/) |
 | Close Door | [Pixabay - Door open and close](https://pixabay.com/sound-effects/door-open-and-close-65541/) |
 | Candle Snuff when Enemy Approaches | [Mixkit - Wizard fire woosh / Ghost fire woosh](https://mixkit.co/free-sound-effects/fire/) |
@@ -589,10 +514,245 @@ Enemies spawn the same prefab as players on taking damage but modify some values
 | Light A Match | [Pixaby - 071684_light_match.wav](https://pixabay.com/sound-effects/071684-light-matchwav-89669/) |
 | Menu Hover | [Opengameart.org - UI Soundpack by m1chiboi - bleeps and clicks](https://opengameart.org/content/ui-soundpack-by-m1chiboi-bleeps-and-clicks) |
 | Menu Select | [Opengameart.org - Zippo click sound](https://opengameart.org/content/zippo-click-sound) |
+
 <br>
 
-<b>Art</b>
-| Art | References |
-| -------- | -------- |
-| Central Fire Sprite | [Animated Fire](https://opengameart.org/content/animated-fire) |
-| Water Texture | [3dtextures-water](https://3dtextures.me/2018/11/29/water-002/) |
+<b>Game Assets Mainly Source / Generate From: </b>
+
+1. [Unity Assets Store](https://assetstore.unity.com/)
+2. [Asesprite](https://www.aseprite.org/)
+
+<b> List of Candidate Assets </b>
+
+1. Fire and player's attack effect
+
+   a. [Free Pixel Effects Pack - CodeManu](https://codemanu.itch.io/pixelart-effect-pack)
+   <p align="center">
+        <img src="Images/fire_effect.gif" width="200">
+        <img src="Images/player_attack_effect.gif" width="200">
+    </p>
+
+## User Interface
+
+<p align="center">
+    <img id="ui_mockup" src="Images/UI.png" width="600">
+</p>
+
+- Before the game starts we included a short introduction to the game.
+- It will show after the first start and explains backstory, controls and game environment
+- Intro won't show again after the player died.
+
+## Technology and Tools
+
+<table align="center">
+    <thead>
+        <tr>
+            <th style="flex: 1; text-align: center;"><b>Tool</b></th>
+            <th style="flex: 1; text-align: center;"><b>Purpose</b></th>
+            <th style="flex: 1; text-align: center;"><b>Tool</b></th>
+            <th style="flex: 1; text-align: center;"><b>Purpose</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/unity.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Unity <br>
+            - Development of the game <br>
+            - Unity 2D URP
+            </td>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/VSCode_light.png" alt="" width="130">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Visual Studio Code <br>
+            - C# scripting <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/Github.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            GitHub <br>
+            - Game repository <br>
+            - Issues tab for todo's and discussions <br>
+            - Wiki tab for instructions / guides
+            </td>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/firefly_2.jpg" alt="" width="130">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Adobe Firefly <br>
+            - AI image creation <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/Stable Diffusion.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Automatic 1111 <br>
+            - AI image creation <br>
+            </td>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/audacity.png" alt="" width="130">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Audacity <br>
+            - Audio editing <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/aseprite.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Aseprite <br>
+            - Image editor for pixel art drawing and animation
+            </td>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/DallE2_2.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            DALL·E 2 <br>
+            - AI image creation
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+## Team Communication, Timeline, and Task Assignment
+
+### Team Communication
+
+<table align="center">
+    <thead>
+        <tr>
+            <th style="flex: 1; text-align: center;"><b>Tool</b></th>
+            <th style="flex: 1; text-align: center;"><b>Purpose</b></th>
+            <th style="flex: 1; text-align: center;"><b>Tool</b></th>
+            <th style="flex: 1; text-align: center;"><b>Purpose</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/whatsapp2.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Whatsapp <br>
+            - Fast communication
+            </td>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/googleDrive.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Google Drive <br>
+            - File share <br>
+            - Working together on documents 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/discord_small.png" alt="" width="100">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Discord <br>
+            - Meetings <br>
+            - Exchanging ideas
+            </td>
+            <td>
+                <div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="Images/monday.png" alt="" width="130">
+                    </div>
+                </div>
+            </td>
+            <td>
+            Monday <br>
+            - Project management <br>
+            - Delegate tasks <br>
+            - Track team's progress
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Timeline
+
+<p align="center">
+    <img src="Images/Gantt_Final_GDD.png" style="max-width: 100%;">
+    <img src="Images/Gantt_Final_GDD_legend.png" style="max-width: 100%;">
+</p>
+
+### Task Distribution
+
+| Task                 | Main Responsibility | Collaboration |
+| -------------------- | ------------------- | ------------- |
+| Project Management   | Linda               | All others    |
+| Ideas                | -                   | All           |
+| Game Design Document | -                   | All           |
+| Art & Design         | Joe                 | All others    |
+| Audio                | Katherine           | All others    |
+| Development          | All                 | -             |
+| Testing              | Muhammed            | All others    |
+| Evaluation           | Linda               | All others    |
+
+## Possible Challenges
+
+| Challenges                                                                          | Resolution approach                                              |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Avoiding situations where players can win by hiding in a corner for the entire game | Enemies spwan around the main character                          |
+| Design appropriate level difficulty that is challenging but not too difficult       | Testing, Evaluation                                              |
+| Time constraints (work, other subjects)                                             | Good time management, efficient working, equal distributed tasks |
+| Unity, GitHub or Scripting problems                                                 | Attend classes, ask questions early enough, own research         |
+| Merge conflicts                                                                     | Utilize Communication channel to schedule commits                |
+| Creating own assets, very time consuming                                            | distributet the work to two people                               |
+| evaluations got delayed due to time issues                                          | did evaluations later than planned, shorter time for analysis    |
