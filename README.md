@@ -5,9 +5,9 @@
 [Click to Play WebGL Build](https://joe-goodsell.github.io/LanternHead/)
 
 Credit to:
-    - Muhammed Hussein
-    - Linda Schoettler
-    - Katherine Ip
+- Muhammed Hussein
+- Linda Schoettler
+- Katherine Ip
 
 ## Table of contents
 
