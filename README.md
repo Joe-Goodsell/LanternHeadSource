@@ -2,6 +2,8 @@
     <img src="Images/title.png" width="400">
 </p>
 
+[Click to Play WebGL Build](https://joe-goodsell.github.io/LanternHead/)
+
 ## Table of contents
 
 - [Game Overview](#game-overview)
